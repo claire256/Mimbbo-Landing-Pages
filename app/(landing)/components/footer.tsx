@@ -34,10 +34,10 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-between gap-4 pt-6 mt-6 text-xs border-t text-muted-foreground md:flex-row">
           <div className="copyright">Copyright © {new Date().getFullYear()} Mimbbo. All rights reserved.</div>
           <div className="flex gap-4 terms">
-            <Link href="https://terms.mimbbo.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">
+            <Link href="https://terms.mimbbo.com/" target="_blank" rel="noopener noreferrer" className="underline">
               Privacy policy
             </Link>
-            <Link href="https://terms.mimbbo.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">
+            <Link href="https://terms.mimbbo.com/" target="_blank" rel="noopener noreferrer" className="underline">
               Terms of service
             </Link>
           </div>

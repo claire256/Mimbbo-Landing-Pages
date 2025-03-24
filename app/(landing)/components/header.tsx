@@ -10,7 +10,7 @@ const Header = () => {
   const webUrl = process.env.NEXT_PUBLIC_MIMBBO_WEB_URL || "";
 
   useEffect(() => {
-    const userAgent = navigator.userAgent || (window as any).opera;
+    const userAgent = navigator.userAgent|| navigator.vendor || (window as any).opera;
     
     if (/android/i.test(userAgent)) {
       setLink("https://play.google.com/store/apps/details?id=com.mimbbo.app");
