@@ -11,10 +11,19 @@ const HeroSection = () => {
       <p className="mt-4 text-sm text-muted-foreground md:text-base banner-p">
         Join thousands of beauty pros who have found gigs on Mimbbo in 3 minutes
       </p>
+      <Link 
+        href="https://mimbbo.com/?auth=signup" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
       <Button className="px-6 py-2 mt-6 text-white rounded-md theme-btn">Join as a client</Button>
+      </Link>
       <p className="mt-2 text-xs text-muted-foreground alrdy">
         Already have an account?{" "}
-        <Link href="#" className="underline">
+        <Link href="https://mimbbo.com/?auth=login"
+         className="underline" 
+         target="_blank" 
+         rel="noopener noreferrer" >
           Sign in
         </Link>
       </p>
