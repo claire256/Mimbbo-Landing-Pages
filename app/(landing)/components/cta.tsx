@@ -7,12 +7,15 @@ import QRCode from 'react-qr-code';
 
 const CTA = () => {
 
+  const webUrl = process.env.NEXT_PUBLIC_MIMBBO_WEB_URL || "";
+  const signupUrl = `${webUrl}/?auth=signup`;
+
   return (
     <section className="mt-16 bg-[#6d1d14] py-12 text-white">
       <div className="max-w-5xl px-6 mx-auto text-center md:px-8">
         <h2 className="text-2xl font-semibold rdy-text">Ready to get started?</h2>
         <Link
-        href="https://mimbbo.com/?auth=signup" 
+        href={signupUrl}
         target="_blank" 
         rel="noopener noreferrer"
       >
