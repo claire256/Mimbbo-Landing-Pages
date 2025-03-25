@@ -17,7 +17,7 @@ const ServicesOffered = () => {
         {services.map((service, index) => (
           <div key={index} className="flex flex-col items-center">
             <div className="p-3 mb-2 rounded-full bg-accent inner_img">
-              <Image src={service.icon} alt={service.label} height={20} width={20} className="w-5 h-5 text-primary" />
+              <Image src={service.icon} alt={service.label} height={20} width={20} className="w-8 h-8 text-primary" />
             </div>
             <span className="text_service">{service.label}</span>
           </div>

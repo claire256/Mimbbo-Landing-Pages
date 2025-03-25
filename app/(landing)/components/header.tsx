@@ -25,7 +25,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between h-16 px-6 border-b section-padding navbar bg-secondary md:px-8">
+    <header className="sticky top-0 z-50 flex items-center justify-between h-16 px-8 border-b section-padding navbar bg-secondary md:px-8">
       <div className="flex items-center">
         <Link
           href={webUrl}

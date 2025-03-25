@@ -1,5 +1,5 @@
 body {
-  max-width: 1920px;
+  max-width: 1920px; 
   margin: auto;
 }
 
@@ -10,6 +10,7 @@ body {
 }
 main {
   background-color: #f1ede5;
+
 }
 
 .logo {
@@ -62,9 +63,9 @@ section {
 .cards {
   margin-top: 50px;
 }
-.section-padding {
+ .section-padding {
   padding: 0 120px;
-}
+} 
 .theme-card {
   border-radius: 24px;
   -webkit-border-radius: 24px;
@@ -142,7 +143,7 @@ section {
 
 .text-instructions {
   font-size: 28px;
-  font-weight: bold;
+  font-weight: 600;
 }
 .showcase {
   color: #16181d;
@@ -154,7 +155,7 @@ section {
   font-size: 28px;
   color: #16181d;
   background-color: transparent;
-  margin-top: 12px;
+  margin-top: 9px;
 }
 
 .scroll-container {
@@ -379,7 +380,7 @@ section {
   display: flex;
   flex-wrap: nowrap;
   gap: 15px;
-  margin-bottom: 8px;
+  margin-bottom: 14px;
   overflow-x: auto;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */

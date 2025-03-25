@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const WhyJoin = () => (
   <section className="section-padding" data-aos="fade-up">
-    <h2 className="text-2xl font-semibold theme-title">Why Join Mimbbo?</h2>
-    <div className="grid gap-6 mt-8 sm:grid-cols-2 lg:grid-cols-3">
+    <h2 className="text-2xl font-semibold pt-16 theme-title">Why Join Mimbbo?</h2>
+    <div className="grid gap-6 pt-14 sm:grid-cols-2 lg:grid-cols-3">
       {[
         { src: '/marketing.png', title: 'Less marketing', desc: 'Stop cold calling potential clients! Our platform brings clients directly to you' },
         { src: '/dollar.png', title: "It's Free", desc: 'No signup fee, no monthly fee, no hidden fees' },
