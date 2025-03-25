@@ -47,17 +47,14 @@ main {
   font-size: 48px;
   font-weight: bold;
   text-align: center;
-  padding: 64px 30px;
   line-height: 56px;
 }
 .paragraph {
   text-align: center;
-  margin-top: -35px;
-  color: #000;
   font-size: 16px;
 }
 .section-h {
-  padding-top: 5rem;
+  padding-top: 1rem; 
 }
 section {
   padding: 80px 0;
@@ -381,7 +378,7 @@ section {
 .bottom-row {
   display: flex;
   flex-wrap: nowrap;
-  gap: 8px;
+  gap: 15px;
   margin-bottom: 8px;
   overflow-x: auto;
   scrollbar-width: none; /* Firefox */
@@ -397,7 +394,7 @@ section {
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 
 .image {

@@ -13,12 +13,13 @@ const HeroSection = () => {
       className="max-w-5xl px-6 pt-16 mx-auto text-center md:px-8 md:pt-24"
       data-aos="fade-up"
     >
-      <h1 className="text-4xl font-bold tracking-tight banner_text">
+      <h1 className=" font-bold tracking-tight banner_text">
         Find Your Next <br /> Beauty Gig Here
       </h1>
-      <p className="mt-4 text-sm text-muted-foreground md:text-base banner-p">
+      <p className="mt-4 text-sm text-dark md:text-base banner-p">
         Join thousands of beauty pros who have found gigs on Mimbbo in 3 minutes
       </p>
+      <div className="pt-16 mt-3">
       <Link
         href={signupUrl}
         target="_blank"
@@ -28,17 +29,18 @@ const HeroSection = () => {
           Join as a client
         </Button>
       </Link>
-      <p className="mt-2 text-xs text-muted-foreground alrdy">
+      <p className="mt-2 text-xs text-dark alrdy">
         Already have an account?{" "}
         <Link
           href={loginUrl}
-          className="underline"
           target="_blank"
           rel="noopener noreferrer"
+          className="font-bold"
         >
           Sign in
         </Link>
       </p>
+      </div>
     </section>
   );
 };
