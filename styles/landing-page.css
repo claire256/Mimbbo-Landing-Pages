@@ -204,6 +204,7 @@ section {
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
+  height: 300px;
 }
 .joining_card h3 {
   font-size: 30px;
