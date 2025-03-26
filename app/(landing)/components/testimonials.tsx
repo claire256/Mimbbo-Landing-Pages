@@ -11,26 +11,26 @@ const Testimonials = () => (
         {
           name: "Siv K.",
           role: "Nurse, Owner, Hairitaje",
-          text: "Weekdays are really tough for my business. I use Mimbbo to pick up extra work—I just log in, see what gigs are available, and respond.",
-          src: "/su.png",
+          text: "Mimbbo makes it so easy to pick up beauty gigs during my off seasons from travel nursing. It’s perfect for keeping my business, Hairitaje, busy when I need it—and letting me focus on my nursing career when I don’t..",
+          src: "/sru.png",
         },
         {
           name: "Dorcas N.",
           role: "College Student",
           text: `I've been using the app to pick up makeup gigs on the weekends. It’s perfect for making extra cash when I need it, without the commitment of a full-time job.`,
-          src: "/su.png",
+          src: "/dorcus.png",
         },
       ].map((testimonial, index) => (
         <div
           key={index}
-          className="flex justify-between gap-1 border-[#C5CAD3] rounded-[24px] h-[320px] border w-[688px] testimonial_img"
+          className="flex justify-between gap-1 border-[#C5CAD3] h-[320px] border w-[688px] testimonial_img"
         >
           <Image
             src={testimonial.src}
             alt={testimonial.name}
             width={60}
             height={60}
-            className="w-full h-full rounded-[10px] object-cover mb-4 sm:mb-0"
+            className="w-full h-full object-cover mb-4 sm:mb-0"
           />
           <div className="testimonial_text">
             <div>

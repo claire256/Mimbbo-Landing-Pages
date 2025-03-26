@@ -115,6 +115,9 @@ section {
 .instructions {
   margin-top: 70px;
   align-items: center;
+  display: flex;
+  justify-content: space-between;
+
 }
 
 .service-text {
@@ -134,6 +137,7 @@ section {
   height: 414px;
   padding: 32px;
   border-radius: 18px !important;
+  width: 467px;
 }
 .text_service {
   font-size: 16px;
@@ -159,13 +163,13 @@ section {
 }
 
 .scroll-container {
-  max-height: 300px;
+  /* max-height: 300px;
   overflow-y: auto;
   padding-right: 8px;
 
   direction: rtl; /* Flips content direction */
-  text-align: left;
-}
+  /* text-align: left; */
+} 
 
 .scroll-container::-webkit-scrollbar {
   width: 4px;
@@ -227,13 +231,7 @@ section {
 .testimonial_img img {
   height: auto;
   width: 270px;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
   margin-left: -9px !important;
-  border-radius: 34px !important;
   margin-bottom: 0 !important;
   
 }

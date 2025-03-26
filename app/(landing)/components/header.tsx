@@ -8,6 +8,7 @@ const Header = () => {
   const [link, setLink] = useState<string>("");
 
   const webUrl = process.env.NEXT_PUBLIC_MIMBBO_WEB_URL || "";
+  const loginUrl = `${webUrl}/?auth=login`;
 
   useEffect(() => {
     const userAgent = navigator.userAgent|| navigator.vendor || (window as any).opera;
@@ -43,14 +44,15 @@ const Header = () => {
         </Link>
       </div>
       <div className="flex items-center gap-4">
-        <span className="text-sm">Download the app</span>
-        {link && (
-          <Link href={link} target="_blank" rel="noopener noreferrer">
+      {link && (
+        <Link href={link} target="_blank" rel="noopener noreferrer" className="text-sm underline">Download the app</Link>
+      )}
+          <Link href={loginUrl} target="_blank" rel="noopener noreferrer">
             <Button size="sm" className="h-8 text-white rounded-md main_btn">
-              Get it
+              Sign In
             </Button>
           </Link>
-        )}
+     
       </div>
     </header>
   );
