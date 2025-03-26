@@ -14,7 +14,7 @@ const EarnSection = () => {
       </div>
 
       {/* Static Cards */}
-      <div className="grid grid-cols-1 gap-6 mt-14 sm:grid-cols-2 lg:grid-cols-3 cards">
+      <div className="grid grid-cols-1 gap-6 mt-14 sm:grid-cols-1 lg:grid-cols-2 cards xl:grid-cols-3">
 
         {/* College Students Card */}
         <div className="relative overflow-hidden theme-card college-student-card">

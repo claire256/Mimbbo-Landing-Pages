@@ -107,6 +107,7 @@ section {
   -moz-border-radius: 24px;
   -ms-border-radius: 24px;
   -o-border-radius: 24px;
+
 }
 
 .salon-owners-card {
@@ -114,9 +115,7 @@ section {
 }
 .instructions {
   margin-top: 70px;
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
+
 
 }
 
@@ -138,6 +137,7 @@ section {
   padding: 32px;
   border-radius: 18px !important;
   width: 467px;
+  
 }
 .text_service {
   font-size: 16px;
@@ -168,7 +168,7 @@ section {
   padding-right: 8px;
 
   direction: rtl; /* Flips content direction */
-  /* text-align: left; */
+   text-align: left; 
 } 
 
 .scroll-container::-webkit-scrollbar {
@@ -286,10 +286,10 @@ section {
 }
 
 .faq_section {
-  display: flex;
+  /* display: flex;
   gap: 80px;
-  /* justify-content: center; */
   align-items: center;
+   */
 }
 .faq_left {
   width: 480px;
@@ -303,8 +303,8 @@ section {
   margin-top: 120px;
 }
 .faq_img {
-  width: 480px;
-  height: 500px;
+  /* width: 480px;
+  height: 500px; */
   border-radius: 24px;
   margin-top: 30px;
   -webkit-border-radius: 24px;
@@ -427,6 +427,7 @@ section {
   .instructions {
     display: flex;
     flex-direction: column;
+  
   }
   .testimonialss {
     display: flex;
@@ -621,6 +622,12 @@ section {
   }
   .faq_img {
     height: 445px;
+  }
+  .faq-a{
+    font-size: 12px;
+  }
+  .faq-q{
+    font-size: 14px;
   }
 }
 
