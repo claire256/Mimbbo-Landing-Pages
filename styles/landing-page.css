@@ -288,7 +288,8 @@ section {
 .faq_section {
   display: flex;
   gap: 80px;
-  justify-content: center;
+  /* justify-content: center; */
+  align-items: center;
 }
 .faq_left {
   width: 480px;
