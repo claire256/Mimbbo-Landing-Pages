@@ -44,11 +44,11 @@ const faqs = [
     a: "Mimbbo is open to all skill levels, whether you’re licensed or self-taught. It’s up to the customer to choose who they want to work with based on your profile, experience, and reviews.",
   },
   {
-    q: "What areas do i need to travel to?",
+    q: "What areas do I need to travel to?",
     a: "That’s 100% up to you. You set your travel preferences and service radius. Most Mimbbo at Home gigs are within your city or surrounding metro area.",
   },
   {
-    q: "Can i set my own prices?",
+    q: "Can I set my own prices?",
     a: "Yes. For marketplace gigs, you can choose to bid with your rate. For promos or direct bookings, you set your pricing and service terms.",
   },
   {
