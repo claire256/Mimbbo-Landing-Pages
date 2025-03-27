@@ -5,16 +5,16 @@ import { Card } from "@/components/ui/card";
 
 const EarnSection = () => {
   return (
-    <section className="px-6 py-16 md:px-12 section-padding" data-aos="fade-up">
+    <section className="px-6 pt-10 py-16 md:px-12 section-padding" data-aos="fade-up">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-3xl font-bold md:text-4xl theme-title">Who Can Earn on Mimbbo?</h2>
-        <p className="mt-2 text-lg text-muted-foreground paragraph">
+        <p className="pt-4 text-lg text-dark paragraph">
           From side gigs to growing your business. Earn whenever you need with Mimbbo.
         </p>
       </div>
 
       {/* Static Cards */}
-      <div className="grid grid-cols-1 gap-6 mt-10 sm:grid-cols-2 lg:grid-cols-3 cards">
+      <div className="grid grid-cols-1 gap-6 mt-14 sm:grid-cols-1 lg:grid-cols-2 cards xl:grid-cols-3">
 
         {/* College Students Card */}
         <div className="relative overflow-hidden theme-card college-student-card">

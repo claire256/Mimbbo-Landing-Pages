@@ -23,6 +23,7 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        dark: "#1E1E1E",
         primary: {
           DEFAULT: "#106f47",
           foreground: "#ffffff",
@@ -56,6 +57,9 @@ module.exports = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        inter: ["inter" ,"sans-serif"]
       },
       keyframes: {
         "accordion-down": {

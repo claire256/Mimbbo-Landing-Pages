@@ -1,5 +1,5 @@
 body {
-  max-width: 1920px;
+  max-width: 1920px; 
   margin: auto;
 }
 
@@ -10,6 +10,7 @@ body {
 }
 main {
   background-color: #f1ede5;
+
 }
 
 .logo {
@@ -47,17 +48,14 @@ main {
   font-size: 48px;
   font-weight: bold;
   text-align: center;
-  padding: 64px 30px;
   line-height: 56px;
 }
 .paragraph {
   text-align: center;
-  margin-top: -35px;
-  color: #000;
   font-size: 16px;
 }
 .section-h {
-  padding-top: 5rem;
+  padding-top: 1rem; 
 }
 section {
   padding: 80px 0;
@@ -65,9 +63,9 @@ section {
 .cards {
   margin-top: 50px;
 }
-.section-padding {
+ .section-padding {
   padding: 0 120px;
-}
+} 
 .theme-card {
   border-radius: 24px;
   -webkit-border-radius: 24px;
@@ -109,6 +107,7 @@ section {
   -moz-border-radius: 24px;
   -ms-border-radius: 24px;
   -o-border-radius: 24px;
+
 }
 
 .salon-owners-card {
@@ -116,7 +115,8 @@ section {
 }
 .instructions {
   margin-top: 70px;
-  align-items: center;
+
+
 }
 
 .service-text {
@@ -136,6 +136,8 @@ section {
   height: 414px;
   padding: 32px;
   border-radius: 18px !important;
+  width: 467px;
+  
 }
 .text_service {
   font-size: 16px;
@@ -145,7 +147,7 @@ section {
 
 .text-instructions {
   font-size: 28px;
-  font-weight: bold;
+  font-weight: 600;
 }
 .showcase {
   color: #16181d;
@@ -157,17 +159,17 @@ section {
   font-size: 28px;
   color: #16181d;
   background-color: transparent;
-  margin-top: 12px;
+  margin-top: 9px;
 }
 
 .scroll-container {
-  max-height: 300px;
+  /* max-height: 300px;
   overflow-y: auto;
   padding-right: 8px;
 
   direction: rtl; /* Flips content direction */
-  text-align: left;
-}
+   text-align: left; 
+} 
 
 .scroll-container::-webkit-scrollbar {
   width: 4px;
@@ -206,6 +208,7 @@ section {
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
+  height: 300px;
 }
 .joining_card h3 {
   font-size: 30px;
@@ -228,13 +231,7 @@ section {
 .testimonial_img img {
   height: auto;
   width: 270px;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
   margin-left: -9px !important;
-  border-radius: 34px !important;
   margin-bottom: 0 !important;
   
 }
@@ -289,9 +286,10 @@ section {
 }
 
 .faq_section {
-  display: flex;
+  /* display: flex;
   gap: 80px;
-  justify-content: center;
+  align-items: center;
+   */
 }
 .faq_left {
   width: 480px;
@@ -305,8 +303,8 @@ section {
   margin-top: 120px;
 }
 .faq_img {
-  width: 480px;
-  height: 500px;
+  /* width: 480px;
+  height: 500px; */
   border-radius: 24px;
   margin-top: 30px;
   -webkit-border-radius: 24px;
@@ -343,8 +341,8 @@ section {
   padding: 18px 0;
 }
 .qr_code img {
-  height: 120px;
-  width: 120px;
+  /* height: 120px;
+  width: 120px; */
   cursor: pointer;
 }
 .footer-logo img {
@@ -359,9 +357,7 @@ section {
   font-size: 16px;
 }
 .social_links a {
-  color: #000;
-  background-color: #ccc;
-  padding: 6px;
+  padding: 2px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -381,8 +377,8 @@ section {
 .bottom-row {
   display: flex;
   flex-wrap: nowrap;
-  gap: 8px;
-  margin-bottom: 8px;
+  gap: 15px;
+  margin-bottom: 14px;
   overflow-x: auto;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
@@ -397,7 +393,7 @@ section {
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 
 .image {
@@ -429,6 +425,7 @@ section {
   .instructions {
     display: flex;
     flex-direction: column;
+  
   }
   .testimonialss {
     display: flex;
@@ -623,6 +620,12 @@ section {
   }
   .faq_img {
     height: 445px;
+  }
+  .faq-a{
+    font-size: 12px;
+  }
+  .faq-q{
+    font-size: 14px;
   }
 }
 

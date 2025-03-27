@@ -1,9 +1,11 @@
+@import "@fontsource/inter";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "inter", sans-serif;
 }
 
 @layer utilities {

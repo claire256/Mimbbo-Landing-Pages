@@ -11,13 +11,13 @@ const services = [
 
 const ServicesOffered = () => {
   return (
-    <div className="p-6 bg-white rounded-xl service_card" data-aos="fade-left">
+    <div className="p-6 bg-white rounded-xl w-full service_card" data-aos="fade-left">
       <h3 className="mb-4 text-sm font-medium text-center service-text">What services do you offer?</h3>
       <div className="grid grid-cols-3 gap-4">
         {services.map((service, index) => (
           <div key={index} className="flex flex-col items-center">
             <div className="p-3 mb-2 rounded-full bg-accent inner_img">
-              <Image src={service.icon} alt={service.label} height={20} width={20} className="w-5 h-5 text-primary" />
+              <Image src={service.icon} alt={service.label} height={20} width={20} className="w-8 h-8 text-primary" />
             </div>
             <span className="text_service">{service.label}</span>
           </div>
