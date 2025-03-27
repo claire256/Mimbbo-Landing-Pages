@@ -7,6 +7,7 @@ import "../../../styles/landing-page.css"
 import Header from "../components/header";
 import HeroSection from "./components/client-hero-section";
 import DiscoverSection from "./components/discover-section";
+import ImageGrid from "./components/client-image-grid";
 
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <DiscoverSection/>
+        <ImageGrid/>
 
       </main>
     </div>

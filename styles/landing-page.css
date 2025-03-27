@@ -406,6 +406,11 @@ section {
   padding: 0 !important;
   margin-top: 50px;
 }
+.client-layout{
+  margin-top: 160px;
+  padding: 0 !important;
+
+}
 
 .footer-sec {
   padding: 50px 0;
