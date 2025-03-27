@@ -8,6 +8,7 @@ import Header from "../components/header";
 import HeroSection from "./components/client-hero-section";
 import DiscoverSection from "./components/discover-section";
 import ImageGrid from "./components/client-image-grid";
+import HowItWorks from "./components/client-how-it-works";
 
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
         <HeroSection />
         <DiscoverSection/>
         <ImageGrid/>
+        <HowItWorks/>
 
       </main>
     </div>

@@ -139,6 +139,15 @@ section {
   width: 467px;
   
 }
+.needed_card {
+  height: 530px;
+  padding: 32px;
+  border-radius: 18px !important;
+  width: 600px;
+}
+.post{
+  background-color: #FA98F1;
+}
 .text_service {
   font-size: 16px;
   font-weight: 500;
