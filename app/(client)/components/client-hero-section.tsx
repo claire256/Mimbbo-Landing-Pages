@@ -21,7 +21,7 @@ const HeroSection = () => {
       </p>
       <div className="pt-16 mt-3">
       <Link
-        href={signupUrl}
+        href="./business"
         target="_blank"
         rel="noopener noreferrer"
       >

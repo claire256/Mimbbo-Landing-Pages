@@ -11,7 +11,7 @@ import RevenueStream from "./components/revenue-stream";
 import HowItWorks from "./components/how-it-works";
 import WhyJoin from "./components/why-join";
 import Testimonials from "./components/testimonials";
-import FAQ from "./components/faq";
+import FAQ from "./components/business-faqs";
 import CTA from "./components/cta";
 import Footer from "./components/footer";
 
