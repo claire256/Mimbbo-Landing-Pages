@@ -5,20 +5,20 @@ import ServicesNeeded from "./services-needed";
 const steps = [
   {
     step: "1.",
-    title: "Create your account",
+    title: "Pick the look and budget",
     description:
-      "Set up your profile showcasing your skills, services, and availability to start attracting clients",
+      "Set up your profile-showcase your skills, services, and availability to start attracting beauty gigs",
   },
   {
     step: "2.",
-    title: "Activate Mimbbo Pay",
-    description: " Get paid fast and securely for every gig you complete",
+    title: "Post it on marketplace",
+    description: "",
   },
   {
     step: "3.",
-    title: "Start Taking Gigs",
+    title: "Review proposals",
     description:
-      "Browse opportunities, apply for gigs, and start earning on your terms!",
+      "",
   },
 ];
 
