@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "../../styles/landing-page.css"
+import "../../../styles/landing-page.css"
 import EarnSection from "./components/earn-section"
 import Header from "./components/header";
 import HeroSection from "./components/hero-section";
