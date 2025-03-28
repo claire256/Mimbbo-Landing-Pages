@@ -10,6 +10,9 @@ import DiscoverSection from "./components/discover-section";
 import ImageGrid from "./components/client-image-grid";
 import HowItWorks from "./components/client-how-it-works";
 import WhyJoin from "./components/client-why-join";
+import FAQ from "./components/client-faqs";
+import CTA from "../components/cta";
+import Footer from "../components/footer";
 
 
 export default function Home() {
@@ -33,8 +36,10 @@ export default function Home() {
         <ImageGrid/>
         <HowItWorks/>
         <WhyJoin/>
-
+        <FAQ/>
+        <CTA/>
       </main>
+      <Footer/>
     </div>
   )
 }
