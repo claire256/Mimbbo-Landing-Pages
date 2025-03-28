@@ -5,22 +5,22 @@ const WhyJoin = () => (
     <h2 className="text-2xl font-semibold pt-16 theme-title">
       Why Join Mimbbo?
     </h2>
-    <div className="grid gap-6 pt-14 lg:grid-cols-2 xl:grid-cols-3 md:grid-cols-2 card_div">
+    <div className="grid gap-6 pt-14 lg:grid-cols-2 xl:grid-cols-3 md:grid-cols-2">
       {[
         {
-          src: "/marketing.png",
-          title: "Less marketing",
-          desc: "Clients post service requests; you pick what works for you. No need to chase them.",
+          src: "/Group.png",
+          title: "More convenient",
+          desc: "Enjoy the freedom to choose pros that match your budget and timing.",
         },
         {
           src: "/dollar.png",
-          title: "It's Free",
-          desc: "No fees, no cuts—join free and keep every dollar you earn.",
+          title: "Budget friendly",
+          desc: "Set your budget upfront and receive offers from beauty pros who match your price range.",
         },
         {
           src: "/time.png",
-          title: "Work when you want",
-          desc: "Pick them up on your schedule—no commitments , no pressure.",
+          title: "Save time",
+          desc: "Get quick replies from local beauty pros without the back-and-forth messaging.",
         },
       ].map((item, index) => (
         <div
