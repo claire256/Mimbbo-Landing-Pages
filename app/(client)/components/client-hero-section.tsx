@@ -14,19 +14,19 @@ const HeroSection = () => {
       data-aos="fade-up"
     >
       <h1 className=" font-bold tracking-tight banner_text">
-        Find Your Next <br /> Beauty Gig Here
+        Get matched with beauty <br /> Pros near you in minutes
       </h1>
       <p className="mt-4 text-sm text-dark md:text-base banner-p">
-        Join thousands of beauty pros who have found gigs on Mimbbo in 3 minutes
+        Simplify your search-post your beauty needs, set your budget, and let offers roll in
       </p>
       <div className="pt-16 mt-3">
       <Link
-        href={signupUrl}
+        href="./business"
         target="_blank"
         rel="noopener noreferrer"
       >
         <Button className="px-6 py-2 mt-6 text-white rounded-md theme-btn">
-          Join as a client
+          Join as a Pro
         </Button>
       </Link>
       <p className="mt-2 text-xs text-dark alrdy">

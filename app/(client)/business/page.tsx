@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "../../styles/landing-page.css"
+import "../../../styles/landing-page.css"
 import EarnSection from "./components/earn-section"
 import Header from "./components/header";
 import HeroSection from "./components/hero-section";
@@ -11,7 +11,7 @@ import RevenueStream from "./components/revenue-stream";
 import HowItWorks from "./components/how-it-works";
 import WhyJoin from "./components/why-join";
 import Testimonials from "./components/testimonials";
-import FAQ from "./components/faq";
+import FAQ from "./components/business-faqs";
 import CTA from "./components/cta";
 import Footer from "./components/footer";
 

@@ -10,7 +10,6 @@ body {
 }
 main {
   background-color: #f1ede5;
-
 }
 
 .logo {
@@ -27,6 +26,7 @@ main {
   font-size: 64px;
   font-weight: 700;
   color: 11eE1E;
+  font-family: inter;
   line-height: 75px;
 }
 .banner-p {
@@ -46,6 +46,7 @@ main {
 .theme-title {
   color: #106f47;
   font-size: 48px;
+  font-family: inter;
   font-weight: bold;
   text-align: center;
   line-height: 56px;
@@ -107,7 +108,6 @@ section {
   -moz-border-radius: 24px;
   -ms-border-radius: 24px;
   -o-border-radius: 24px;
-
 }
 
 .salon-owners-card {
@@ -115,8 +115,6 @@ section {
 }
 .instructions {
   margin-top: 70px;
-
-
 }
 
 .service-text {
@@ -138,6 +136,15 @@ section {
   border-radius: 18px !important;
   width: 467px;
   
+}
+.needed_card {
+  height: auto;
+  padding: 32px;
+  border-radius: 18px !important;
+  width: 600px;
+}
+.post{
+  background-color: #FA98F1;
 }
 .text_service {
   font-size: 16px;
@@ -286,10 +293,7 @@ section {
 }
 
 .faq_section {
-  /* display: flex;
-  gap: 80px;
-  align-items: center;
-   */
+
 }
 .faq_left {
   width: 480px;
@@ -303,8 +307,6 @@ section {
   margin-top: 120px;
 }
 .faq_img {
-  /* width: 480px;
-  height: 500px; */
   border-radius: 24px;
   margin-top: 30px;
   -webkit-border-radius: 24px;
@@ -341,8 +343,6 @@ section {
   padding: 18px 0;
 }
 .qr_code img {
-  /* height: 120px;
-  width: 120px; */
   cursor: pointer;
 }
 .footer-logo img {
@@ -405,6 +405,11 @@ section {
 .grid-layout {
   padding: 0 !important;
   margin-top: 50px;
+}
+.client-layout{
+  margin-top: 160px;
+  padding: 0 !important;
+
 }
 
 .footer-sec {
@@ -554,9 +559,51 @@ section {
   .banner_text {
     font-size: 38px;
     font-weight: 700;
-    color: 11eE1E;
     line-height: 46px;
   }
+  .images_div{
+    width:160px;
+    height: 290px;
+
+ }
+ .images_div p{
+     font-size: 13px;
+ }
+ .images_div button{
+   width:144px;
+   height: 28px;
+   font-size: 15px;
+
+ }
+ .natural{
+   width: 150px
+ }
+ .needed_card{
+  width: auto;
+ }
+ .vector_div{
+  display: flex;
+  gap: 4px;
+}
+.display_vector{
+  display: flex;
+ gap: 1px;
+}
+.display_vector2{
+  display: flex;
+ gap: 5px;
+}
+.display_vector2 p{
+  font-size: 13px;
+}
+ .makeup{
+  font-size: 9px;
+  width: 48px;
+  height: 20px;
+ }
+ .flex_images{
+  gap:15px;
+ }
 }
 
 @media only screen and (max-width: 475px) {
@@ -602,6 +649,7 @@ section {
   .service_card {
     height: 350px;
   }
+
   .scroll-container {
     width: 400px;
   }
