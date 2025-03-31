@@ -31,7 +31,7 @@ const faqs = [
           </li>
           <li>
             Verified Contact Info: We check email and phone numbers before they
-            can post gigs..
+            can post gigs.
           </li>
           <li>
             Location Transparency: You'll know the type of location (home,
@@ -72,7 +72,21 @@ const FAQ = () => {
 
   return (
     <section className="faqs" data-aos="fade-up">
+           <div className="grid lg:grid-cols-1 xl:grid-cols-2 gap-8 lg:place-items-center section-padding faq_section">
+              <div className="faq_left">
+                <h2 className="text-2xl font-semibold text-left theme-title">Frequently Asked Questions</h2>
+                <div className="mt-6 faq_img">
+                  <Image
+                    src="/faq.png"
+                    alt="FAQ Image"
+                    width={300}
+                    height={400}
+                    className="object-cover rounded-xl"
+                  />
+                </div>
+              </div>
       <FaqsComp faqs={faqs}/>
+      </div>
     </section>
   );
 };

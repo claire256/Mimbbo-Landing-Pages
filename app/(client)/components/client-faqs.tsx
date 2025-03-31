@@ -10,19 +10,50 @@ const faqs = [
   },
   {
     q: "Does this mean the pro comes to me?",
-    a: "",
+    a: "Only if you request it.  When posting a request, you’ll have the option to choose your preferred location, and providers can choose whether to accept.",
   },
   {
     q: "Is Mimbbo free to use?",
-    a: "",
+    a: (
+      <>
+      Yes, a travel fee applies for at-home services, and 100% of it goes to your beauty pro. The fee is based on distance and shown before you book:
+      <ul className="list-disc list-inside mt-2 space-y-1">
+        <li>
+        0–5 miles → $15
+        </li>
+        <li>
+        6–10 miles → $25
+        </li>
+        <li>
+        11–15 miles → $35
+        </li>
+        <li>
+        16–20 miles → $45
+        </li>
+        <li>
+        21+ miles → $60+
+        </li>
+     </ul>
+      </>
+    ),
   },
   {
     q: "Is Mimbbo available everywhere?",
-    a: "We’re currently focused on select markets, but we’re expanding quickly! Join the platform to get notified when new opportunities are available in your area.",
+    a: "We’re currently focused on select cities, starting with Atlanta. We’re expanding quickly, so sign up to get notified when we launch in your area.",
   },
   {
     q: "How do I get started?",
-    a: "Sign up on Mimbbo, complete your profile, and start exploring available beauty gigs. You can apply for marketplace jobs, post promotions, and connect with new clients right away!",
+    a: (
+      <>
+      It’s simple:
+      <ol className="list-decimal list-inside mt-2 space-y-1">
+        <li>Create a free account.</li>
+        <li>Post your beauty need (what you’re looking for, date, budget, etc.).</li>
+        <li>Get matched with providers who fit your request.</li>
+        <li>Choose who you’d like to book with and finalize the details.</li>
+      </ol>
+      </>
+    ),
   },
 ];
 

@@ -22,7 +22,6 @@ const HeroSection = () => {
       <div className="pt-16 mt-3">
       <Link
         href="./business"
-        target="_blank"
         rel="noopener noreferrer"
       >
         <Button className="px-6 py-2 mt-6 text-white rounded-md theme-btn">

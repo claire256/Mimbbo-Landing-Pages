@@ -5,20 +5,20 @@ import ServicesNeeded from "./services-needed";
 const steps = [
   {
     step: "1.",
-    title: "Pick the look and budget",
+    title: "Post your beauty need",
     description:
-      "Set up your profile-showcase your skills, services, and availability to start attracting beauty gigs",
+      "Tell us what you’re looking for, including the service, your budget, timing, and preferred location.",
   },
   {
     step: "2.",
-    title: "Post it on marketplace",
-    description: "",
+    title: "We'll match you with providers",
+    description: "Professionals in your area will review your request and send offers based on what you need.",
   },
   {
     step: "3.",
-    title: "Review proposals",
+    title: "Choose your preffered pro",
     description:
-      "",
+      "Browse your offers, compare profiles, and select the provider that feels right for you.",
   },
 ];
 

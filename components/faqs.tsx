@@ -23,8 +23,8 @@ const FaqsComp = ({ faqs}: FAQProps) => {
   };
 
   return (
-    <section className="faqs" data-aos="fade-up">
-        <div className="w-full p-5">
+    <section className="faqs w-full" data-aos="fade-up">
+        <div className="w-full">
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <div key={index} className="border-b border-gray-300 pb-3">
