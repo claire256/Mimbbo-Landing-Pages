@@ -14,12 +14,11 @@ type FAQProps = {
 };
 
 const FaqsComp = ({ faqs}: FAQProps) => {
-  const [openIndices, setOpenIndices] = useState<number[]>([]);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
-    setOpenIndices((prev) =>
-      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
-    );
+    setOpenIndex(openIndex === index ? null : index);
+
   };
 
   return (
@@ -35,9 +34,9 @@ const FaqsComp = ({ faqs}: FAQProps) => {
                   <span className="faq-q">
                     {index + 1}. {faq.q}
                   </span>
-                  {openIndices.includes(index) ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                  {openIndex === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                 </button>
-                {openIndices.includes(index) && (
+                {openIndex === index && (
                   <div className="text-dark text-[15px] faq-a">{faq.a}</div>
                 )}
               </div>
