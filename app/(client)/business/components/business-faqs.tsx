@@ -31,7 +31,7 @@ const faqs = [
           </li>
           <li>
             Verified Contact Info: We check email and phone numbers before they
-            can post gigs..
+            can post gigs.
           </li>
           <li>
             Location Transparency: You'll know the type of location (home,
