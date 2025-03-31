@@ -7,7 +7,7 @@ const DiscoverSection = () => {
   return (
     <section className="px-6 pt-10 py-16 md:px-12 section-padding" data-aos="fade-up">
       <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl font-bold md:text-4xl theme-title">Discover Fresh Ideas and Get <br/> Inspired</h2>
+        <h2 className="text-3xl font-bold md:text-4xl theme-title">Find ideas for your next look</h2>
         <p className="pt-4 text-lg text-dark paragraph">
           Find looks you love and save them to your moonboard <br/> for your next beauty appointment or DIY project.
         </p>
