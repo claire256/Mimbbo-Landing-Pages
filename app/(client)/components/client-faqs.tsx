@@ -6,7 +6,7 @@ import FaqsComp from "@/components/faqs";
 const faqs = [
   {
     q: "What is Mimbbo?",
-    a: "Mimbbo is a beauty marketplace that connects freelancers, side-giggers, and salon owners with paid beauty gigs near them.",
+    a: "Mimbbo is a beauty marketplace that makes it easy to find local beauty pros that fit your budget.",
   },
   {
     q: "Does this mean the pro comes to me?",

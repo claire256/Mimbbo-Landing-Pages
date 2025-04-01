@@ -16,7 +16,7 @@ const steps = [
   },
   {
     step: "3.",
-    title: "Choose your preffered pro",
+    title: "Choose your preferred pro",
     description:
       "Browse your offers, compare profiles, and select the provider that feels right for you.",
   },

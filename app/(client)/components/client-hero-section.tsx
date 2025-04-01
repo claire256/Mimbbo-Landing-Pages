@@ -14,10 +14,10 @@ const HeroSection = () => {
       data-aos="fade-up"
     >
       <h1 className=" font-bold tracking-tight banner_text">
-        Get matched with beauty <br /> Pros near you in minutes
+        Get matched with beauty <br /> pros near you in minutes
       </h1>
       <p className="mt-4 text-sm text-dark md:text-base banner-p">
-        Simplify your search-post your beauty needs, set your budget, and let offers roll in
+        Simplify your search. Post your beauty needs. Set your budget and let offers roll in.
       </p>
       <div className="pt-16 mt-3">
       <Link
