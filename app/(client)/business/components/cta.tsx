@@ -19,7 +19,7 @@ const CTA = () => {
           </Button>
         </Link>
         <div className="">
-          <p className="text-xs download">Download the Mimmbbo App</p>
+          <p className="text-xs download">Download the Mimbbo App</p>
           <div className="flex gap-4 justify-center qr_code">
             <Link href={"https://apps.apple.com/us/app/mimbbo/id1602788926"} target="_blank" rel="noopener noreferrer">
               <Image
