@@ -4,15 +4,21 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
-const Header = () => {
+interface PageProps{
+  utm_source: string
+}
+const Header = ({utm_source}: PageProps) => {
   const [link, setLink] = useState<string>("");
 
   const webUrl = process.env.NEXT_PUBLIC_MIMBBO_WEB_URL || "";
-  const loginUrl = `${webUrl}/?auth=login`;
+
+  const loginUrl = `${webUrl}/?auth=login&utm_source=${utm_source}`;
+  const downloadUrl = `${webUrl}/?utm_source=${utm_source}`;
 
   useEffect(() => {
-    const userAgent = navigator.userAgent|| navigator.vendor || (window as any).opera;
-    
+    const userAgent =
+      navigator.userAgent || navigator.vendor || (window as any).opera;
+
     if (/android/i.test(userAgent)) {
       setLink("https://play.google.com/store/apps/details?id=com.mimbbo.app");
     } else if (
@@ -21,15 +27,15 @@ const Header = () => {
     ) {
       setLink("https://apps.apple.com/us/app/mimbbo/id1602788926");
     } else {
-      setLink(webUrl);
+      setLink(downloadUrl);
     }
   }, []);
-
+  
   return (
     <header className="sticky top-0 z-50 flex items-center justify-between h-16 px-8 border-b section-padding navbar bg-secondary md:px-8">
       <div className="flex items-center">
         <Link
-          href={webUrl}
+          href={downloadUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center"
@@ -44,15 +50,21 @@ const Header = () => {
         </Link>
       </div>
       <div className="flex items-center gap-4">
-      {link && (
-        <Link href={link} target="_blank" rel="noopener noreferrer" className="text-sm underline">Download the app</Link>
-      )}
-          <Link href={loginUrl} target="_blank" rel="noopener noreferrer">
-            <Button size="sm" className="h-8 text-white rounded-md main_btn">
-              Sign In
-            </Button>
+        {link && (
+          <Link
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm underline"
+          >
+            Download the app
           </Link>
-     
+        )}
+        <Link href={loginUrl} target="_blank" rel="noopener noreferrer">
+          <Button size="sm" className="h-8 text-white rounded-md main_btn">
+            Sign In
+          </Button>
+        </Link>
       </div>
     </header>
   );

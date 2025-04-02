@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      <Header utm_source='customer_landing_page' />
 
       <main className="flex-1">
         <HeroSection />
@@ -37,7 +37,7 @@ export default function Home() {
         <HowItWorks/>
         <WhyJoin/>
         <FAQ/>
-        <CTA/>
+        <CTA utm_source='customer_landing_page'/>
       </main>
       <Footer/>
     </div>

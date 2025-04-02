@@ -29,7 +29,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      <Header utm_source="mimbboss_landing_page" />
 
       <main className="flex-1">
         <HeroSection />
@@ -39,7 +39,7 @@ export default function Home() {
         <WhyJoin />
         <Testimonials />
         <FAQ />
-        <CTA />
+        <CTA utm_source="mimbboss_landing_page" />
       </main>
 
       <Footer />
