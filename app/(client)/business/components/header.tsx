@@ -4,20 +4,16 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
-const Header = () => {
+interface PageProps{
+  utm_source: string
+}
+const Header = ({utm_source}: PageProps) => {
   const [link, setLink] = useState<string>("");
-  const [utmSource, setUtmSource] = useState<string>("");
 
   const webUrl = process.env.NEXT_PUBLIC_MIMBBO_WEB_URL || "";
 
-  useEffect(() => {
-    const searchParams = new URLSearchParams(window.location.search);
-    const utm = searchParams.get("utm_source") || "customer_landing_page";
-    setUtmSource(utm);
-  }, []);
-
-  const loginUrl = `${webUrl}/?auth=login&utm_source=${utmSource}`;
-  const downloadUrl = `${webUrl}/?utm_source=customer_landing_page`;
+  const loginUrl = `${webUrl}/?auth=login&utm_source=${utm_source}`;
+  const downloadUrl = `${webUrl}/?utm_source=${utm_source}`;
 
   useEffect(() => {
     const userAgent =
@@ -39,7 +35,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 flex items-center justify-between h-16 px-8 border-b section-padding navbar bg-secondary md:px-8">
       <div className="flex items-center">
         <Link
-          href={webUrl}
+          href={downloadUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center"

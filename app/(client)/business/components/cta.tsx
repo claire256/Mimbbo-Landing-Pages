@@ -3,18 +3,13 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-const CTA = () => {
-  const [utmSource, setUtmSource] = useState<string>("");
-
+interface PageProps{
+  utm_source: string
+}
+const CTA = ({utm_source}: PageProps) => {
   const webUrl = process.env.NEXT_PUBLIC_MIMBBO_WEB_URL || "";
 
-  useEffect(() => {
-    const searchParams = new URLSearchParams(window.location.search);
-    const utm = searchParams.get("utm_source") || "customer_landing_page";
-    setUtmSource(utm);
-  }, []);
-
-  const signupUrl = `${webUrl}/?auth=signup&utm_source=${utmSource}`;
+  const signupUrl = `${webUrl}/?auth=signup&utm_source=${utm_source}`;
 
   return (
     <section className="mt-16 bg-[#6d1d14] py-12 text-white">

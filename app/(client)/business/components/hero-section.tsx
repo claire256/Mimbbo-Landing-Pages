@@ -4,17 +4,8 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 const HeroSection = () => {
-  const [utmSource, setUtmSource] = useState<string>("");
-
   const webUrl = process.env.NEXT_PUBLIC_MIMBBO_WEB_URL || "";
-
-  useEffect(() => {
-    const searchParams = new URLSearchParams(window.location.search);
-    const utm = searchParams.get("utm_source") || "customer_landing_page";
-    setUtmSource(utm);
-  }, []);
-
-  const loginUrl = `${webUrl}/?auth=login&utm_source=${utmSource}`;
+  const loginUrl = `${webUrl}/?auth=login&utm_source=mimbboss_landing_page`;
 
   return (
     <section
