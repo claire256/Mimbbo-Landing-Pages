@@ -1,5 +1,6 @@
 "use client";
 
+import {Amplify} from "aws-amplify";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -15,6 +16,11 @@ import FAQ from "./components/business-faqs";
 import CTA from "./components/cta";
 import Footer from "./components/footer";
 
+Amplify.configure({Analytics:{
+  Pinpoint:{
+  appId: "",
+  region: "us-east-1",
+},}})
 
 export default function Home() {
 

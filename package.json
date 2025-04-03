@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-amplify/analytics": "^7.0.77",
     "@fontsource/inter": "^5.2.5",
     "@hookform/resolvers": "^3.9.1",
     "@radix-ui/react-accordion": "latest",
@@ -42,6 +43,7 @@
     "@types/react-dom": "latest",
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.20",
+    "aws-amplify": "^6.14.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "1.0.4",

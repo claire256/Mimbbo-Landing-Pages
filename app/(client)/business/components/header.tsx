@@ -1,4 +1,6 @@
 "use client";
+
+import { record } from 'aws-amplify/analytics';
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -7,13 +9,27 @@ import { useEffect, useState } from "react";
 interface PageProps{
   utm_source: string
 }
+
 const Header = ({utm_source}: PageProps) => {
   const [link, setLink] = useState<string>("");
 
   const webUrl = process.env.NEXT_PUBLIC_MIMBBO_WEB_URL || "";
 
   const loginUrl = `${webUrl}/?auth=login&utm_source=${utm_source}`;
-  const downloadUrl = `${webUrl}/?utm_source=${utm_source}`;
+  const downloadUrl = `${webUrl}/?utm_source=${utm_source}`; 
+
+
+const trackClick = async(eventName: string)=>{
+  try{
+ await record({
+   name: eventName,
+   attributes: {page: `${utm_source}`}
+  })
+  console.log(`tracked event:${eventName}`)
+}catch(error){
+  console.log("error tracking event:", error)
+}
+}
 
   useEffect(() => {
     const userAgent =
@@ -60,7 +76,7 @@ const Header = ({utm_source}: PageProps) => {
             Download the app
           </Link>
         )}
-        <Link href={loginUrl} target="_blank" rel="noopener noreferrer">
+        <Link href={loginUrl} target="_blank" rel="noopener noreferrer" onClick={()=> trackClick('LoginClick')}>
           <Button size="sm" className="h-8 text-white rounded-md main_btn">
             Sign In
           </Button>
