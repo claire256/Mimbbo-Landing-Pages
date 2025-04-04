@@ -18,7 +18,6 @@ import {
   platform,
   screenSize,
   timezone,
-  userDetails,
 } from './pinpointParams';
 
 export { pinpointAppId } from '../Config/amplify-auth-config';
@@ -85,19 +84,3 @@ export const pinPointOptions = async (): Promise<UpdateEndpointCommandInput> => 
   };
 };
 
-// Example function to update endpoint in Pinpoint
-export const updatePinpointEndpoint = async (
-  endpointOptions: UpdateEndpointCommandInput
-) => {
-  try {
-    const command = new UpdateEndpointCommand({
-      ApplicationId: pinpointAppId,
-      EndpointRequest: endpointOptions.EndpointRequest,
-      EndpointId: endpointOptions.EndpointId,
-    });
-    const data = await pinpoint.send(command);
-    console.log('Endpoint updated successfully:', data);
-  } catch (error) {
-    console.error('Error updating Pinpoint endpoint:', error);
-  }
-};

@@ -30,19 +30,8 @@ const auth_object = {
 const getAPIEndpoints = (env) => {
   env === 'prod' ? (env = '') : (env = `.${env}`);
   const obj = {
-    marketplace: `https://marketplace.api${env}.mimbbo.com`,
-    availability: `https://availability.api${env}.mimbbo.com`,
-    campaigns: `https://campaigns.api${env}.mimbbo.com`,
-    shopping: `https://db.api${env}.mimbbo.com`,
-    shoppingv2: `https://shop.api${env}.mimbbo.com`,
-    'rest-events': `https://rest-events.api${env}.mimbbo.com`,
-    'url-signer': `https://sign.api${env}.mimbbo.com`,
-    tags: `https://tags.api${env}.mimbbo.com`,
     account: `https://account.api${env}.mimbbo.com`,
-    pay: `https://pay.api${env}.mimbbo.com`,
-    stripe: 'https://api.stripe.com',
-    reviews: `https://reviews.api${env}.mimbbo.com`,
-    notifications: `https://notifications.api${env}.mimbbo.com`,
+  
   };
 
   return obj;
@@ -88,7 +77,6 @@ const Config = {
     Config.itunesAppId = appEnv === 'prod' ? '1602788926' : `1638154372`;
     Config.assets = getAssetEndpoints(appEnv);
     Config.env = appEnv;
-    Config.stripePublishableKey = stripePublishableKey;
     Config.pinpointAppId = pinpointAppId;
     Config.slug = slug;
   };
