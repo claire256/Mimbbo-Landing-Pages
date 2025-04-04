@@ -338,37 +338,6 @@ export const customQueries = ({ query = {} }) => {
   return filteredQuery;
 };
 
-/**
- * Retrieves a shortened URL from the specified long URL.
- *
- * @param {string} url - The long URL to be shortened
- * @return {Promise<string>} The shortened URL
- */
-
-export const getShortenedUrl = async ({ url, queryParams = {}, ttl = 90 }) => {
-  const queryString = new URLSearchParams(queryParams).toString();
-  let destination = '';
-
-  if (queryString) {
-    destination = `${url}?${queryString}`;
-  } else {
-    destination = url;
-  }
-
-  const apiName = 'url-signer';
-  const headers = await setHeaders();
-  const requestInfo = { headers, body: { destination, ttl } };
-  const path = '/shorten';
-
-  try {
-    const response = await API.post(apiName, path, requestInfo);
-
-    return response || {};
-  } catch (error) {
-    console.log(error);
-    sentryErrorHandler(error);
-  }
-};
 
 /**
  * Determines the media type based on the file extension of the provided URL.

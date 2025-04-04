@@ -66,27 +66,13 @@ export const endpointRequest = {
   EffectiveDate: effectiveDate,
   EndpointStatus: 'ACTIVE',
   OptOut: 'NONE',
-  User: {
-    UserAttributes: {
-      fname: [''],
-      lname: [''],
-      email: [''],
-      phone: [''],
-      isMimbboss: [''],
-    },
-  },
 };
 
 // Update the Address field once the address is fetched
 getAddress().then((address) => (endpointRequest.Address = address));
 
 // Function to get Pinpoint options for a user
-export const pinPointOptions = async ({
-  userId,
-}: {
-  userId: string;
-}): Promise<UpdateEndpointCommandInput> => {
-  const { isMimbboss, details } = await userDetails();
+export const pinPointOptions = async (): Promise<UpdateEndpointCommandInput> => {
   const Address = await getAddress();
 
   return {
@@ -94,20 +80,6 @@ export const pinPointOptions = async ({
     EndpointRequest: {
       ...endpointRequest,
       Address,
-      User: details
-        ? {
-            ...endpointRequest.User,
-            UserAttributes: {
-              fname: [details?.fname || ''],
-              lname: [details?.lname || ''],
-              email: [details?.email || ''],
-              phone: [details?.phone || ''],
-              profilePic: [details?.profilePic || ''],
-              isMimbboss: [isMimbboss ? 'true' : 'false'],
-            },
-            UserId: userId,
-          }
-        : undefined,
     },
     EndpointId: await endpointId(),
   };

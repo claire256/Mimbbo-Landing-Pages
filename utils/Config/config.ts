@@ -67,7 +67,7 @@ const Config = {
     analytics: {},
     stripePublishableKey: '',
     pinpointAppId: '',
-    appName: 'Mimbbo',
+    appName: 'Mimbbo Landing Page',
     slug: '',
   };
 

@@ -47,21 +47,6 @@ export const endpointId = async () => {
   }
 };
 
-export const userDetails = () => {
-  const userCookieData = getCookie('user') ?? '';
-  let user = null;
-
-  if (userCookieData !== '') {
-    user = JSON.parse(
-      (typeof userCookieData === 'string' && userCookieData) || ''
-    )?.user;
-  }
-
-  return {
-    isMimbboss: user?.pages?.length,
-    details: user,
-  };
-};
 
 export const randomString = () => {
   return (
