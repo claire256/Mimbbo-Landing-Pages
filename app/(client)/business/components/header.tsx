@@ -4,18 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-import { trackEvent } from '@/utils/pinpoint/pinpointEvent';
-interface PageProps{
-  utm_source: string
+import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
+interface PageProps {
+  utm_source: string;
 }
 
-const Header = ({utm_source}: PageProps) => {
+const Header = ({ utm_source }: PageProps) => {
   const [link, setLink] = useState<string>("");
 
   const webUrl = process.env.NEXT_PUBLIC_MIMBBO_WEB_URL || "";
 
   const loginUrl = `${webUrl}/?auth=login&utm_source=${utm_source}`;
-  const downloadUrl = `${webUrl}/?utm_source=${utm_source}`; 
+  const downloadUrl = `${webUrl}/?utm_source=${utm_source}`;
 
   useEffect(() => {
     const userAgent =
@@ -32,21 +32,20 @@ const Header = ({utm_source}: PageProps) => {
       setLink(downloadUrl);
     }
   }, []);
-  
-  const trackClick = async(eventName: string)=>{
-   
+
+  const trackClick = async (eventName: string) => {
     await trackEvent({
-     eventName,
-     params: {
-      attributes:{
-        buttonLocation: "header"
+      eventName,
+      params: {
+        attributes: {
+          buttonLocation: "header",
+        },
+        query: {
+          utm_source,
+        },
       },
-      query: {
-      utm_source,
-     },
-  }
-  })
-  }
+    });
+  };
 
   return (
     <header className="sticky top-0 z-50 flex items-center justify-between h-16 px-8 border-b section-padding navbar bg-secondary md:px-8">
@@ -69,7 +68,7 @@ const Header = ({utm_source}: PageProps) => {
       <div className="flex items-center gap-4">
         {link && (
           <Link
-           onClick={()=> trackClick('download Click')}
+            onClick={() => trackClick("download_click")}
             href={link}
             target="_blank"
             rel="noopener noreferrer"
@@ -78,11 +77,15 @@ const Header = ({utm_source}: PageProps) => {
             Download the app
           </Link>
         )}
-        <Link href={loginUrl} target="_blank" rel="noopener noreferrer"> 
-          <Button onClick={()=> trackClick('LoginClick')} size="sm" className="h-8 text-white rounded-md main_btn">
+        <Link href={loginUrl} target="_blank" rel="noopener noreferrer">
+          <Button
+            onClick={() => trackClick("login_click")}
+            size="sm"
+            className="h-8 text-white rounded-md main_btn"
+          >
             Sign In
           </Button>
-        </Link> 
+        </Link>
       </div>
     </header>
   );
