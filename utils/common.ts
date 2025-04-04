@@ -5,11 +5,8 @@ import moment from 'moment';
 import ngeohash from 'ngeohash';
 
 import getSymbolFromCurrency from 'currency-symbol-map';
-import { s3BucketUrl } from '../utils/constants/s3bucketurl';
 import { setHeaders } from './auth/auth';
 import { sentryErrorHandler } from './sentry/sentry';
-import { Promotion } from '../features/marketPlace/promotion';
-
 /**
  * Retrieves the currency symbol based on the provided currency code.
  *
@@ -31,15 +28,6 @@ export const updateStateObj = <T>(
   }));
 };
 
-export const getMediaUrl = (key: string) => {
-  if (!key) return null;
-
-  if (isValidURL(key)) {
-    return key;
-  }
-
-  return s3BucketUrl + key;
-};
 
 export const cleanItemType = (itemType: string) => {
   let result = itemType.replace('eye', '');
@@ -80,9 +68,6 @@ export const appEnv = process.env.NEXT_PUBLIC_APP_ENV || 'staging';
  * @param {string} key key to be used for s3 url
  * @returns {string} s3 url
  */
-export const generateS3Url = (key) => {
-  return s3BucketUrl + key;
-};
 
 /**
  * @description capitalizeFirstLetter is used to capitalize the first later of a given string
@@ -589,11 +574,6 @@ export const getTypeTheme = cva('theme', {
   },
 });
 
-export const isLastMinuteDeal = (
-  type: Promotion['details']['type'] | undefined
-) => {
-  return type === 'lastminute' || type === 'last_minute';
-};
 
 export const formatPrice = (price: number | string) => {
   let formattedPrice = price;

@@ -69,6 +69,7 @@ const Header = ({utm_source}: PageProps) => {
       <div className="flex items-center gap-4">
         {link && (
           <Link
+           onClick={()=> trackClick('download Click')}
             href={link}
             target="_blank"
             rel="noopener noreferrer"
