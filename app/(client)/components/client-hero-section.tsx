@@ -2,10 +2,30 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import { trackEvent } from '@/utils/pinpoint/pinpointEvent';
+interface PageProps{
+  utm_source: string
+}
 
-const HeroSection = () => {
+const HeroSection = ({utm_source}: PageProps) => {
   const webUrl = process.env.NEXT_PUBLIC_MIMBBO_WEB_URL || "";
   const loginUrl = `${webUrl}/?auth=login&utm_source=customer_landing_page`;
+
+  const trackClick = async(eventName: string)=>{
+   
+    await trackEvent({
+     eventName,
+     params: {
+      attributes:{
+        buttonLocation: "header"
+      },
+      query: {
+      utm_source,
+     },
+  }
+  })
+
+  }
 
   return (
     <section

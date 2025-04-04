@@ -15,12 +15,23 @@ import Testimonials from "./components/testimonials";
 import FAQ from "./components/business-faqs";
 import CTA from "./components/cta";
 import Footer from "./components/footer";
+import { apiConfig, auth_object } from '../../../utils/Config/amplify-auth-config';
 
-Amplify.configure({Analytics:{
-  Pinpoint:{
-  appId: "",
-  region: "us-east-1",
-},}})
+// const pinpointAppId =
+//     // appEnv === 'prod'
+//       ? '87c515e341cf4ca4885178343dbd7661'
+//       : 'd4b2fb4e0e584eb6af8da102065ce8af';
+
+// Amplify.configure({
+//   Analytics: {
+//     Pinpoint: {
+//       appId: 'd4b2fb4e0e584eb6af8da102065ce8af',
+//       region: 'us-east-1', // Replace with your region
+ 
+//     }
+//   }
+// });
+Amplify.configure({ Auth: auth_object, API: apiConfig });
 
 export default function Home() {
 
@@ -38,7 +49,7 @@ export default function Home() {
       <Header utm_source="mimbboss_landing_page" />
 
       <main className="flex-1">
-        <HeroSection />
+        <HeroSection utm_source="mimboss_landing_page" />
         <RevenueStream />
         <EarnSection />
         <HowItWorks />

@@ -1,0 +1,131 @@
+import { auth_object, pinpointAppId } from '../Config/amplify-auth-config';
+import {
+  PinpointClient,
+  UpdateEndpointCommand,
+  UpdateEndpointCommandInput,
+} from '@aws-sdk/client-pinpoint';
+import { fromCognitoIdentityPool } from '@aws-sdk/credential-provider-cognito-identity';
+import {
+  appId,
+  appName,
+  appVersion,
+  effectiveDate,
+  endpointId,
+  locale,
+  make,
+  model,
+  osVersion,
+  platform,
+  screenSize,
+  timezone,
+  userDetails,
+} from './pinpointParams';
+
+export { pinpointAppId } from '../Config/amplify-auth-config';
+
+const region = auth_object.region;
+const credentials = fromCognitoIdentityPool({
+  clientConfig: { region },
+  identityPoolId: auth_object.IdentityPoolId,
+});                            
+
+export const pinpoint = new PinpointClient({
+  region,
+  credentials,
+});
+
+export const opts = {
+  ApplicationId: pinpointAppId,
+};
+
+// Helper to get address from endpoint
+export const getAddress = async () => {
+  const id = await endpointId();
+  return `address_${id}`;
+};
+
+// Endpoint request configuration
+export const endpointRequest = {
+  ChannelType: 'EMAIL',
+  Address: '',
+  Attributes: {
+    screenSize: [screenSize],
+    appId: [appId],
+    appName: [appName],
+    appVersion: [appVersion],
+  },
+  Demographic: {
+    AppVersion: appVersion,
+    Locale: locale,
+    Make: make,
+    Model: model,
+    Platform: platform,
+    PlatformVersion: osVersion,
+    Timezone: timezone,
+  },
+  EffectiveDate: effectiveDate,
+  EndpointStatus: 'ACTIVE',
+  OptOut: 'NONE',
+  User: {
+    UserAttributes: {
+      fname: [''],
+      lname: [''],
+      email: [''],
+      phone: [''],
+      isMimbboss: [''],
+    },
+  },
+};
+
+// Update the Address field once the address is fetched
+getAddress().then((address) => (endpointRequest.Address = address));
+
+// Function to get Pinpoint options for a user
+export const pinPointOptions = async ({
+  userId,
+}: {
+  userId: string;
+}): Promise<UpdateEndpointCommandInput> => {
+  const { isMimbboss, details } = await userDetails();
+  const Address = await getAddress();
+
+  return {
+    ...opts,
+    EndpointRequest: {
+      ...endpointRequest,
+      Address,
+      User: details
+        ? {
+            ...endpointRequest.User,
+            UserAttributes: {
+              fname: [details?.fname || ''],
+              lname: [details?.lname || ''],
+              email: [details?.email || ''],
+              phone: [details?.phone || ''],
+              profilePic: [details?.profilePic || ''],
+              isMimbboss: [isMimbboss ? 'true' : 'false'],
+            },
+            UserId: userId,
+          }
+        : undefined,
+    },
+    EndpointId: await endpointId(),
+  };
+};
+
+// Example function to update endpoint in Pinpoint
+export const updatePinpointEndpoint = async (
+  endpointOptions: UpdateEndpointCommandInput
+) => {
+  try {
+    const command = new UpdateEndpointCommand({
+      ApplicationId: pinpointAppId,
+      EndpointRequest: endpointOptions.EndpointRequest,
+      EndpointId: endpointOptions.EndpointId,
+    });
+    const data = await pinpoint.send(command);
+    console.log('Endpoint updated successfully:', data);
+  } catch (error) {
+    console.error('Error updating Pinpoint endpoint:', error);
+  }
+};

@@ -1,5 +1,6 @@
 "use client";
 
+import {Amplify} from "aws-amplify";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -13,7 +14,9 @@ import WhyJoin from "./components/client-why-join";
 import FAQ from "./components/client-faqs";
 import CTA from "./business/components/cta";
 import Footer from "./business/components/footer";
+import { apiConfig, auth_object } from '../../utils/Config/amplify-auth-config';
 
+Amplify.configure({ Auth: auth_object, API: apiConfig });
 
 export default function Home() {
 
@@ -31,7 +34,7 @@ export default function Home() {
       <Header utm_source='customer_landing_page' />
 
       <main className="flex-1">
-        <HeroSection />
+        <HeroSection utm_source="customer_landing_page"  />
         <DiscoverSection/>
         <ImageGrid/>
         <HowItWorks/>
