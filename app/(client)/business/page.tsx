@@ -17,21 +17,7 @@ import CTA from "./components/cta";
 import Footer from "./components/footer";
 import { apiConfig, auth_object } from '../../../utils/Config/amplify-auth-config';
 
-// const pinpointAppId =
-//     // appEnv === 'prod'
-//       ? '87c515e341cf4ca4885178343dbd7661'
-//       : 'd4b2fb4e0e584eb6af8da102065ce8af';
-
-// Amplify.configure({
-//   Analytics: {
-//     Pinpoint: {
-//       appId: 'd4b2fb4e0e584eb6af8da102065ce8af',
-//       region: 'us-east-1', // Replace with your region
- 
-//     }
-//   }
-// });
-Amplify.configure({ Auth: auth_object, API: apiConfig });
+Amplify.configure({ Auth: auth_object, API: apiConfig , ssr: true});
 
 export default function Home() {
 

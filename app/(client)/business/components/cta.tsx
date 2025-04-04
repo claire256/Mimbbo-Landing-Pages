@@ -34,7 +34,7 @@ const CTA = ({utm_source}: PageProps) => {
           Ready to get started?
         </h2>
         <Link href={signupUrl} target="_blank" rel="noopener noreferrer">
-          <Button onClick={()=> trackClick('SignUp Click')} className="mt-6 rounded-md bg-white px-6 py-2 text-[#6d1d14] hover:bg-white/90 theme-btn  signup">
+          <Button onClick={()=> trackClick('SignUp click')} className="mt-6 rounded-md bg-white px-6 py-2 text-[#6d1d14] hover:bg-white/90 theme-btn  signup">
             Sign Up
           </Button>
         </Link>
@@ -52,6 +52,7 @@ const CTA = ({utm_source}: PageProps) => {
                 width={1}
                 height={1}
                 className="apps-icon h-10 w-36 "
+                onClick={()=> trackClick('applestore click')}
               />
             </Link>
             <Link
@@ -62,6 +63,7 @@ const CTA = ({utm_source}: PageProps) => {
               rel="noopener noreferrer"
             >
               <Image
+              onClick={()=> trackClick('playstore click')}
                 src="/playstore.png"
                 alt="playstore"
                 width={1}

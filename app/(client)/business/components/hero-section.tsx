@@ -3,8 +3,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { trackEvent } from '@/utils/pinpoint/pinpointEvent';
-
-
 interface PageProps{
   utm_source: string
 }
@@ -19,7 +17,7 @@ const HeroSection = ({utm_source}: PageProps) => {
      eventName,
      params: {
       attributes:{
-        buttonLocation: "header"
+        buttonLocation: "hero section"
       },
       query: {
       utm_source,
@@ -52,6 +50,7 @@ const HeroSection = ({utm_source}: PageProps) => {
             target="_blank"
             rel="noopener noreferrer"
             className="font-bold"
+            onClick={()=> trackClick('Login Click')}
           >
             Sign in
           </Link>

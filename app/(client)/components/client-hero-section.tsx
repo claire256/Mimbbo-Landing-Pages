@@ -17,7 +17,7 @@ const HeroSection = ({utm_source}: PageProps) => {
      eventName,
      params: {
       attributes:{
-        buttonLocation: "header"
+        buttonLocation: "hero section"
       },
       query: {
       utm_source,
@@ -52,6 +52,7 @@ const HeroSection = ({utm_source}: PageProps) => {
             target="_blank"
             rel="noopener noreferrer"
             className="font-bold"
+            onClick={()=> trackClick('login Click')}
           >
             Sign in
           </Link>

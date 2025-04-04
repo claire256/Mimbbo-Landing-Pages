@@ -77,11 +77,11 @@ const Header = ({utm_source}: PageProps) => {
             Download the app
           </Link>
         )}
-        {/* <Link href="" target="_blank" rel="noopener noreferrer" onClick={()=> trackClick('LoginClick')}> */}
+        <Link href={loginUrl} target="_blank" rel="noopener noreferrer"> 
           <Button onClick={()=> trackClick('LoginClick')} size="sm" className="h-8 text-white rounded-md main_btn">
             Sign In
           </Button>
-        {/* </Link> */}
+        </Link> 
       </div>
     </header>
   );
