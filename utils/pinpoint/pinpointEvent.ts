@@ -93,10 +93,10 @@ export const putEvent = async ({
     EventsRequest: {
       BatchItem: {
         [`${endpointIdValue}_email`]: {
-          Endpoint: {
+           Endpoint: {
             Attributes: params.EndpointRequest.Attributes,
             ...location,
-            ChannelType: 'EMAIL',
+            ChannelType: 'IN_APP',
             Demographic: params.EndpointRequest.Demographic,
             EffectiveDate: params.EndpointRequest.EffectiveDate,
             EndpointStatus: params.EndpointRequest.EndpointStatus,

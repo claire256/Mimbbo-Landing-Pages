@@ -45,7 +45,7 @@ export const getAddress = async () => {
 
 // Endpoint request configuration
 export const endpointRequest = {
-  ChannelType: 'EMAIL',
+  ChannelType: 'IN_APP',
   Address: '',
   Attributes: {
     screenSize: [screenSize],

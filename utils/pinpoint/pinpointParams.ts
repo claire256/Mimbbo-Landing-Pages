@@ -13,7 +13,7 @@ const deviceData = parseUserAgent(getClientUserAgent());
 
 export const appName = Config.appName;
 export const appId = Config.slug;
-export const appVersion = '0.124.0';
+export const appVersion = '1.0.0';
 export const screenSize = `${width}x${height}`;
 export const deviceName = deviceData.browser;
 export const platform = deviceData.os;

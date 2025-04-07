@@ -10,20 +10,6 @@ const HeroSection = ({ utm_source }: PageProps) => {
   const webUrl = process.env.NEXT_PUBLIC_MIMBBO_WEB_URL || "";
   const loginUrl = `${webUrl}/?auth=login&utm_source=customer_landing_page`;
 
-  const trackClick = async (eventName: string) => {
-    await trackEvent({
-      eventName,
-      params: {
-        attributes: {
-          buttonLocation: "hero section",
-        },
-        query: {
-          utm_source,
-        },
-      },
-    });
-  };
-
   return (
     <section
       className="max-w-5xl px-6 pt-16 mx-auto text-center md:px-8 md:pt-24"
@@ -49,7 +35,19 @@ const HeroSection = ({ utm_source }: PageProps) => {
             target="_blank"
             rel="noopener noreferrer"
             className="font-bold"
-            onClick={() => trackClick("login_Click")}
+            onClick={async () =>
+              await trackEvent({
+                eventName: "login_click",
+                params: {
+                  attributes: {
+                    buttonLocation: "hero_section",
+                  },
+                  query: {
+                    utm_source,
+                  },
+                },
+              })
+            }
           >
             Sign in
           </Link>

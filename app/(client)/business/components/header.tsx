@@ -33,20 +33,6 @@ const Header = ({ utm_source }: PageProps) => {
     }
   }, []);
 
-  const trackClick = async (eventName: string) => {
-    await trackEvent({
-      eventName,
-      params: {
-        attributes: {
-          buttonLocation: "header",
-        },
-        query: {
-          utm_source,
-        },
-      },
-    });
-  };
-
   return (
     <header className="sticky top-0 z-50 flex items-center justify-between h-16 px-8 border-b section-padding navbar bg-secondary md:px-8">
       <div className="flex items-center">
@@ -68,7 +54,19 @@ const Header = ({ utm_source }: PageProps) => {
       <div className="flex items-center gap-4">
         {link && (
           <Link
-            onClick={() => trackClick("download_click")}
+            onClick={async() => 
+              await trackEvent({
+                eventName: "download_click",
+                params: {
+                  attributes: {
+                    buttonLocation: "header",
+                  },
+                  query: {
+                    utm_source,
+                  },
+                },
+              })
+            }
             href={link}
             target="_blank"
             rel="noopener noreferrer"
@@ -79,7 +77,19 @@ const Header = ({ utm_source }: PageProps) => {
         )}
         <Link href={loginUrl} target="_blank" rel="noopener noreferrer">
           <Button
-            onClick={() => trackClick("login_click")}
+            onClick={async() => 
+              await trackEvent({
+                eventName: "login_click",
+                params: {
+                  attributes: {
+                    buttonLocation: "header",
+                  },
+                  query: {
+                    utm_source,
+                  },
+                },
+              }) 
+            }
             size="sm"
             className="h-8 text-white rounded-md main_btn"
           >
