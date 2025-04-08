@@ -14,11 +14,34 @@ import WhyJoin from "./components/client-why-join";
 import FAQ from "./components/client-faqs";
 import CTA from "./business/components/cta";
 import Footer from "./business/components/footer";
+import { useSearchParams } from "next/navigation";
 import { apiConfig, auth_object } from '../../utils/Config/amplify-auth-config';
+import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
 
 Amplify.configure({ Auth: auth_object, API: apiConfig });
 
 export default function Home() {
+ 
+   const searchParams = useSearchParams()
+ 
+    useEffect(()=>{
+     for(const key of searchParams.keys()){
+       console.log('key', key)
+       if(key.includes('utm')){
+         console.log('key-value', key, searchParams.get(key))
+         trackEvent({
+           eventName: 'Customer_landing_page_view',
+           params:{
+             attributes:{},
+             query:{
+               [key]: searchParams.get(key)
+             } 
+           }
+         })
+       }
+     }
+ 
+    },[])
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -29,9 +52,10 @@ export default function Home() {
     }
   }, []);
 
+
   return (
     <div className="flex flex-col min-h-screen">
-      <Header utm_source='customer_landing_page' />
+      <Header utm_source="customer_landing_page" />
 
       <main className="flex-1">
         <HeroSection utm_source="customer_landing_page"  />

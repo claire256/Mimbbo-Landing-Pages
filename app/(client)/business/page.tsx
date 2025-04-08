@@ -15,11 +15,34 @@ import Testimonials from "./components/testimonials";
 import FAQ from "./components/business-faqs";
 import CTA from "./components/cta";
 import Footer from "./components/footer";
+import { useSearchParams } from "next/navigation";
 import { apiConfig, auth_object } from '../../../utils/Config/amplify-auth-config';
+import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
 
 Amplify.configure({ Auth: auth_object, API: apiConfig , ssr: true});
 
 export default function Home() {
+
+  const searchParams = useSearchParams()
+
+   useEffect(()=>{
+    for(const key of searchParams.keys()){
+      console.log('key', key)
+      if(key.includes('utm')){
+        console.log('key-value', key, searchParams.get(key))
+        trackEvent({
+          eventName: 'Mimboss_landing_page_view',
+          params:{
+            attributes:{},
+            query:{
+              [key]: searchParams.get(key)
+            } 
+          }
+        })
+      }
+    }
+
+   },[])
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -32,7 +55,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header utm_source="mimbboss_landing_page" />
+      <Header />
 
       <main className="flex-1">
         <HeroSection utm_source="mimboss_landing_page" />
