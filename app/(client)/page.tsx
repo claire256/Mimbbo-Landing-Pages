@@ -12,7 +12,7 @@ import HowItWorks from "./components/client-how-it-works";
 import WhyJoin from "./components/client-why-join";
 import FAQ from "./components/client-faqs";
 import CTA from "./business/components/cta";
-import Footer from "./business/components/footer";
+import Footer from "../../components/footer";
 
 
 export default function Home() {

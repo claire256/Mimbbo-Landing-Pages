@@ -1,10 +1,13 @@
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const Footer = () => {
+interface FooterProps {
+  bgColorClass?: string; // 👈 customizable background color
+}
+
+const Footer = ({ bgColorClass = "bg-secondary" }: FooterProps) => {
   return (
-    <footer className="border-t bg-secondary footer-sec">
+    <footer className={`border-t ${bgColorClass} footer-sec`}>
       <div className="section-padding">
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <div className="footer-logo">
@@ -22,29 +25,29 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="bg-secondary"
+              className={bgColorClass}
             >
-              <Image 
-              className="w-5 h-5" 
-              src="/Facebook.png"
-              alt="facebook"
-              width={300}
-              height={50}
+              <Image
+                className="w-5 h-5"
+                src="/Facebook.png"
+                alt="facebook"
+                width={300}
+                height={50}
               />
             </Link>
-            
+
             <Link
               href="https://www.instagram.com/mimbbo/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
             >
-              <Image 
-              className="w-5 h-5" 
-              src="/Instagram.png"
-              alt="instagram"
-              width={300}
-              height={50}
+              <Image
+                className="w-5 h-5"
+                src="/Instagram.png"
+                alt="instagram"
+                width={300}
+                height={50}
               />
             </Link>
             <Link
@@ -53,12 +56,12 @@ const Footer = () => {
               rel="noopener noreferrer"
               aria-label="LinkedIn"
             >
-              <Image 
-              className="w-5 h-5" 
-              src="/Linkedin.png"
-              alt="linkedin"
-              width={300}
-              height={50}
+              <Image
+                className="w-5 h-5"
+                src="/Linkedin.png"
+                alt="linkedin"
+                width={300}
+                height={50}
               />
             </Link>
           </div>

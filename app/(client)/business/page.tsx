@@ -13,7 +13,7 @@ import WhyJoin from "./components/why-join";
 import Testimonials from "./components/testimonials";
 import FAQ from "./components/business-faqs";
 import CTA from "./components/cta";
-import Footer from "./components/footer";
+import Footer from "../../../components/footer";
 
 
 export default function Home() {
