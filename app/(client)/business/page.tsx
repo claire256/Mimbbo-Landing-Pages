@@ -55,7 +55,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      <Header utm_source="mimboss_landing_page"/>
 
       <main className="flex-1">
         <HeroSection utm_source="mimboss_landing_page" />
