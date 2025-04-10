@@ -468,6 +468,26 @@ section {
   }
 }
 
+@media only screen and (max-width: 700px){
+  .makeup_artist{
+    gap: 0px;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+  }
+  .makeup_artist img{
+    width: 550px;
+    height: 400px;
+  }
+  .glam{
+    text-align: center;
+    padding-top: 30px;
+  }
+  .glam h2{
+    font-size: 38px;
+ }
+}
 @media only screen and (max-width: 600px) {
   .testimonial_text p {
     font-size: 14px;
@@ -512,7 +532,26 @@ section {
     max-height: max-content !important;
     padding: 0 !important;
   }
+  .makeup_artist{
+    gap: 0px;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+  }
+  .makeup_artist img{
+    width: 450px;
+    height: 350px;
+  }
+  .glam{
+    text-align: center;
+
+  }
+  .glam h2{
+    font-size: 38px;
+ }
 }
+
 
 @media only screen and (max-width: 500px) {
   .image-wrapper {
@@ -604,6 +643,17 @@ section {
  .flex_images{
   gap:15px;
  }
+ .makeup_artist img{
+  width: 400px;
+  height: 300px;
+}
+.glam h2{
+   font-size: 38px;
+}
+.glam p{
+  padding-left: 150px;
+  padding-right: 150px;
+}
 }
 
 @media only screen and (max-width: 475px) {
@@ -663,6 +713,7 @@ section {
     border-radius: 8px;
     padding: 16px;
   }
+
   .gap-4 {
     gap: 10px !important;
   }
@@ -675,6 +726,31 @@ section {
   .faq-q{
     font-size: 14px;
   }
+  .makeup_artist{
+    gap: 0px;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+  }
+  .makeup_artist img{
+    width: 350px;
+    height: 250px;
+  }
+  .glam{
+    text-align: center;
+  }
+  .glam h2{
+    font-size: 30px;
+ }
+ .glam p{
+  font-size: 14px;
+  padding-left: 150px;
+  padding-right: 150px;
+ }
+ .glam button{
+  height: 40px;
+ }
 }
 
 /* For very small screens, allow wrapping */

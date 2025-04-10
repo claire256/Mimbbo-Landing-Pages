@@ -32,7 +32,7 @@ const Header = ({utm_source}: PageProps) => {
   }, []);
   
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between h-16 px-8 border-b section-padding navbar bg-secondary md:px-8">
+    <header className="sticky top-0 z-50 flex items-center justify-between h-16 px-8 border-b section-padding navbar bg-white md:px-8">
       <div className="flex items-center">
         <Link
           href={downloadUrl}
@@ -50,19 +50,19 @@ const Header = ({utm_source}: PageProps) => {
         </Link>
       </div>
       <div className="flex items-center gap-4">
-        {link && (
+        {/* {link && (
           <Link
             href={link}
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm underline"
-          >
-            Customer
-          </Link>
-        )}
+          > */}
+            <p>Customer</p>
+          {/* </Link>
+        )} */}
         <Link href={loginUrl} target="_blank" rel="noopener noreferrer">
-          <Button size="sm" className="h-8 text-white rounded-md main_btn">
-            Sign In
+          <Button size="sm" className="rounded-md home_button w-[81px] border-slate-950 h-8" variant={"outline"}>
+            Login
           </Button>
         </Link>
       </div>
