@@ -30,7 +30,7 @@ export default function HomeClient() {
        if(key.includes('utm')){
          console.log('key-value', key, searchParams.get(key))
          trackEvent({
-           eventName: 'Customer_landing_page_view',
+           eventName: 'customer_landing_page_view',
            params:{
              attributes:{},
              query:{
