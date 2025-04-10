@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
 
-interface PageProps{
-  utm_source: string
+interface PageProps {
+  utm_source: string;
 }
-const CTA = ({utm_source}: PageProps) => {
+const CTA = ({ utm_source }: PageProps) => {
   const webUrl = process.env.NEXT_PUBLIC_MIMBBO_WEB_URL || "";
 
   const signupUrl = `${webUrl}/?auth=signup&utm_source=${utm_source}`;
@@ -18,7 +19,22 @@ const CTA = ({utm_source}: PageProps) => {
           Ready to get started?
         </h2>
         <Link href={signupUrl} target="_blank" rel="noopener noreferrer">
-          <Button className="mt-6 rounded-md bg-white px-6 py-2 text-[#6d1d14] hover:bg-white/90 theme-btn  signup">
+          <Button
+            onClick={async() =>
+              await trackEvent({
+                eventName : "signup_click",
+                params: {
+                  attributes: {
+                    buttonLocation: "cta_section",
+                  },
+                  query: {
+                    utm_source,
+                  },
+                },
+              })   
+            }
+            className="mt-6 rounded-md bg-white px-6 py-2 text-[#6d1d14] hover:bg-white/90 theme-btn  signup"
+          >
             Sign Up
           </Button>
         </Link>
@@ -36,6 +52,19 @@ const CTA = ({utm_source}: PageProps) => {
                 width={1}
                 height={1}
                 className="apps-icon h-10 w-36 "
+                onClick={async() => 
+                  await trackEvent({
+                    eventName : "applestore_click",
+                    params: {
+                      attributes: {
+                        linkLocation: "cta_section",
+                      },
+                      query: {
+                        utm_source,
+                      },
+                    },
+                  })   
+                }
               />
             </Link>
             <Link
@@ -46,6 +75,19 @@ const CTA = ({utm_source}: PageProps) => {
               rel="noopener noreferrer"
             >
               <Image
+                onClick={async() => 
+                  await trackEvent({
+                    eventName : "playstore_click",
+                    params: {
+                      attributes: {
+                       linkLocation: "cta_section",
+                      },
+                      query: {
+                        utm_source,
+                      },
+                    },
+                  }) 
+                } 
                 src="/playstore.png"
                 alt="playstore"
                 width={1}

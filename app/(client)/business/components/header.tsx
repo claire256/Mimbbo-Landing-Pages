@@ -1,13 +1,15 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-
-interface PageProps{
-  utm_source: string
+import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
+interface PageProps {
+  utm_source: string;
 }
-const Header = ({utm_source}: PageProps) => {
+
+const Header = ({ utm_source }: PageProps) => {
   const [link, setLink] = useState<string>("");
 
   const webUrl = process.env.NEXT_PUBLIC_MIMBBO_WEB_URL || "";
@@ -30,7 +32,7 @@ const Header = ({utm_source}: PageProps) => {
       setLink(downloadUrl);
     }
   }, []);
-  
+
   return (
     <header className="sticky top-0 z-50 flex items-center justify-between h-16 px-8 border-b section-padding navbar bg-secondary md:px-8">
       <div className="flex items-center">
@@ -52,6 +54,19 @@ const Header = ({utm_source}: PageProps) => {
       <div className="flex items-center gap-4">
         {link && (
           <Link
+            onClick={async() => 
+              await trackEvent({
+                eventName: "download_click",
+                params: {
+                  attributes: {
+                    buttonLocation: "header",
+                  },
+                  query: {
+                    utm_source,
+                  },
+                },
+              })
+            }
             href={link}
             target="_blank"
             rel="noopener noreferrer"
@@ -61,7 +76,23 @@ const Header = ({utm_source}: PageProps) => {
           </Link>
         )}
         <Link href={loginUrl} target="_blank" rel="noopener noreferrer">
-          <Button size="sm" className="h-8 text-white rounded-md main_btn">
+          <Button
+            onClick={async() => 
+              await trackEvent({
+                eventName: "login_click",
+                params: {
+                  attributes: {
+                    buttonLocation: "header",
+                  },
+                  query: {
+                    utm_source,
+                  },
+                },
+              }) 
+            }
+            size="sm"
+            className="h-8 text-white rounded-md main_btn"
+          >
             Sign In
           </Button>
         </Link>

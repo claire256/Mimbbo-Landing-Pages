@@ -1,9 +1,12 @@
 "use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { useEffect, useState } from "react";
+import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
+interface PageProps {
+  utm_source: string;
+}
 
-const HeroSection = () => {
+const HeroSection = ({ utm_source }: PageProps) => {
   const webUrl = process.env.NEXT_PUBLIC_MIMBBO_WEB_URL || "";
   const loginUrl = `${webUrl}/?auth=login&utm_source=customer_landing_page`;
 
@@ -32,6 +35,19 @@ const HeroSection = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="font-bold"
+            onClick={async () =>
+              await trackEvent({
+                eventName: "login_click",
+                params: {
+                  attributes: {
+                    buttonLocation: "hero_section",
+                  },
+                  query: {
+                    utm_source,
+                  },
+                },
+              })
+            }
           >
             Sign in
           </Link>
