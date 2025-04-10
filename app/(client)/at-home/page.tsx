@@ -7,6 +7,7 @@ import "../../../styles/landing-page.css"
 import Header from "./components/header";
 import Footer from "../../../components/footer";
 import HeroSection from "./components/hero";
+import UnLock from "./components/unlock-a-new-way";
 
 
 
@@ -25,9 +26,10 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Header utm_source="" />
 
-      <main className="flex-1">
+      <section className="flex-1 bg-">
         <HeroSection/>
-      </main>
+        <UnLock/>
+      </section>
 
       <Footer bgColorClass="bg-white" />
     </div>

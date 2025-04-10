@@ -13,7 +13,7 @@ import HowItWorks from "./components/client-how-it-works";
 import WhyJoin from "./components/client-why-join";
 import FAQ from "./components/client-faqs";
 import CTA from "./business/components/cta";
-import Footer from "./business/components/footer";
+import Footer from "../../components/footer";
 import { useSearchParams } from "next/navigation";
 import { apiConfig, auth_object } from '../../utils/Config/amplify-auth-config';
 import { trackEvent } from "@/utils/pinpoint/pinpointEvent";

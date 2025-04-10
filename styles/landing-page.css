@@ -9,7 +9,7 @@ body {
   border: none;
 }
 main {
-  background-color: #f1ede5;
+   background-color: #f1ede5;
 }
 
 .logo {
@@ -198,10 +198,10 @@ section {
 .content {
   margin-left: 10px;
 }
-.icon img {
+ .icon img {
   height: 60px;
   width: 60px;
-}
+} 
 
 .joining_card {
   padding: 32px;
@@ -292,9 +292,6 @@ section {
   padding: 0 !important;
 }
 
-.faq_section {
-
-}
 .faq_left {
   width: 480px;
 }
