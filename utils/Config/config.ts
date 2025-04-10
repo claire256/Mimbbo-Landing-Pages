@@ -1,6 +1,6 @@
 export const { NODE_ENV = 'prod' } = process.env;
 export const IS_DEV = NODE_ENV !== 'prod';
-export const SITE_NAME = 'MIMBBO';
+export const SITE_NAME = 'Mimbbo Landing Page';
 
 const auth_object = {
   dev: {
