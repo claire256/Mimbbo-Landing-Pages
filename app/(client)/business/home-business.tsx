@@ -31,7 +31,7 @@ export default function HomeBusiness() {
       if(key.includes('utm')){
         console.log('key-value', key, searchParams.get(key))
         trackEvent({
-          eventName: 'Mimboss_landing_page_view',
+          eventName: 'mimboss_landing_page_view',
           params:{
             attributes:{},
             query:{
