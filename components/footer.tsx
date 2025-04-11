@@ -67,10 +67,10 @@ const Footer = ({ bgColorClass = "bg-secondary" }: FooterProps) => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-between gap-4 pt-6 mt-6 text-xs border-t text-muted-foreground md:flex-row">
-          <div className="copyright">
+          <div className="copyright text-sm">
             Copyright © {new Date().getFullYear()} Mimbbo. All rights reserved.
           </div>
-          <div className="flex gap-4 terms">
+          <div className="flex gap-4 terms text-sm">
             <Link
               href="https://support.mimbbo.com/support/solutions"
               target="_blank"
