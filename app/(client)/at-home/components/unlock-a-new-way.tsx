@@ -4,14 +4,14 @@ import Image from "next/image";
 
 const UnLock = ()=>{
    return(
-    <section className="section-padding mx-auto text-center" data-aos="fade-up">
+    <section className="section-padding mx-auto text-center place-items-center" data-aos="fade-up">
         <div className="pt-16">
         <h2 className="text-2xl md:text-[40px] font-semibold ">
         Unlock a new way to grow your beauty business
             </h2>
-        <p className="pt-4 text-sm md:text-lg">Supercharge your design workflow, kick-start your projects faster, and level up your process.</p>
+        <p className="pt-4 md:text-[18px] text-[14px]">Supercharge your design workflow, kick-start your projects faster, and level up your process.</p>
         </div>
-            <div className="flex gap-10 flex-wrap sm:place-content-center pt-10">
+            <div className="flex gap-10 flex-wrap justify-center items-center pt-10">
 
               {[
                 {
@@ -41,7 +41,7 @@ const UnLock = ()=>{
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="flex flex-col justify-center items-center rounded-lg bg-[#F4F6F7] pb-4 pl-2 pr-2 w-[350px] h-[210px]"
+                  className="flex flex-col justify-center items-center rounded-xl bg-[#F4F6F7] pb-4 pl-2 pr-2 w-[350px] h-[210px]"
                 >
                   <div className="">
                     <Image

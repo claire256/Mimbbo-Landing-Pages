@@ -8,6 +8,7 @@ import Header from "./components/header";
 import Footer from "../../../components/footer";
 import HeroSection from "./components/hero";
 import UnLock from "./components/unlock-a-new-way";
+import YourBusiness from "./components/your-business";
 
 
 
@@ -29,6 +30,7 @@ export default function Home() {
       <section className="flex-1 bg-">
         <HeroSection/>
         <UnLock/>
+        <YourBusiness/>
       </section>
 
       <Footer bgColorClass="bg-white" />
