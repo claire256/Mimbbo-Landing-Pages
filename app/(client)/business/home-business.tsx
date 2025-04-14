@@ -23,6 +23,7 @@ Amplify.configure({ Auth: auth_object, API: apiConfig , ssr: true});
 
 export default function HomeBusiness() {
 
+  const mimboss = "mimboss_landing_page"
   const searchParams = useSearchParams()
 
    useEffect(()=>{
@@ -31,7 +32,7 @@ export default function HomeBusiness() {
       if(key.includes('utm')){
         console.log('key-value', key, searchParams.get(key))
         trackEvent({
-          eventName: 'mimboss_landing_page_view',
+          eventName: `${mimboss}_view`,
           params:{
             attributes:{},
             query:{
@@ -55,17 +56,17 @@ export default function HomeBusiness() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header utm_source="mimboss_landing_page"/>
+      <Header utm_source={mimboss}/>
 
       <main className="flex-1">
-        <HeroSection utm_source="mimboss_landing_page" />
+        <HeroSection utm_source={mimboss} />
         <RevenueStream />
         <EarnSection />
         <HowItWorks />
         <WhyJoin />
         <Testimonials />
         <FAQ />
-        <CTA utm_source="mimbboss_landing_page" />
+        <CTA utm_source={mimboss} />
       </main>
 
       <Footer />

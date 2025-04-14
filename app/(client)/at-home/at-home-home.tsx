@@ -20,7 +20,7 @@ import Help from "./components/help";
 Amplify.configure({ Auth: auth_object, API: apiConfig , ssr: true});
 
 export default function Home() {
-
+  const at_home = "at_home_landing_page"
   const searchParams = useSearchParams()
 
   useEffect(()=>{
@@ -29,7 +29,7 @@ export default function Home() {
      if(key.includes('utm')){
        console.log('key-value', key, searchParams.get(key))
        trackEvent({
-         eventName: 'mimboss_landing_page_view',
+         eventName: `${at_home}_view`,
          params:{
            attributes:{},
            query:{
@@ -50,18 +50,17 @@ export default function Home() {
       })
     }
   }, []);
-
   return (
     <div className="flex flex-col min-h-screen">
-      <Header utm_source="at_home_landing_page" />
+      <Header utm_source={at_home} />
 
       <section className="flex-1">
-        <HeroSection/>
+        <HeroSection utm_source={at_home} />
         <UnLock/>
-        <YourBusiness/>
-        <Pricing/>
+        <YourBusiness utm_source={at_home} />
+        <Pricing utm_source={at_home} />
         <FAQ/>
-        <Help/>
+        <Help utm_source={at_home}/>
       </section>
 
       <Footer bgColorClass="bg-white" />

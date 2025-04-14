@@ -1,9 +1,15 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
 import Image from "next/image";
 import { GoShieldCheck } from "react-icons/go";
-
+import Config from "@/utils/Config/config";
+ 
+interface PageProps {
+  utm_source: string;
+}
 const steps = [
   {
     icon: <GoShieldCheck className="text-primary w-[16px]" />,
@@ -21,10 +27,27 @@ const steps = [
     des: "Be featured at the top of relevant searches when customers look for at-home services in your area.",
   },
 ];
+const Pricing = ({utm_source}: PageProps) => {
+  const router = useRouter();
 
-const Pricing = () => {
+  const trackPrice = async()=>{
+    router.push(Config.pricingUrl)
+
+    await trackEvent({
+      eventName: "claim_my_spot_click",
+      params: {
+        attributes: {
+          buttonLocation: "pricing_section",
+        },
+        query: {
+          utm_source,
+        },
+      },
+    })
+  }
+
   return (
-    <section className="section-padding" data-aos="fade-up">
+    <section id="pricing" className="section-padding" data-aos="fade-up">
       <div className="grid xl:grid-cols-2 md:grid-cols-1 pt-36 gap-10">
         <div className="p-4">
           <h2 className="md:text-[32px] text-2xl font-semibold pb-10">
@@ -89,6 +112,7 @@ const Pricing = () => {
             variant="custom"
             radius="full"
             className="bg-LimeGreen w-full text-primary h-12 mt-20"
+            onClick={trackPrice}
           >
             Claim My Spot
           </Button>

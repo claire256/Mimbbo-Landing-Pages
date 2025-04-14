@@ -22,6 +22,7 @@ Amplify.configure({ Auth: auth_object, API: apiConfig });
 
 export default function HomeClient() {
  
+   const client = "customer_landing_page"
    const searchParams = useSearchParams()
  
     useEffect(()=>{
@@ -30,7 +31,7 @@ export default function HomeClient() {
        if(key.includes('utm')){
          console.log('key-value', key, searchParams.get(key))
          trackEvent({
-           eventName: 'customer_landing_page_view',
+           eventName: `${client}_view`,
            params:{
              attributes:{},
              query:{
@@ -55,16 +56,16 @@ export default function HomeClient() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header utm_source="customer_landing_page" />
+      <Header utm_source={client} />
 
       <main className="flex-1">
-        <HeroSection utm_source="customer_landing_page"  />
+        <HeroSection utm_source={client}  />
         <DiscoverSection/>
         <ImageGrid/>
         <HowItWorks/>
         <WhyJoin/>
         <FAQ/>
-        <CTA utm_source='customer_landing_page'/>
+        <CTA utm_source={client}/>
       </main>
       <Footer/>
     </div>

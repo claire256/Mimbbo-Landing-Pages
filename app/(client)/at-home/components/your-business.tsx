@@ -1,8 +1,12 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
 import Image from "next/image";
 
+interface PageProps {
+  utm_source: string;
+}
 const steps = [
   {
     src: "./check.png",
@@ -18,7 +22,7 @@ const steps = [
   },
 ];
 
-const YourBusiness = () => {
+const YourBusiness = ({ utm_source }: PageProps) => {
   return (
     <section className="section-padding" data-aos="fade-up">
       <div className="grid grid-cols-1 sm:grid-cols-1 gap-10 md:pt-40 pt-6 lg:grid-cols-1 xl:grid-cols-2 place-items-center">
@@ -50,6 +54,19 @@ const YourBusiness = () => {
               variant="custom"
               radius="full"
               className="bg-LimeGreen text-primary md:w-[156px] h-12 w-full "
+              onClick={async () =>
+                await trackEvent({
+                  eventName: "get_started_click",
+                  params: {
+                    attributes: {
+                      buttonLocation: "your_business_section",
+                    },
+                    query: {
+                      utm_source,
+                    },
+                  },
+                })
+              }
             >
               Get Started
             </Button>
