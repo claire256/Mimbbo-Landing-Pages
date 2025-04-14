@@ -13,6 +13,7 @@ import YourBusiness from "./components/your-business";
 import { useSearchParams } from "next/navigation";
 import { apiConfig, auth_object } from '../../../utils/Config/amplify-auth-config';
 import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
+import Pricing from "./components/pricing";
 
 Amplify.configure({ Auth: auth_object, API: apiConfig , ssr: true});
 
@@ -56,6 +57,7 @@ export default function Home() {
         <HeroSection/>
         <UnLock/>
         <YourBusiness/>
+        <Pricing/>
       </section>
 
       <Footer bgColorClass="bg-white" />
