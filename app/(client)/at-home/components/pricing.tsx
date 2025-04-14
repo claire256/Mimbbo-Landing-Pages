@@ -48,7 +48,7 @@ const Pricing = ({utm_source}: PageProps) => {
 
   return (
     <section id="pricing" className="section-padding" data-aos="fade-up">
-      <div className="grid xl:grid-cols-2 md:grid-cols-1 pt-36 gap-10">
+      <div className="grid xl:grid-cols-2 md:grid-cols-1 md:pt-36 pt-20 gap-10">
         <div className="p-4">
           <h2 className="md:text-[32px] text-2xl font-semibold pb-10">
             Now 50% off for early pros

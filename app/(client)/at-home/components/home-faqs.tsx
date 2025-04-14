@@ -21,10 +21,10 @@ const faqs = [
 const FAQ = () => {
   return (
     <section className="section-padding" data-aos="fade-up">
-      <h2 className="md:text-3xl text-center font-semibold pt-40">
+      <h2 className="md:text-3xl text-2xl text-center font-semibold pt-20 md:pt-40">
         Frequently Asked Questions
       </h2>
-      <div className="lg:w-[840px] pl-4 pr-4 mx-auto">
+      <div className="lg:w-[840px] pl-4 pr-4 mx-auto md:text-base text-sm">
         <FaqsComp faqs={faqs} />
       </div>
     </section>
