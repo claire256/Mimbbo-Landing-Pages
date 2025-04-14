@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+
 
 interface PageProps {
     utm_source: string;
@@ -15,6 +17,10 @@ const Help = ({utm_source}: PageProps) => {
           assist you. Contact our 24/7 live support by clicking the button
           below.
         </p>
+        <Link
+         href="https://support.mimbbo.com/"
+         target="_blank"
+         rel="noopener noreferrer">
         <Button
           variant="custom"
           radius="full"
@@ -35,6 +41,7 @@ const Help = ({utm_source}: PageProps) => {
         >
           Contact Support <ArrowRight size={18} />
         </Button>
+        </Link>
       </div>
     </section>
   );

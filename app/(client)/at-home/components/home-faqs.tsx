@@ -1,12 +1,10 @@
-import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
-import Image from "next/image";
+
 import FaqsComp from "@/components/faqs";
 
 const faqs = [
   {
     q: "How can I begin using Nucleus?",
-    a: "",
+    // a: "",
   },
   {
     q: "How do I integrate Nucleus design templates into my existing projects?",
