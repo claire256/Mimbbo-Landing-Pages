@@ -32,7 +32,7 @@ const Header = ({ utm_source }: PageProps) => {
         </Link>
       </div>
       <div className="flex items-center gap-4">
-        <p>Customer</p>
+        {/* <p>Customer</p> */}
         <Link href={loginUrl} target="_blank" rel="noopener noreferrer">
           <Button
             onClick={async () =>

@@ -23,6 +23,13 @@ const steps = [
 ];
 
 const YourBusiness = ({ utm_source }: PageProps) => {
+
+  const handleScroll = ()=>{
+    const section = document.getElementById("pricing");
+    if(section){
+      section.scrollIntoView({behavior: "smooth"})
+    }
+  }
   return (
     <section className="section-padding" data-aos="fade-up">
       <div className="grid grid-cols-1 sm:grid-cols-1 gap-10 md:pt-40 pt-6 lg:grid-cols-1 xl:grid-cols-2 place-items-center">
@@ -44,12 +51,7 @@ const YourBusiness = ({ utm_source }: PageProps) => {
               </div>
             </div>
           ))}
-          <div className="p-2 flex flex-wrap items-center  gap-2">
-            <input
-              type="text"
-              placeholder="Email Address"
-              className="border-[#E6E9EB] border-2 px-4 py-2 rounded-md"
-            />
+          <div className="p-2 flex items-center" onClick={handleScroll}>
             <Button
               variant="custom"
               radius="full"

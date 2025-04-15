@@ -1,6 +1,5 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
 import Image from "next/image";
@@ -28,11 +27,10 @@ const steps = [
   },
 ];
 const Pricing = ({utm_source}: PageProps) => {
-  const router = useRouter();
 
   const trackPrice = async()=>{
-    router.push(Config.pricingUrl)
-
+    window.open(Config.pricingUrl, '_blank');
+    
     await trackEvent({
       eventName: "claim_my_spot_click",
       params: {
