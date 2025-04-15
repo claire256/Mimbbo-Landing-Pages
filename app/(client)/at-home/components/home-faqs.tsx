@@ -4,7 +4,7 @@ import FaqsComp from "@/components/faqs";
 const faqs = [
   {
     q: "How can I begin using Nucleus?",
-    // a: "",
+    a: "",
   },
   {
     q: "How do I integrate Nucleus design templates into my existing projects?",

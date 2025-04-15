@@ -23,7 +23,7 @@ const HeroSection = ({ utm_source }: PageProps) => {
         offers roll in.
       </p>
       <div className="pt-16 mt-3">
-        <Link href="./business" rel="noopener noreferrer">
+        <Link href="./business">
           <Button className="px-6 py-2 mt-6 text-white rounded-md theme-btn">
             Join as a Pro
           </Button>

@@ -5,9 +5,10 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 type FaqItem = {
   q: string;
-  a: string | string[]; // Allow both single and multiple paragraphs
+  a: string | string[];
+  qClassName?: string; // optional styles for question
+  aClassName?: string; // optional styles for answer
 };
-
 type FAQProps = {
   faqs: FaqItem[];
 };
@@ -19,41 +20,40 @@ const FaqsComp = ({ faqs }: FAQProps) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  return (
-    <section className="faqs w-full " data-aos="fade-up">
-      <div className="w-full">
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <div key={index} className="border-b  pb-3">
-              <button
-                onClick={() => toggleFaq(index)}
-                className="w-full flex justify-between items-center py-3 text-left text-lg font-medium"
-              >
-                <span className="faq-q">
-                  {index + 1}. {faq.q}
-                </span>
-                {openIndex === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-              </button>
 
-              {openIndex === index && (
-                <div className="text-dark text-[15px] space-y-6 mt-1">
-                  {Array.isArray(faq.a) ? (
-                    faq.a.map((paragraph, i) => (
-                      <p key={i} className="text-gray-600">
-                        {paragraph}
-                      </p>
-                    ))
-                  ) : (
-                    <p className="text-gray-600">{faq.a}</p>
-                  )}
-                </div>
+return (
+  <div className="w-full pt-4" data-aos="fade-up">
+    <div className="space-y-4">
+      {faqs.map((faq, index) => (
+        <div key={index} className="border-b pb-3">
+          <button
+            onClick={() => toggleFaq(index)}
+            className={`w-full flex justify-between items-center py-3 text-left`}
+          >
+            <span className={`flex items-start text-base ${faq.qClassName || "md:text-xl"}`}>
+              <span>{faq.q}</span>
+            </span>
+            {openIndex === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+          </button>
+
+          {openIndex === index && (
+            <div className={` space-y-4 text-sm mt-1 pl-6 ${faq.aClassName || "md:text-base"}`}>
+              {Array.isArray(faq.a) ? (
+                faq.a.map((paragraph, i) => (
+                  <p key={i} className="leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))
+              ) : (
+                <p className="leading-relaxed">{faq.a}</p>
               )}
             </div>
-          ))}
+          )}
         </div>
-      </div>
-    </section>
-  );
+      ))}
+    </div>
+  </div>
+);
 };
 
 export default FaqsComp;

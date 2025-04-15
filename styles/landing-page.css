@@ -292,15 +292,15 @@ section {
   padding: 0 !important;
 }
 
-.faq_left {
+/* .faq_left {
   width: 480px;
 }
 .faq_left img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-.faqs {
+} */
+/* .faqs {
 
 }
 .faq_img {
@@ -316,7 +316,7 @@ section {
   padding: 20px 0 !important;
   font-weight: 500;
   /* line-height: 76px; */
-  border-bottom: 1px solid #cdcbcb;
+  /* border-bottom: 1px solid #cdcbcb;
 }
 .faq-title:hover {
   text-decoration: none;
@@ -324,7 +324,7 @@ section {
 
 .faqs .overflow-hidden {
   padding-top: 16px !important;
-}
+} */ 
 .rdy-text {
   font-size: 48px;
   margin-bottom: 20px;
@@ -433,10 +433,10 @@ section {
     display: flex;
     flex-direction: column;
   }
-  .faq_section {
+  /* .faq_section {
     display: flex;
     flex-direction: column;
-  }
+  } */
   .section-padding {
     padding: 0 40px;
   }
@@ -444,12 +444,12 @@ section {
     margin-top: 22px;
     align-items: center;
   }
-  .faq_left {
+  /* .faq_left {
     width: 100%;
   }
   .faq_img {
     width: 100%;
-  }
+  } */
   .faqs {
     /* margin-top: 60px; */
   }
@@ -460,9 +460,9 @@ section {
     padding: 8px;
     margin-top: 20px;
   }
-  .faq-title {
+  /* .faq-title {
     padding: 15px 0 !important;
-  }
+  } */
 }
 
 @media only screen and (max-width: 600px) {
@@ -667,7 +667,7 @@ section {
   .gap-4 {
     gap: 10px !important;
   }
-  .faq_img {
+   /* .faq_img {
     height: 445px;
   }
   .faq-a{
@@ -675,8 +675,9 @@ section {
   }
   .faq-q{
     font-size: 14px;
-  }
+  } */
 }
+ 
 
 /* For very small screens, allow wrapping */
 @media (max-width: 375px) {

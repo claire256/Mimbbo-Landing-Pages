@@ -22,7 +22,7 @@ const HeroSection = ({ utm_source }: PageProps) => {
         Join thousands of beauty pros who have found gigs on Mimbbo in 3 minutes
       </p>
       <div className="pt-16 mt-3">
-        <Link href="/" rel="noopener noreferrer">
+        <Link href="/">
           <Button className="px-6 py-2 mt-6 text-white rounded-md theme-btn">
             Join as a client
           </Button>

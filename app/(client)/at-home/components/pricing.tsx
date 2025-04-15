@@ -28,9 +28,9 @@ const steps = [
 ];
 const Pricing = ({utm_source}: PageProps) => {
 
-  const trackPrice = async()=>{
-    window.open(Config.pricingUrl, '_blank');
-    
+  const trackPrice = async()=>{   
+    const newTab = window.open('', '_blank');
+
     await trackEvent({
       eventName: "claim_my_spot_click",
       params: {
@@ -42,6 +42,12 @@ const Pricing = ({utm_source}: PageProps) => {
         },
       },
     })
+
+    // Navigate the new tab to the pricing URL
+  if (newTab) {
+    newTab.location.href = Config.pricingUrl;
+  }
+
   }
 
   return (
