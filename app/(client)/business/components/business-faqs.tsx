@@ -71,11 +71,11 @@ const FAQ = () => {
 
 
   return (
-    <section className="faqs" data-aos="fade-up">
-           <div className="grid md:grid-cols-1 xl:grid-cols-2 gap-8 md:place-items-center section-padding faq_section">
-              <div className="faq_left">
+    <section data-aos="fade-up">
+           <div className="grid md:grid-cols-1 xl:grid-cols-2 gap-8 md:place-items-center section-padding">
+              <div>
                 <h2 className="text-2xl font-semibold text-left theme-title">Frequently Asked <br></br>Questions</h2>
-                <div className="mt-6 faq_img">
+                <div className="mt-6">
                   <Image
                     src="/faq.png"
                     alt="FAQ Image"

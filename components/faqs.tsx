@@ -28,12 +28,14 @@ return (
         <div key={index} className="border-b pb-3">
           <button
             onClick={() => toggleFaq(index)}
-            className={`w-full flex justify-between items-center py-3 text-left`}
+            className={`w-full flex justify-between py-3 text-left`}
           >
-            <span className={`flex items-start text-base ${faq.qClassName || "md:text-xl"}`}>
+            <span className={`flex flex-1 items-start text-base ${faq.qClassName || "md:text-xl"}`}>
               <span>{faq.q}</span>
             </span>
+            <span className="ml-2 shrink-0 flex items-center">
             {openIndex === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+            </span>
           </button>
 
           {openIndex === index && (

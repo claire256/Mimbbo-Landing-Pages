@@ -170,11 +170,7 @@ section {
 }
 
 .scroll-container {
-  /* max-height: 300px;
-  overflow-y: auto;
-  padding-right: 8px;
-
-  direction: rtl; /* Flips content direction */
+ 
    text-align: left; 
 } 
 
@@ -203,38 +199,6 @@ section {
   width: 60px;
 } 
 
-.joining_card {
-  padding: 32px;
-  border-radius: 24px;
-  -webkit-border-radius: 24px;
-  -moz-border-radius: 24px;
-  -ms-border-radius: 24px;
-  -o-border-radius: 24px;
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  height: 300px;
-}
-.joining_card h3 {
-  font-size: 30px;
-  font-weight: bold;
-  margin-top: 38px;
-}
-.joining_card p {
-  font-size: 16px;
-  line-height: 26px;
-  color: #16181d;
-}
-
-.joining_card:hover {
-  transform: translateY(-10px);
-  -webkit-transform: translateY(-10px);
-  -moz-transform: translateY(-10px);
-  -ms-transform: translateY(-10px);
-  -o-transform: translateY(-10px);
-}
 .testimonial_img img {
   height: auto;
   width: 270px;
@@ -291,40 +255,6 @@ section {
   /* line-height: 65px; */
   padding: 0 !important;
 }
-
-/* .faq_left {
-  width: 480px;
-}
-.faq_left img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
-/* .faqs {
-
-}
-.faq_img {
-  border-radius: 24px;
-  margin-top: 30px;
-  -webkit-border-radius: 24px;
-  -moz-border-radius: 24px;
-  -ms-border-radius: 24px;
-  -o-border-radius: 24px;
-}
-.faq-title {
-  font-size: 18px;
-  padding: 20px 0 !important;
-  font-weight: 500;
-  /* line-height: 76px; */
-  /* border-bottom: 1px solid #cdcbcb;
-}
-.faq-title:hover {
-  text-decoration: none;
-}
-
-.faqs .overflow-hidden {
-  padding-top: 16px !important;
-} */ 
 .rdy-text {
   font-size: 48px;
   margin-bottom: 20px;
@@ -433,25 +363,12 @@ section {
     display: flex;
     flex-direction: column;
   }
-  /* .faq_section {
-    display: flex;
-    flex-direction: column;
-  } */
   .section-padding {
     padding: 0 40px;
   }
   .instructions {
     margin-top: 22px;
     align-items: center;
-  }
-  /* .faq_left {
-    width: 100%;
-  }
-  .faq_img {
-    width: 100%;
-  } */
-  .faqs {
-    /* margin-top: 60px; */
   }
 }
 
@@ -460,9 +377,6 @@ section {
     padding: 8px;
     margin-top: 20px;
   }
-  /* .faq-title {
-    padding: 15px 0 !important;
-  } */
 }
 
 @media only screen and (max-width: 600px) {
@@ -667,15 +581,7 @@ section {
   .gap-4 {
     gap: 10px !important;
   }
-   /* .faq_img {
-    height: 445px;
-  }
-  .faq-a{
-    font-size: 12px;
-  }
-  .faq-q{
-    font-size: 14px;
-  } */
+
 }
  
 

@@ -5,23 +5,25 @@ import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
 import Image from "next/image";
 import { GoShieldCheck } from "react-icons/go";
 import Config from "@/utils/Config/config";
+import { RiVipCrown2Line } from "react-icons/ri";
+import { GrGroup } from "react-icons/gr";
  
 interface PageProps {
   utm_source: string;
 }
 const steps = [
   {
-    icon: <GoShieldCheck className="text-primary w-[16px]" />,
+    icon: <GoShieldCheck className="text-primary w-[18px]" />,
     title: "Background check (safety badge on your profile)",
     des: "So customers feel confident inviting you into their homes. You’ll receive a “Verified Pro” badge once complete.",
   },
   {
-    src: "/profiles.png",
+    icon: <GrGroup className="text-primary w-[18px]"/>,
     title: "Early access to house call gigs",
     des: "Be the first to see and claim at-home beauty requests in your area — before the full rollout. More visibility. More bookings.",
   },
   {
-    src: "/vip.png",
+    icon: <RiVipCrown2Line className="text-primary w-[18px]"/>,
     title: "Priority placement in search",
     des: "Be featured at the top of relevant searches when customers look for at-home services in your area.",
   },
@@ -58,19 +60,10 @@ const Pricing = ({utm_source}: PageProps) => {
             Now 50% off for early pros
           </h2>
           {steps.map((item, index) => (
-            <div key={index} className="flex gap-4 pb-3 ">
-              <div className="flex items-center justify-center">
-                {item.icon ? (
-                  item.icon
-                ) : (
-                  <Image
-                    src={item.src}
-                    alt="images"
-                    width={16}
-                    height={16}
-                    className=""
-                  />
-                )}
+            <div key={index} className="flex items-center gap-4 pb-3 ">
+              <div className="">
+                {item.icon}
+               
               </div>
               <div>
                 <p className="md:text-[18px] text-[14px] font-semibold">
@@ -99,8 +92,8 @@ const Pricing = ({utm_source}: PageProps) => {
             <Image
               src="./info.png"
               alt="info"
-              width={1}
-              height={1}
+              width={0}
+              height={0}
               className="w-[16px] h-[16px]"
             />
             <p className="md:text-[18px]">

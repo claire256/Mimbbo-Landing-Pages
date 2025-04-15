@@ -5,7 +5,7 @@ const WhyJoin = () => (
     <h2 className="text-2xl font-semibold pt-16 theme-title">
       Why Join Mimbbo?
     </h2>
-    <div className="flex flex-wrap gap-6 items-center justify-center pt-14">
+    <div className="flex flex-wrap gap-10 items-center justify-center pt-14">
       {[
         {
           src: "/marketing.png",

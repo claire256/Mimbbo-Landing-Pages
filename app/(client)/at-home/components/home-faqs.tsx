@@ -5,6 +5,8 @@ const faqs = [
   {
     q: "How can I begin using Nucleus?",
     a: "",
+    qClassName: "font-semibold",
+
   },
   {
     q: "How do I integrate Nucleus design templates into my existing projects?",
@@ -13,13 +15,14 @@ const faqs = [
       "Nucleus also provides comprehensive documentation and tutorials to assist you with template integration. These resources can guide you through best practices and advanced customization techniques.",
       "If you encounter any issues or have specific questions during the integration process, Nucleus’s customer support team is available to help.",
     ],
+    qClassName: "font-semibold",
   },
 ];
 
 const FAQ = () => {
   return (
     <section className="section-padding" data-aos="fade-up">
-      <h2 className="md:text-3xl text-2xl text-center font-semibold pt-20 md:pt-40">
+      <h2 className="md:text-3xl text-2xl text-center font-semibold pt-20 md:pt-40 mb-8">
         Frequently Asked Questions
       </h2>
       <div className="lg:w-[840px] pl-4 pr-4 mx-auto md:text-base text-sm">
