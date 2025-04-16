@@ -2,7 +2,9 @@ body {
   max-width: 1920px; 
   margin: auto;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 /* static css */
 .sticky {
   height: 112px;
@@ -169,28 +171,6 @@ section {
   margin-top: 9px;
 }
 
-.scroll-container {
- 
-   text-align: left; 
-} 
-
-.scroll-container::-webkit-scrollbar {
-  width: 4px;
-}
-
-.scroll-container::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-.scroll-container::-webkit-scrollbar-thumb {
-  background: #16181d;
-  border-radius: 10px;
-}
-
-.scroll-container > * {
-  direction: ltr; /* Reset content direction */
-}
 .content {
   margin-left: 10px;
 }
@@ -419,10 +399,6 @@ section {
   .theme-card img {
     height: 430px;
   }
-  .scroll-container {
-    max-height: max-content !important;
-    padding: 0 !important;
-  }
  
 }
 
@@ -462,9 +438,6 @@ section {
   }
   .testimonial_img {
     height: auto !important;
-  }
-  .scroll-container {
-    width: 432px;
   }
   .showcase {
     width: 260px;
@@ -562,10 +535,6 @@ section {
   }
   .service_card {
     height: 350px;
-  }
-
-  .scroll-container {
-    width: 400px;
   }
   .number {
     font-size: 20px;

@@ -92,8 +92,8 @@ const Pricing = ({utm_source}: PageProps) => {
             <Image
               src="./info.png"
               alt="info"
-              width={0}
-              height={0}
+              width={16}
+              height={16}
               className="w-[16px] h-[16px]"
             />
             <p className="md:text-[18px]">

@@ -9,12 +9,7 @@ interface PageProps {
 }
 
 const HeroSection = ({utm_source}: PageProps) => {
-  const handleScroll = () => {
-    const section = document.getElementById("pricing");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+
   return (
     <div data-aos="fade-up">
       <div className="grid xl:grid-cols-2 md:gap-24 lg:grid-cols-1 gap-10 place-items-center ">
@@ -32,28 +27,29 @@ const HeroSection = ({utm_source}: PageProps) => {
           <p className=" text-[#6E7375] md:text-[18px] text-[16px] pt-6">
             Offer at-home beauty services and earn more on your schedule
           </p>
-          <div onClick={async() => 
-              await trackEvent({
-                eventName: "get_early_access_click",
-                params: {
-                  attributes: {
-                    buttonLocation: "hero_section",
-                  },
-                  query: {
-                    utm_source,
-                  },
-                },
-              })
-            } >
+          <a href="#pricing">
           <Button
-            onClick={handleScroll}
+            onClick={
+              async() => 
+                await trackEvent({
+                  eventName: "get_early_access_click",
+                  params: {
+                    attributes: {
+                      buttonLocation: "hero_section",
+                    },
+                    query: {
+                      utm_source,
+                    },
+                  },
+                })
+            }
             variant="custom"
             radius="full"
             className="bg-LimeGreen text-primary mt-8 w-[183px] h-12"
           >
             Get Early Access
           </Button>
-          </div>
+          </a>
         </div>
       </div>
     </div>
