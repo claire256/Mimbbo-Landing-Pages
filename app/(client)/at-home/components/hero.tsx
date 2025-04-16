@@ -16,8 +16,8 @@ const HeroSection = ({utm_source}: PageProps) => {
     }
   };
   return (
-    <div className="" data-aos="fade-up">
-      <div className="grid  xl:grid-cols-2 gap-24 lg:grid-cols-1 lg:gap-10 place-items-center">
+    <div data-aos="fade-up">
+      <div className="grid xl:grid-cols-2 md:gap-24 lg:grid-cols-1 gap-10 place-items-center ">
         <Image
           src="./makeupartist.jpeg"
           alt="makeup artist"
