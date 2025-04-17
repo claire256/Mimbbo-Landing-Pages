@@ -5,33 +5,31 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../../styles/landing-page.css";
-import EarnSection from "./components/earn-section";
 import Header from "./components/header";
-import HeroSection from "./components/hero-section";
-import RevenueStream from "./components/revenue-stream";
-import HowItWorks from "./components/how-it-works";
-import WhyJoin from "./components/why-join";
-import Testimonials from "./components/testimonials";
-import FAQ from "./components/business-faqs";
-import CTA from "./components/cta";
 import Footer from "../../../components/footer";
+import HeroSection from "./components/hero";
+import UnLock from "./components/unlock-a-new-way";
+import YourBusiness from "./components/your-business";
 import { useSearchParams } from "next/navigation";
 import {
   apiConfig,
   auth_object,
 } from "../../../utils/Config/amplify-auth-config";
 import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
+import Pricing from "./components/pricing";
+import FAQ from "./components/home-faqs";
+import Help from "./components/help";
 
 Amplify.configure({ Auth: auth_object, API: apiConfig, ssr: true });
 
-export default function HomeBusiness() {
-  const mimboss = "mimboss_landing_page";
+export default function Home() {
+  const at_home = "at_home_landing_page";
   const searchParams = useSearchParams();
 
   useEffect(() => {
     // track the page view first
     trackEvent({
-      eventName: `${mimboss}_view`,
+      eventName: `${at_home}_view`,
       params: {
         attributes: {
           source: "_direct",
@@ -45,7 +43,7 @@ export default function HomeBusiness() {
       console.log("key", key);
       if (key.includes("utm")) {
         trackEvent({
-          eventName: `${mimboss}_utm_view`,
+          eventName: `${at_home}_utm_view`,
           params: {
             attributes: {},
             query: {
@@ -65,23 +63,20 @@ export default function HomeBusiness() {
       });
     }
   }, []);
-
   return (
     <div className="flex flex-col min-h-screen">
-      <Header utm_source={mimboss} />
+      <Header utm_source={at_home} />
 
-      <main className="flex-1">
-        <HeroSection utm_source={mimboss} />
-        <RevenueStream />
-        <EarnSection />
-        <HowItWorks />
-        <WhyJoin />
-        <Testimonials />
+      <div className="flex-1">
+        <HeroSection utm_source={at_home} />
+        <UnLock />
+        <YourBusiness utm_source={at_home} />
+        <Pricing utm_source={at_home} />
         <FAQ />
-        <CTA utm_source={mimboss} />
-      </main>
+        <Help utm_source={at_home} />
+      </div>
 
-      <Footer />
+      <Footer bgColorClass="bg-white" />
     </div>
   );
 }

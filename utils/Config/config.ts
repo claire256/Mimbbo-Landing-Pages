@@ -58,6 +58,7 @@ const Config = {
     pinpointAppId: '',
     appName: 'Mimbbo Landing Page',
     slug: '',
+    pricingUrl: '',
   };
 
   const configuration = () => {
@@ -70,6 +71,8 @@ const Config = {
       appEnv === 'prod'
         ? '87c515e341cf4ca4885178343dbd7661'
         : 'd4b2fb4e0e584eb6af8da102065ce8af';
+    const pricingUrl =
+      appEnv === 'staging'? "https://buy.stripe.com/test_cN2eWg2pk89l8G47ss" : "https://buy.stripe.com/7sI6pH8ahffc7YI288"
   
     const slug = appEnv === 'prod' ? 'mimbbo-app' : `mimbbo-${appEnv}`;
     Config.auth = auth_object[appEnv];
@@ -79,6 +82,7 @@ const Config = {
     Config.env = appEnv;
     Config.pinpointAppId = pinpointAppId;
     Config.slug = slug;
+    Config.pricingUrl = pricingUrl;
   };
   
   configuration();

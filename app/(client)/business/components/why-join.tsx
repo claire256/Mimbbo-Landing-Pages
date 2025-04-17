@@ -5,7 +5,7 @@ const WhyJoin = () => (
     <h2 className="text-2xl font-semibold pt-16 theme-title">
       Why Join Mimbbo?
     </h2>
-    <div className="grid gap-6 pt-14 lg:grid-cols-2 xl:grid-cols-3 md:grid-cols-2">
+    <div className="flex flex-wrap gap-10 items-center justify-center pt-14">
       {[
         {
           src: "/marketing.png",
@@ -25,7 +25,7 @@ const WhyJoin = () => (
       ].map((item, index) => (
         <div
           key={index}
-          className="flex flex-col border border-[#C5CAD3] joining_card"
+          className="border border-[#C5CAD3] w-[400px] h-[296px] rounded-xl p-6"
         >
           <div className="icon">
             <Image
@@ -33,11 +33,11 @@ const WhyJoin = () => (
               alt={item.title}
               height={60}
               width={60}
-              className="w-12 h-12 text-primary"
+              className=" text-primary"
             />
           </div>
-          <h3 className="font-semibold pt-4">{item.title}</h3>
-          <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
+          <h3 className="font-semibold text-2xl md:text-3xl pt-10">{item.title}</h3>
+          <p className="pt-6 text-sm  md:text-base">{item.desc}</p>
         </div>
       ))}
     </div>

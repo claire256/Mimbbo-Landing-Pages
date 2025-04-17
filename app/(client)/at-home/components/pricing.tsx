@@ -1,0 +1,122 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
+import Image from "next/image";
+import { GoShieldCheck } from "react-icons/go";
+import Config from "@/utils/Config/config";
+import { RiVipCrown2Line } from "react-icons/ri";
+import { GrGroup } from "react-icons/gr";
+ 
+interface PageProps {
+  utm_source: string;
+}
+const steps = [
+  {
+    icon: <GoShieldCheck className="text-primary w-[18px]" />,
+    title: "Background check (safety badge on your profile)",
+    des: "So customers feel confident inviting you into their homes. You’ll receive a “Verified Pro” badge once complete.",
+  },
+  {
+    icon: <GrGroup className="text-primary w-[18px]"/>,
+    title: "Early access to house call gigs",
+    des: "Be the first to see and claim at-home beauty requests in your area — before the full rollout. More visibility. More bookings.",
+  },
+  {
+    icon: <RiVipCrown2Line className="text-primary w-[18px]"/>,
+    title: "Priority placement in search",
+    des: "Be featured at the top of relevant searches when customers look for at-home services in your area.",
+  },
+];
+const Pricing = ({utm_source}: PageProps) => {
+
+  const trackPrice = async()=>{   
+    const newTab = window.open('', '_blank');
+
+    await trackEvent({
+      eventName: "claim_my_spot_click",
+      params: {
+        attributes: {
+          buttonLocation: "pricing_section",
+        },
+        query: {
+          utm_source,
+        },
+      },
+    })
+
+    // Navigate the new tab to the pricing URL
+  if (newTab) {
+    newTab.location.href = Config.pricingUrl;
+  }
+
+  }
+
+  return (
+    <section id="pricing" className="section-padding" data-aos="fade-up">
+      <div className="grid xl:grid-cols-2 md:grid-cols-1 md:pt-36 pt-20 gap-10">
+        <div className="p-4">
+          <h2 className="md:text-[32px] text-2xl font-semibold pb-10">
+            Now 50% off for early pros
+          </h2>
+          {steps.map((item, index) => (
+            <div key={index} className="flex items-center gap-4 pb-3 ">
+              <div className="">
+                {item.icon}
+               
+              </div>
+              <div>
+                <p className="md:text-[18px] text-[14px] font-semibold">
+                  {item.title}
+                </p>
+                <p className="text-textGray md:text-[16px] text-[14px]">
+                  {item.des}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="shadow-md rounded-lg p-10 ">
+          <div className="flex items-center justify-between">
+            <h2 className="md:text-[32px] font-semibold">One-Time Setup</h2>
+            <div className="flex items-center gap-4">
+              <p className="text-[#979797] font-semibold md:text-xl line-through">
+                $160
+              </p>
+              <h2 className="font-semibold md:md:text-[32px]">$79.95</h2>
+            </div>
+          </div>
+          <hr className="w-full border-t-2  my-6" />
+
+          <div className="flex gap-3 items-center pt-6">
+            <Image
+              src="./info.png"
+              alt="info"
+              width={16}
+              height={16}
+              className="w-[16px] h-[16px]"
+            />
+            <p className="md:text-[18px]">
+              Monthly Subscription $35/mo (Starts Later){" "}
+            </p>
+          </div>
+          <p className="text-textGray pt-6 md:text-[16px] text-[14px]">
+            Once you’re approved and fully onboarded, a $35/month <br></br>
+            subscription will kick in. But don’t worry — you’ll be notified
+            <br></br> before this happens, so there won’t be any surprises.
+          </p>
+          <Button
+            variant="custom"
+            radius="full"
+            className="bg-LimeGreen w-full text-primary h-12 mt-20"
+            onClick={trackPrice}
+          >
+            Claim My Spot
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Pricing;
