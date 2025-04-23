@@ -22,105 +22,122 @@ const Header = ({ utm_source }: PageProps) => {
       src: "/checkcalender.png",
       des: "Appointments that fit into your routine, not the other way around",
     },
-    { 
-    src: "/home.png", 
-    des: "No need to find childcare or sit in traffic" },
     {
-      icon: <RiBearSmileLine/>,
+      src: "/home.png",
+      des: "No need to find childcare or sit in traffic",
+    },
+    {
+      icon: <RiBearSmileLine className="w-6 h-6 text-[#FE5F1D]" />,
       des: "Services done while your child naps, plays, or relaxes nearby",
     },
   ];
 
   return (
-    <section className="flex gap-32 bg-[#f1ede5] pl-[120px]">
-        <div>
-      <div className="flex justify-between align-center">
-        <div className="flex items-center">
+    <section className="grid xl:grid-cols-2 grid-cols-1  bg-[#f1ede5]">
+      <div>
+        <div className="flex justify-between align-center section-padding">
+          <div className="flex items-center">
+            <Link
+              href={downloadUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center"
+            >
+              <Image
+                src="/logo.png?height=24&width=100"
+                alt="Mimbbo"
+                width={180}
+                height={48}
+                className="w-auto h-6 logo"
+              />
+            </Link>
+          </div>
+          <div className="flex items-center gap-4">
+            {/* <p>Customer</p> */}
+            <Link href={loginUrl} target="_blank" rel="noopener noreferrer">
+              <Button
+                onClick={async () =>
+                  await trackEvent({
+                    eventName: "login_click",
+                    params: {
+                      attributes: {
+                        buttonLocation: "header_section",
+                      },
+                      query: {
+                        utm_source,
+                      },
+                    },
+                  })
+                }
+                className="rounded-md home_button w-[81px] border-slate-950 h-8"
+                variant={"outline"}
+              >
+                Login
+              </Button>
+            </Link>
+          </div>
+        </div>
+        <div className="section-padding text-center md:text-start">
+          <h2 className="font-bold text-3xl md:text-5xl md:pt-28 pt-14">
+            Your time is limited. Your <br></br>self-care shouldn’t be.
+          </h2>
+          <p className="md:text-base text-sm pt-8">
+            Book trusted beauty professionals who can come to your home -
+            <br></br>
+            so you can care for yourself without rearranging your entire day.
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-3 section-padding items-center md:items-start md:justify-start justify-center">
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className="w-[200px] h-[186px] bg-white rounded-lg p-4 mt-10"
+            >
+              {item.icon ? (
+                item.icon
+              ) : (
+                <Image src={item.src} width={24} height={27} alt="" />
+              )}
+              <p className="pt-6 md:text-base text-sm">{item.des}</p>
+            </div>
+          ))}
+        </div>
+        <div className="section-padding grid md:place-items-start place-items-center">
+        <Button
+          variant="custom"
+          radius="full"
+          className="bg-[#FE5F1D] md:w-[406px] md:h-11 mt-12 text-white w-[300px] h-8"
+        >
+          Join the Waitlist for At-Home Appointments
+        </Button>
+        <p className="mt-2 text-sm md:text-base">
+          Already have an account?{" "}
           <Link
-            href={downloadUrl}
+            href={loginUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center"
-          >
-            <Image
-              src="/logo.png?height=24&width=100"
-              alt="Mimbbo"
-              width={180}
-              height={48}
-              className="w-auto h-6 logo"
-            />
-          </Link>
-        </div>
-        <div className="flex items-center gap-4">
-          {/* <p>Customer</p> */}
-          <Link href={loginUrl} target="_blank" rel="noopener noreferrer">
-            <Button
-              onClick={async () =>
-                await trackEvent({
-                  eventName: "login_click",
-                  params: {
-                    attributes: {
-                      buttonLocation: "header_section",
-                    },
-                    query: {
-                      utm_source,
-                    },
+            className="font-bold md:text-base text-sm"
+            onClick={async () =>
+              await trackEvent({
+                eventName: "login_click",
+                params: {
+                  attributes: {
+                    buttonLocation: "header_section",
                   },
-                })
-              }
-              className="rounded-md home_button w-[81px] border-slate-950 h-8"
-              variant={"outline"}
-            >
-              Login
-            </Button>
+                  query: {
+                    utm_source,
+                  },
+                },
+              })
+            }
+          >
+            Sign in
           </Link>
+        </p>
         </div>
       </div>
-      <h2 className="font-bold text-5xl pt-28">Your time is limited. Your <br></br>self-care shouldn’t be.</h2>
-      <p className="text-base pt-4">
-        Book trusted beauty professionals who can come to your home -
-        <br></br>
-          so you can care for yourself without rearranging your entire day.
-      </p>
-      <div className="flex gap-3 pt-10">
-        {items.map((item, index)=>
-        <div key={index} className="w-[200px] h-[186px] bg-white rounded-lg p-4">
-        {item.icon?
-        <div className="text-3xl text-[#FE5F1D]">{item.icon}</div>
-        :
-        <Image src={item.src} width={24} height={27} alt=""/>}
-        <p className="pt-6">{item.des}</p>
-        </div>
-        )}
-      </div>
-      <Button variant='custom' radius="full" className="bg-[#FE5F1D] w-[406px] h-11 mt-12 text-white" >Join the Waitlist for At-Home Appointments</Button>
-      <p className="mt-2 text-xs text-dark alrdy">
-        Already have an account?{" "}
-        <Link
-          href={loginUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-bold"
-          onClick={async () =>
-            await trackEvent({
-              eventName: "login_click",
-              params: {
-                attributes: {
-                  buttonLocation: "hero_section",
-                },
-                query: {
-                  utm_source,
-                },
-              },
-            })
-          }
-        >
-          Sign in
-        </Link>
-      </p>
-      </div>
-      <div className="">
-       <ImageGrid/> 
+      <div className="xl:pt-0 pt-16">
+        <ImageGrid />
       </div>
     </section>
   );
