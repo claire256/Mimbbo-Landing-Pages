@@ -11,6 +11,7 @@ import { useSearchParams } from "next/navigation";
 import { apiConfig, auth_object } from "../../../utils/Config/amplify-auth-config";
 import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
 import Header from "./components/header";
+import HowItWorks from "./components/how-it-works";
 
 Amplify.configure({ Auth: auth_object, API: apiConfig });
 
@@ -61,6 +62,7 @@ export default function Home() {
       <Header utm_source={for_moms} />
 
       <main className="flex-1">
+        <HowItWorks/>
         <CTA utm_source={for_moms} />
       </main>
       <Footer />
