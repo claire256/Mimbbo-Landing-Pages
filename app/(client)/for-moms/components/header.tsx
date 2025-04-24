@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
 import ImageGrid from "./image-grid";
-import { RiBearSmileLine } from "react-icons/ri";
 
 interface PageProps {
   utm_source: string;
@@ -27,7 +26,7 @@ const Header = ({ utm_source }: PageProps) => {
       des: "No need to find childcare or sit in traffic",
     },
     {
-      icon: <RiBearSmileLine className="w-6 h-6 text-[#FE5F1D]" />,
+      src: "/bear.png",
       des: "Services done while your child naps, plays, or relaxes nearby",
     },
   ];
@@ -81,7 +80,7 @@ const Header = ({ utm_source }: PageProps) => {
           <h2 className="font-bold text-3xl md:text-5xl md:pt-28 pt-14">
             Your time is limited. Your <br></br>self-care shouldn’t be.
           </h2>
-          <p className="md:text-base text-sm pt-8">
+          <p className="md:text-[16px] text-base pt-8">
             Book trusted beauty professionals who can come to your home -
             <br></br>
             so you can care for yourself without rearranging your entire day.
@@ -93,12 +92,8 @@ const Header = ({ utm_source }: PageProps) => {
               key={index}
               className="w-[200px] h-[186px] bg-white rounded-lg p-4 mt-10"
             >
-              {item.icon ? (
-                item.icon
-              ) : (
-                <Image src={item.src} width={24} height={27} alt="" />
-              )}
-              <p className="pt-6 md:text-base text-sm">{item.des}</p>
+            <Image src={item.src} width={24} height={27} alt="" />
+              <p className="pt-6 md:text-[16px] text-base">{item.des}</p>
             </div>
           ))}
         </div>
@@ -110,7 +105,7 @@ const Header = ({ utm_source }: PageProps) => {
         >
           Join the Waitlist for At-Home Appointments
         </Button>
-        <p className="mt-2 text-sm md:text-base">
+        <p className="mt-2 md:text-[16px] text-base">
           Already have an account?{" "}
           <Link
             href={loginUrl}
