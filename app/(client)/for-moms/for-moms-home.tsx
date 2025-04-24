@@ -14,6 +14,7 @@ import Header from "./components/header";
 import HowItWorks from "./components/how-it-works";
 import WhyMoms from "./components/why-moms";
 import RealStories from "./components/real-stories";
+import Services from "./components/services";
 
 Amplify.configure({ Auth: auth_object, API: apiConfig });
 
@@ -67,6 +68,7 @@ export default function Home() {
         <HowItWorks/>
         <WhyMoms/>
         <RealStories/>
+        <Services/>
         <CTA utm_source={for_moms} />
       </main>
       <Footer />
