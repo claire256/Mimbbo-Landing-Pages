@@ -12,6 +12,7 @@ import { apiConfig, auth_object } from "../../../utils/Config/amplify-auth-confi
 import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
 import Header from "./components/header";
 import HowItWorks from "./components/how-it-works";
+import WhyMoms from "./components/why-moms";
 
 Amplify.configure({ Auth: auth_object, API: apiConfig });
 
@@ -63,6 +64,7 @@ export default function Home() {
 
       <main className="flex-1">
         <HowItWorks/>
+        <WhyMoms/>
         <CTA utm_source={for_moms} />
       </main>
       <Footer />

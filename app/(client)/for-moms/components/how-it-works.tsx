@@ -1,7 +1,4 @@
 import Image from "next/image";
-import { LuMessageSquareMore } from "react-icons/lu";
-import { MdOutlineManageAccounts } from "react-icons/md";
-import { FaVenus } from "react-icons/fa";
 
 const HowItWorks = () => {
   const items = [
@@ -23,7 +20,7 @@ const HowItWorks = () => {
   ];
   return (
     <section className="section-padding bg-white">
-      <div className="grid xl:grid-cols-2">
+      <div className="grid xl:grid-cols-2 pb-20">
         <div className="relative xl:pl-[190px]  pt-60 w-full grid place-items-center object-cover xl:place-items-start">
           <Image
             src="./masai.jpeg"
