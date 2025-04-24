@@ -26,16 +26,16 @@ const WhyMoms = ()=>{
     ]
     return(
         <section className="relative">
-            <div className="grid md:grid-cols-2">
-                <div className="section-padding relative">
-                    <h2 className="md:text-5xl font-bold text-mimbboRed pt-24">Why Moms Love <br></br> Mimbbo</h2>
-                    <p className="md:text-[20px] text-[16px] pt-4 text-[#181A20]">Aliquam lacinia diam quis lacus euismod</p>
+            <div className="grid xl:grid-cols-2">
+                <div className="section-padding relative text-center xl:text-start">
+                    <h2 className="md:text-5xl text-3xl font-bold text-mimbboRed xl:pt-24 pt-0">Why Moms Love <br></br> Mimbbo</h2>
+                    <p className="md:text-[20px] text-[16px] pt-4 pb-10 xl:pb-0 text-[#181A20]">Aliquam lacinia diam quis lacus euismod</p>
                 </div>
                 <Image src="./curlymom.png" alt="mom" width={900} height={800} className="w-full relative" />
             </div>
-            <div className="flex bg-white w-[1295px] h-[300px] rounded-lg gap-8 p-6 absolute right-20 bottom-6">
+            <div className="xl:flex bg-white xl:w-[1295px] xl:h-[300px] rounded-lg gap-8 p-6 xl:absolute xl:right-20 xl:bottom-6">
                 {intems.map((item, index)=>
-                <div className="p-6">
+                <div className="p-6 grid md:place-items-center xl:place-items-start">
                 <Image src={item.src} alt="" width={50} height={50}/>
                 <p className="md:text-[16px] text-base font-bold pt-10">{item.title}</p>
                 <p className="md:text-[16px] text-base pt-2">{item.des}</p>
