@@ -35,9 +35,9 @@ const WhyMoms = ()=>{
             </div>
             <div className="xl:flex bg-white xl:w-[1295px] xl:h-[300px] rounded-lg gap-8 p-6 xl:absolute xl:right-20 xl:bottom-6">
                 {intems.map((item, index)=>
-                <div className="p-6 grid md:place-items-center xl:place-items-start">
-                <Image src={item.src} alt="" width={50} height={50}/>
-                <p className="md:text-[16px] text-base font-bold pt-10">{item.title}</p>
+                <div className="p-6  grid md:place-items-center xl:place-items-start">
+                <Image src={item.src} alt="" width={50} height={50} className="md:w-[50px] md:h-[50px] h-8 w-8" />
+                <p className="md:text-[16px] text-base font-bold md:pt-10 pt-6">{item.title}</p>
                 <p className="md:text-[16px] text-base pt-2">{item.des}</p>
                 </div>
                 )}

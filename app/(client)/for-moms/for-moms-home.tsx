@@ -13,6 +13,7 @@ import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
 import Header from "./components/header";
 import HowItWorks from "./components/how-it-works";
 import WhyMoms from "./components/why-moms";
+import RealStories from "./components/real-stories";
 
 Amplify.configure({ Auth: auth_object, API: apiConfig });
 
@@ -65,6 +66,7 @@ export default function Home() {
       <main className="flex-1">
         <HowItWorks/>
         <WhyMoms/>
+        <RealStories/>
         <CTA utm_source={for_moms} />
       </main>
       <Footer />
