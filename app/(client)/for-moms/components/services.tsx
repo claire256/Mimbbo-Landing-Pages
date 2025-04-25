@@ -1,3 +1,6 @@
+'use client';
+
+
 import Image from "next/image";
 
 const Services = ()=>{
@@ -41,7 +44,7 @@ const Services = ()=>{
     ]
     return(
         <section className="section-padding bg-white">
-          <h2 className="text-2xl md:text-3xl font-bold text-center pt-32">What Services Can You Book?</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center pt-20 md:pt-32">What Services Can You Book?</h2>
           <div className="flex md:gap-8 gap-4 flex-wrap justify-center items-center pb-28">
             {items.map((item, index)=>
             <div key={index}>

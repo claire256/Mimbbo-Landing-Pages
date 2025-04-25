@@ -56,13 +56,13 @@ export default function CardCarousel() {
 
   return (
     <section className="section-padding bg-primary px-4 md:px-8">
-      <div className="text-center pt-32">
+      <div className="text-center pt-20 md:pt-32">
         <h2 className="text-3xl text-white font-bold">Real Stories from Real Moms</h2>
         <p className="text-white pt-4">Hear from clients just like you.</p>
       </div>
 
       {/* Scroll area */}
-      <div className="overflow-hidden pt-20">
+      <div className="overflow-hidden pt-10 md:pt-20">
         <div
           className="flex transition-transform duration-500"
           style={{
@@ -98,7 +98,7 @@ export default function CardCarousel() {
       </div>
 
       {/* Dots */}
-      <div className="flex justify-center mt-4 space-x-2 pt-14 pb-20">
+      <div className="flex justify-center mt-4 space-x-2 pt-6 md:pt-14 pb-20">
         {cards.map((_, i) => (
           <button
             key={i}
