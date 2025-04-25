@@ -58,7 +58,7 @@ export default function CardCarousel() {
     <section className="section-padding bg-primary px-4 md:px-8">
       <div className="text-center pt-32">
         <h2 className="text-3xl text-white font-bold">Real Stories from Real Moms</h2>
-        <p className="text-white">Hear from clients just like you.</p>
+        <p className="text-white pt-4">Hear from clients just like you.</p>
       </div>
 
       {/* Scroll area */}
@@ -76,7 +76,7 @@ export default function CardCarousel() {
               className="p-4"
               style={{ width: `${100 / cards.length}%`, flex: "0 0 auto" }}
             >
-              <div className="bg-white shadow rounded-xl p-4 md:p-10 w-full max-w-[514px] h-full">
+              <div className="bg-white shadow rounded-xl p-4 md:p-14 w-full max-w-[514px] h-full">
                 <div className="flex items-center gap-6">
                   <Image
                     width={60}
@@ -90,7 +90,7 @@ export default function CardCarousel() {
                     <p className="text-[#717171] md:text-[16px] text-sm">{card.title}</p>
                   </div>
                 </div>
-                <p className="xl:pt-14 pt-6 md:text-[16px] text-sm">{card.text}</p>
+                <p className="xl:pt-10 pt-6 md:text-[16px] text-sm">{card.text}</p>
               </div>
             </div>
           ))}

@@ -54,7 +54,7 @@ const HowItWorks = () => {
           <div className="">
             {items.map((item, index) => (
               <div key={index} className="flex gap-4 pt-14 items-center">
-                <div className="md:w-[102px] md:h-[102px] rounded-full bg-[#fdeadd] flex justify-center items-center w-[50px] h-[40px]">
+                <div className="md:w-[102px] md:h-[102px] rounded-full bg-[#faece4] flex justify-center items-center w-[50px] h-[40px]">
                   <Image src={item.src} alt="" width={36} height={36} className="text-[#FE5F1D] md:w-9 md:h-9 w-6 h-6"/>
                 </div>
                 <div>
