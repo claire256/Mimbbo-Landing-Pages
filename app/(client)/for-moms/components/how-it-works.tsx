@@ -19,7 +19,7 @@ const HowItWorks = () => {
     },
   ];
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-white" data-aos="fade-up">
       <div className="grid xl:grid-cols-2 pb-20">
         <div className="relative xl:pl-[190px]  pt-60 w-full grid place-items-center object-cover xl:place-items-start">
           <Image

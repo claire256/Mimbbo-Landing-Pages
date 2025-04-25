@@ -27,7 +27,7 @@ const WhyMoms = ()=>{
           },
     ]
     return(
-        <section className="relative">
+        <section className="relative" data-aos="fade-up">
             <div className="grid xl:grid-cols-2">
                 <div className="section-padding relative text-center xl:text-start">
                     <h2 className="md:text-5xl text-3xl font-bold text-mimbboRed xl:pt-24 pt-0">Why Moms Love <br></br> Mimbbo</h2>

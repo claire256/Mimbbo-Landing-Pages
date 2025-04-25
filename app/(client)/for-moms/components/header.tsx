@@ -32,7 +32,7 @@ const Header = ({ utm_source }: PageProps) => {
   ];
 
   return (
-    <section className="grid xl:grid-cols-2 grid-cols-1  bg-[#f1ede5]">
+    <section className="grid xl:grid-cols-2 grid-cols-1  bg-[#f1ede5]" data-aos="fade-up">
       <div>
         <div className="flex justify-between align-center section-padding">
           <div className="flex items-center">
