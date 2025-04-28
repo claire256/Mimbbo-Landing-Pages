@@ -19,6 +19,7 @@ import TrustComes from "./components/trust-comes";
 import GetStarted from "./components/get-started";
 import TreatYourself from "./components/treat-yourself";
 import Faqs from "./components/faq";
+import BeautyCare from "./components/beauty-care";
 
 Amplify.configure({ Auth: auth_object, API: apiConfig });
 
@@ -77,6 +78,7 @@ export default function Home() {
         <GetStarted/>
         <TreatYourself/>
         <Faqs/>
+        <BeautyCare/>
         <CTA utm_source={for_moms} />
       </main>
       <Footer />
