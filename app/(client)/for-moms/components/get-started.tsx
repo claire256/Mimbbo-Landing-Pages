@@ -5,24 +5,20 @@ import ServicesNeeded from "./services-needed";
 
 const steps = [
   {
-    step: "1.",
-    title: "Create Your Account",
+    title: "1. Create Your Account",
     description:
       "Create your account on Mimbbo and gain access to multiple professionals.",
   },
   {
-    step: "2.",
-    title: "Post a Request",
+    title: "2. Post a Request",
     description: "",
   },
   {
-    step: "3.",
-    title: "Get Offers",
+    title: "3. Get Offers",
     description: "",
   },
   {
-    step: "4.",
-    title: "Book & Enjoy",
+    title: "4. Book & Enjoy",
     description: "",
   },
 ];
@@ -35,26 +31,25 @@ const GetStarted = () => {
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-1 gap-10 mt-8 lg:grid-cols-1 xl:grid-cols-2 lg:place-items-center instructions section-padding">
         <div className="relative pl-6 space-y-6" data-aos="fade-up">
-          {steps.map(({ step, title, description }) => (
-            <div key={step} className="flex gap-4 content">
-              <div className="flex items-center justify-center w-6 h-6 text-white rounded-full bg-primary number">
-                {step}
-              </div>
+          {steps.map(({ title, description }) => (
+            <div className="flex gap-4 content">
               <div>
-                <h3 className="font-semibold text-instructions">{title}</h3>
+                <h3 className="font-semibold md:text-[28px] text-xl">{title}</h3>
                 <p className="mt-1 text-sm text-muted-foreground showcase">
                   {description}
                 </p>
               </div>
             </div>
           ))}
+          <div className="md:pt-28 pt-4">
           <Button
             variant="custom"
             radius="full"
-            className="bg-[#FE5F1D] md:w-[406px] md:h-16 mt-12 text-white w-[300px] h-8 font-bold text-xl"
+            className="bg-[#FE5F1D] md:w-[406px] md:h-16  text-white w-[300px] h-8 font-bold md:text-xl text-[16px]"
           >
             Post Your First Request
           </Button>
+          </div>
         </div>
 
         <ServicesNeeded />
