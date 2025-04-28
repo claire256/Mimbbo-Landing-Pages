@@ -39,7 +39,7 @@ return (
           </button>
 
           {openIndex === index && (
-            <div className={` space-y-4 text-sm mt-1 pl-6 ${faq.aClassName || "md:text-base"}`}>
+            <div className={` space-y-4 text-base mt-1 pl- ${faq.aClassName || "md:text-[16px]"}`}>
               {Array.isArray(faq.a) ? (
                 faq.a.map((paragraph, i) => (
                   <p key={i} className="leading-relaxed">
