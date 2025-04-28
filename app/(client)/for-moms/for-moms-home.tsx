@@ -17,6 +17,7 @@ import RealStories from "./components/real-stories";
 import Services from "./components/services";
 import TrustComes from "./components/trust-comes";
 import GetStarted from "./components/get-started";
+import TreatYourself from "./components/treat-yourself";
 
 Amplify.configure({ Auth: auth_object, API: apiConfig });
 
@@ -73,6 +74,7 @@ export default function Home() {
         <Services/>
         <TrustComes/>
         <GetStarted/>
+        <TreatYourself/>
         <CTA utm_source={for_moms} />
       </main>
       <Footer />
