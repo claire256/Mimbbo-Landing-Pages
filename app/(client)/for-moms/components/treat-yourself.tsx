@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
 import React from "react";
 
-const TreatYourself = () => {
+interface PageProps {
+  utm_source: string;
+}
+const TreatYourself = ({ utm_source }: PageProps) => {
   return (
     <section
       className=" pt-24 pb-20  bg-gradient-to-r grid place-content-center text-center"
@@ -15,6 +19,19 @@ const TreatYourself = () => {
           Book your first Mimbbo At Home service today and get $25 off.
         </p>
         <Button
+         onClick={async () =>
+                        await trackEvent({
+                          eventName: "claim_your_25%_off_click",
+                          params: {
+                            attributes: {
+                              buttonLocation: "treat_yourself_section",
+                            },
+                            query: {
+                              utm_source,
+                            },
+                          },
+                        })
+                      }
           variant="custom"
           radius="full"
           className="bg-primary md:w-[327px] md:h-16  text-white w-[300px] h-8 font-bold md:text-xl text-[16px] mt-14"

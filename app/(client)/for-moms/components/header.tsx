@@ -99,6 +99,20 @@ const Header = ({ utm_source }: PageProps) => {
         </div>
         <div className="section-padding grid md:place-items-start place-items-center">
         <Button
+         onClick={
+          async() => 
+            await trackEvent({
+              eventName: "join-wait-list-for-at-home_click",
+              params: {
+                attributes: {
+                  buttonLocation: "hero_section",
+                },
+                query: {
+                  utm_source,
+                },
+              },
+            })
+        }
           variant="custom"
           radius="full"
           className="bg-[#FE5F1D] md:w-[406px] md:h-11 mt-12 text-white w-[300px] h-8"
@@ -117,7 +131,7 @@ const Header = ({ utm_source }: PageProps) => {
                 eventName: "login_click",
                 params: {
                   attributes: {
-                    buttonLocation: "header_section",
+                    buttonLocation: "hero_section",
                   },
                   query: {
                     utm_source,

@@ -1,8 +1,12 @@
 import { Button } from '@/components/ui/button';
+import { trackEvent } from '@/utils/pinpoint/pinpointEvent';
 import Image from 'next/image';
 import React from 'react'
 
-const BeautyCare = () => {
+interface PageProps {
+  utm_source: string;
+}
+const BeautyCare = ({ utm_source }: PageProps) => {
   return (
     <div className='grid md:grid-cols-2'>
         <div className='grid place-content-center section-padding '>
@@ -12,6 +16,20 @@ const BeautyCare = () => {
             simple, affordable, and doable.
             </p>
             <Button
+              onClick={
+                      async() => 
+                        await trackEvent({
+                          eventName: "book_click",
+                          params: {
+                            attributes: {
+                              buttonLocation: "beauty_care_section",
+                            },
+                            query: {
+                              utm_source,
+                            },
+                          },
+                        })
+                    }
           variant="custom"
           radius="full"
           className="bg-primary md:w-[383px] md:h-16  text-white w-[300px] h-8 font-bold md:text-xl text-[16px] md:mb-0 mb-10 mt-14"

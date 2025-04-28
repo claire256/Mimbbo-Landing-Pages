@@ -2,7 +2,11 @@
 
 import { Button } from "@/components/ui/button";
 import ServicesNeeded from "./services-needed";
+import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
 
+interface PageProps {
+  utm_source: string;
+}
 const steps = [
   {
     title: "1. Create Your Account",
@@ -23,7 +27,7 @@ const steps = [
   },
 ];
 
-const GetStarted = () => {
+const GetStarted = ({ utm_source }: PageProps) => {
   return (
     <section className=" bg-white" data-aos="fade-up">
       <h2 className="text-3xl md:text-5xl font-semibold text-center">
@@ -34,7 +38,9 @@ const GetStarted = () => {
           {steps.map(({ title, description }) => (
             <div className="flex gap-4 content">
               <div>
-                <h3 className="font-semibold md:text-[28px] text-xl">{title}</h3>
+                <h3 className="font-semibold md:text-[28px] text-xl">
+                  {title}
+                </h3>
                 <p className="mt-1 text-sm text-muted-foreground showcase">
                   {description}
                 </p>
@@ -42,13 +48,26 @@ const GetStarted = () => {
             </div>
           ))}
           <div className="md:pt-28 pt-4">
-          <Button
-            variant="custom"
-            radius="full"
-            className="bg-[#FE5F1D] md:w-[406px] md:h-16  text-white w-[300px] h-8 font-bold md:text-xl text-[16px]"
-          >
-            Post Your First Request
-          </Button>
+            <Button
+              onClick={async () =>
+                await trackEvent({
+                  eventName: "post_first-request_click",
+                  params: {
+                    attributes: {
+                      buttonLocation: "get_started_section",
+                    },
+                    query: {
+                      utm_source,
+                    },
+                  },
+                })
+              }
+              variant="custom"
+              radius="full"
+              className="bg-[#FE5F1D] md:w-[406px] md:h-16  text-white w-[300px] h-8 font-bold md:text-xl text-[16px]"
+            >
+              Post Your First Request
+            </Button>
           </div>
         </div>
 

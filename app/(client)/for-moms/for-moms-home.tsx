@@ -75,10 +75,10 @@ export default function Home() {
         <RealStories/>
         <Services/>
         <TrustComes/>
-        <GetStarted/>
-        <TreatYourself/>
+        <GetStarted utm_source={for_moms}/>
+        <TreatYourself utm_source={for_moms}/>
         <Faqs/>
-        <BeautyCare/>
+        <BeautyCare utm_source={for_moms}/>
         <CTA utm_source={for_moms} />
       </main>
       <Footer />
