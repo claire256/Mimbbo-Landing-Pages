@@ -14,6 +14,10 @@ import {
 import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
 import CTA from "../business/components/cta";
 import Hero from "./components/hero";
+import HowItWorksHome from "./components/how-it-works";
+import WhyMoms from "./components/why-moms";
+import RealStories from "./components/real-stories";
+import ServicesHome from "./components/services";
 
 
 Amplify.configure({ Auth: auth_object, API: apiConfig, ssr: true });
@@ -61,9 +65,14 @@ export default function Home() {
   }, []);
   return (
     <div className="flex flex-col min-h-screen">
+        <Hero utm_source={loved_ones}/>
 
       <div className="flex-1">
-        <Hero utm_source={loved_ones}/>
+        <HowItWorksHome/>
+        <WhyMoms/>
+        <RealStories/>
+        <ServicesHome/>
+
       <CTA utm_source={loved_ones}/> 
       </div>
 

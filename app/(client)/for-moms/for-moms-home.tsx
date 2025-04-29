@@ -14,7 +14,7 @@ import Header from "./components/header";
 import HowItWorks from "./components/how-it-works";
 import WhyMoms from "./components/why-moms";
 import RealStories from "./components/real-stories";
-import Services from "./components/services";
+import ServicesHome from "./components/services";
 import TrustComes from "./components/trust-comes";
 import GetStarted from "./components/get-started";
 import TreatYourself from "./components/treat-yourself";
@@ -73,7 +73,7 @@ export default function Home() {
         <HowItWorks/>
         <WhyMoms/>
         <RealStories/>
-        <Services/>
+        <ServicesHome/>
         <TrustComes/>
         <GetStarted utm_source={for_moms}/>
         <TreatYourself utm_source={for_moms}/>

@@ -1,4 +1,3 @@
-// pages/index.tsx or another component
 import WhySection from '@/components/why-section';
 
 const items = [

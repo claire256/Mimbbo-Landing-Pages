@@ -98,7 +98,7 @@ const Hero = ({ utm_source }: PageProps) => {
          onClick={
           async() => 
             await trackEvent({
-              eventName: "join-wait-list-for-at-home_click",
+              eventName: "join_the_wait_list_click",
               params: {
                 attributes: {
                   buttonLocation: "hero_section",
@@ -111,7 +111,7 @@ const Hero = ({ utm_source }: PageProps) => {
         }
           variant="custom"
           radius="full"
-          className="bg-[#FE5F1D] md:w-[406px] md:h-11 mt-12 text-white w-[300px] h-8"
+          className="bg-[#FE5F1D] md:w-[206px] md:h-11 mt-12 text-white w-[300px] h-8"
         >
           Join the Waitlist 
         </Button>
