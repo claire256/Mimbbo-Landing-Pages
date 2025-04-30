@@ -10,7 +10,7 @@ const ServicesNeeded = () => {
         <div className="w-[240px] h-[410px] bg-secondary pl-3 pt-2 pr-2 rounded-xl  images_div">
         <Image src="/natural.jpeg" alt="makeup" height={228} width={215} className="rounded-xl natural" />
         <p className="font-medium text-lg text-dark pt-2 ">need editorial makeup</p>
-        <div className="flex gap-10 vector_div">
+        <div className="flex gap-8 vector_div">
             <div className="flex gap-2 display_vector">
             <Image src="/Vector.png" alt="vector" height={1} width={1} className="h-5 w-5 vector"/>
             <p className="text-dark font-semibold">$115-$155</p>
@@ -22,7 +22,7 @@ const ServicesNeeded = () => {
         <div className="w-[240px] h-[410px] pr-2 bg-secondary pl-2.5 pt-2 rounded-xl images_div">
         <Image src="/pony.jpeg" alt="hair" height={228} width={219} className="rounded-xl"/>
         <p className="font-medium text-lg text-dark pt-2">need a sleek ponytail</p>
-        <div className="flex justify-center gap-16 display_vector2">
+        <div className="flex justify-center gap-14 display_vector2">
             <div className="flex gap-2">
             <Image src="/Vector.png" alt="vector" height={1} width={1} className="h-5 w-5"/>
             <p className="text-dark font-semibold">$95-$105</p>
