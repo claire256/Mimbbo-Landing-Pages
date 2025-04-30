@@ -68,7 +68,7 @@ const Header = ({ utm_source }: PageProps) => {
                     },
                   })
                 }
-                className="rounded-md home_button w-[81px] border-slate-950 h-8"
+                className="rounded-md home_button w-[81px] bg-transparent border-slate-950 h-8"
                 variant={"outline"}
               >
                 Login
