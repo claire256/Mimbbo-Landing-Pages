@@ -5,7 +5,7 @@ import Image from "next/image";
 const ServicesNeeded = () => {
   return (
     <div className="p-6 bg-white rounded-xl w-full needed_card" data-aos="fade-left">
-      <h3 className="mb-4 text-sm font-medium text-center service-text">What do you need done?</h3>
+      <h3 className="mb-4 text-base font-medium text-center service-text">What do you need done?</h3>
       <div className="flex justify-between flex_images">
         <div className="w-[240px] h-[410px] bg-secondary pl-3 pt-2 pr-2 rounded-xl  images_div">
         <Image src="/natural.jpeg" alt="makeup" height={228} width={215} className="rounded-xl natural" />

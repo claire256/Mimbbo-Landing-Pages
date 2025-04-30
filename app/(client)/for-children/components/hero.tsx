@@ -144,7 +144,7 @@ const Header = ({ utm_source }: PageProps) => {
         </div>
       </div>
       <div className="xl:pt-0 pt-16">
-        <Image src="./girl.png" alt="gal with hair" width={688} height={799} className="w-full" />
+        <Image src="./girl.png" alt="gal with hair" width={688} height={788} className="w-full" />
       </div>
       </div>
     </div>

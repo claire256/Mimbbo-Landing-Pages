@@ -2,11 +2,11 @@ import Image from "next/image";
 
 const Testimonials = () => (
   <section
-    className="p md:px-8 md:pt-24 section-padding mt-24"
+    className=" md:mt-28 mt-10 section-padding"
     data-aos="fade-up"
   >
-    <h2 className="text-2xl font-semibold theme-title pt-20">Testimonials</h2>
-    <div className="grid gap-14 mt-12 sm:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 lg:place-items-center testimonialss">
+    <h2 className="text-2xl font-semibold theme-title ">Testimonials</h2>
+    <div className="grid gap-14 md:mt-14   sm:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 lg:place-items-center testimonialss">
       {[
         {
           name: "Siv K.",

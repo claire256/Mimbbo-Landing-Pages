@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 
 const EarnSection = () => {
   return (
-    <section className="px-6 pt-10 py-16 md:px-12 section-padding" data-aos="fade-up">
+    <section className="p-0  section-padding" data-aos="fade-up">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-3xl font-bold md:text-4xl theme-title">Who Can Earn on Mimbbo?</h2>
         <p className="pt-4 text-lg text-dark paragraph">

@@ -2,10 +2,10 @@ import Image from "next/image";
 
 const WhyJoin = () => (
   <section className="section-padding" data-aos="fade-up">
-    <h2 className="text-2xl font-semibold pt-16 theme-title">
+    <h2 className="text-2xl font-semibold   md:pt-32 theme-title ">
       Why Join Mimbbo?
     </h2>
-    <div className="flex flex-wrap gap-10 items-center justify-center pt-14">
+    <div className="flex flex-wrap gap-10 items-center justify-center pt-5 md:pt-14">
       {[
         {
           src: "/marketing.png",
