@@ -20,9 +20,9 @@ const EarnSection = () => {
         <div className="relative overflow-hidden theme-card college-student-card">
           <Image src="/college-student.png" alt="College Students" width={400} height={500} className="object-cover w-full h-full" />
           <Card className="absolute p-4 bg-white shadow-lg bottom-4 left-4 right-4 card_white_box">
-            <span className="px-3 py-1 text-sm font-medium card-box">College Students</span>
-            <h3 className="mt-2 text-xl font-bold value">$200+</h3>
-            <p className="text-sm card-dec">Earn every week by taking on beauty gigs during weekends</p>
+            <span className="px-3 py-1 text-sm font-medium card-box select-none">College Students</span>
+            <h3 className="mt-2 text-xl font-bold value select-none">$200+</h3>
+            <p className="text-sm card-dec select-none">Earn every week by taking on beauty gigs during weekends</p>
           </Card>
         </div>
 
@@ -31,9 +31,9 @@ const EarnSection = () => {
           <div className="relative overflow-hidden theme-card freelancers-card">
             <Image src="/freelancer.png" alt="Freelancers" width={400} height={500} className="object-cover w-full h-full" />
             <Card className="absolute p-4 bg-white shadow-lg bottom-4 left-4 right-4 card_white_box">
-              <span className="px-3 py-1 text-sm font-medium card-box">Freelancers</span>
-              <h3 className="mt-2 text-xl font-bold value">5x</h3>
-              <p className="text-sm card-dec">Your client reach by tapping into Mimbbo’s marketplace</p>
+              <span className="px-3 py-1 text-sm font-medium card-box select-none">Freelancers</span>
+              <h3 className="mt-2 text-xl font-bold value select-none">5x</h3>
+              <p className="text-sm card-dec select-none">Your client reach by tapping into Mimbbo’s marketplace</p>
             </Card>
           </div>
 
@@ -41,9 +41,9 @@ const EarnSection = () => {
           <div className="relative overflow-hidden theme-card salon-owners-card">
             <Image src="/salon-owner.png" alt="Salon Owners" width={400} height={500} className="object-cover w-full h-full" />
             <Card className="absolute p-4 bg-white shadow-lg bottom-4 left-4 right-4 card_white_box">
-              <span className="px-3 py-1 text-sm font-medium card-box">Salon Owners</span>
-              <h3 className="mt-2 text-xl font-bold value">30%</h3>
-              <p className="text-sm card-dec">Fewer empty spots—fill your schedule with beauty gigs</p>
+              <span className="px-3 py-1 text-sm font-medium card-box select-none">Salon Owners</span>
+              <h3 className="mt-2 text-xl font-bold value select-none">30%</h3>
+              <p className="text-sm card-dec select-none">Fewer empty spots—fill your schedule with beauty gigs</p>
             </Card>
           </div>
         </div>
@@ -52,9 +52,9 @@ const EarnSection = () => {
         <div className="relative overflow-hidden theme-card cosmetology-student-card">
           <Image src="/cosmetology-student.png" alt="Cosmetology Students" width={400} height={500} className="object-cover w-full h-full" />
           <Card className="absolute p-4 bg-white shadow-lg bottom-4 left-4 right-4 card_white_box">
-            <span className="px-3 py-1 text-sm font-medium card-box">Cosmetology Students</span>
-            <h3 className="mt-2 text-xl font-bold value">20+</h3>
-            <p className="text-sm card-dec">Paid gigs a semester while building your clientele</p>
+            <span className="px-3 py-1 text-sm font-medium card-box select-none">Cosmetology Students</span>
+            <h3 className="mt-2 text-xl font-bold value select-none">20+</h3>
+            <p className="text-sm card-dec select-none">Paid gigs a semester while building your clientele</p>
           </Card>
         </div>
 

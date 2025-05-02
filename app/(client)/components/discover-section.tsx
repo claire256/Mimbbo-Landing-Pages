@@ -20,8 +20,8 @@ const DiscoverSection = () => {
         <div className="relative overflow-hidden theme-card college-student-card">
           <Image src="/bob.jpeg" alt="College Students" width={400} height={500} className="object-cover w-full h-full" />
           <Card className="absolute p-4 bg-white shadow-lg bottom-4 left-4 right-4 card_white_box">
-            <span className="px-3 py-1 text-sm font-medium card-box">Hair</span>
-            <p className="text-sm card-dec mt-16">Layered bob silk press</p>
+            <span className="px-3 py-1 text-sm font-medium card-box select-none">Hair</span>
+            <p className="text-sm card-dec mt-16 select-none">Layered bob silk press</p>
           </Card>
         </div>
 
@@ -30,8 +30,8 @@ const DiscoverSection = () => {
           <div className="relative overflow-hidden theme-card freelancers-card">
             <Image src="/lash.png" alt="Freelancers" width={400} height={500} className="object-cover w-full h-full" />
             <Card className="absolute p-4 bg-white shadow-lg bottom-4 left-4 right-4 card_white_box">
-              <span className="px-3 py-1 text-sm font-medium card-box">Lash & Brow</span>
-              <p className="text-sm card-dec mt-16">2 weeks fill</p>
+              <span className="px-3 py-1 text-sm font-medium card-box select-none ">Lash & Brow</span>
+              <p className="text-sm card-dec mt-16 select-none">2 weeks fill</p>
             </Card>
           </div>
 
@@ -39,8 +39,8 @@ const DiscoverSection = () => {
           <div className="relative overflow-hidden theme-card salon-owners-card">
             <Image src="/nails.jpeg" alt="Salon Owners" width={400} height={500} className="object-cover w-full h-full" />
             <Card className="absolute p-4 bg-white shadow-lg bottom-4 left-4 right-4 card_white_box">
-              <span className="px-3 py-1 text-sm font-medium card-box">Nails</span>
-              <p className="text-sm card-dec mt-16">Colorful nails for the summer</p>
+              <span className="px-3 py-1 text-sm font-medium card-box select-none">Nails</span>
+              <p className="text-sm card-dec mt-16 select-none">Colorful nails for the summer</p>
             </Card>
           </div>
         </div>
@@ -49,8 +49,8 @@ const DiscoverSection = () => {
         <div className="relative overflow-hidden theme-card cosmetology-student-card">
           <Image src="makeup.jpeg" alt="Cosmetology Students" width={400} height={500} className="object-cover w-full h-full" />
           <Card className="absolute p-4 bg-white shadow-lg bottom-4 left-4 right-4 card_white_box">
-            <span className="px-3 py-1 text-sm font-medium card-box">Makeup</span>
-            <p className="text-sm card-dec mt-16">Soft nude makeup for photoshoot</p>
+            <span className="px-3 py-1 text-sm font-medium card-box select-none">Makeup</span>
+            <p className="text-sm card-dec mt-16 select-none">Soft nude makeup for photoshoot</p>
           </Card>
         </div>
 

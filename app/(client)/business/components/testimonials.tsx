@@ -34,12 +34,12 @@ const Testimonials = () => (
           />
           <div className="testimonial_text">
             <div>
-              <h3 className="text-lg font-medium">{testimonial.name}</h3>
-              <p className="text-xs text-muted-foreground">
+              <h3 className="text-lg font-medium select-none">{testimonial.name}</h3>
+              <p className="text-xs text-muted-foreground select-none">
                 {testimonial.role}
               </p>
             </div>
-            <p className="mt-4 text-sm">{testimonial.text}</p>
+            <p className="mt-4 text-sm select-none">{testimonial.text}</p>
           </div>
         </div>
       ))}

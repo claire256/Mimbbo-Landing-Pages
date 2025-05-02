@@ -57,11 +57,11 @@ const UnLock = () => {
                 className="pt-4 text-primary"
               />
             </div>
-            <h3 className="font-semibold text-[16px]  pt-4">{item.title}</h3>
-            <p className="mt-2 text-sm text-[#6E7375] whitespace-pre-line">
+            <h3 className="font-semibold text-[16px]  pt-4 select-none">{item.title}</h3>
+            <p className="mt-2 text-sm text-[#6E7375] whitespace-pre-line select-none">
               {item.desc}
             </p>
-            <p className=" text-primary text-sm pt-3">{item.more}</p>
+            <a href="#" className=" text-primary text-sm pt-3">{item.more}</a>
           </div>
         ))}
       </div>

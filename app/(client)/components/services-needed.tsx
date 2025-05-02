@@ -19,7 +19,7 @@ const ServicesNeeded = () => {
             width={215}
             className="rounded-xl natural"
           />
-          <p className="font-medium text-lg text-dark pt-2 ">
+          <p className="font-medium text-lg text-dark pt-2 select-none">
             need editorial makeup
           </p>
           <div className="flex gap-6 md:gap-10 vector_div">
@@ -31,7 +31,7 @@ const ServicesNeeded = () => {
                 width={1}
                 className="h-5 w-5 vector"
               />
-              <p className="text-dark font-semibold">$115-$155</p>
+              <p className="text-dark font-semibold select-none">$115-$155</p>
             </div>
             <div className="bg-primary pt-[2px]  rounded-3xl w-[63px] h-[22px] text-white text-xs flex justify-center makeup">
               Makeup
@@ -49,7 +49,7 @@ const ServicesNeeded = () => {
             width={219}
             className="rounded-xl"
           />
-          <p className="font-medium text-lg text-dark pt-2">
+          <p className="font-medium text-lg text-dark pt-2 select-none">
             need a sleek ponytail
           </p>
           <div className="flex justify-center md:gap-16 gap-10 display_vector2">
@@ -61,7 +61,7 @@ const ServicesNeeded = () => {
                 width={1}
                 className="h-5 w-5"
               />
-              <p className="text-dark font-semibold">$95-$105</p>
+              <p className="text-dark font-semibold select-none" >$95-$105</p>
             </div>
             <div className="bg-mimbboRed pt-[2px] rounded-3xl w-[42px] h-[22px] text-white text-xs flex justify-center makeup">
               Hair

@@ -31,7 +31,7 @@ const Services = ({ heading, services, bgColor = "bg-white" }: ServicesProps) =>
               {item.list.map((listItem, i) => (
                 <li
                   key={i}
-                  className="[&::marker]:text-mimbboRed [&::marker]:text-lg"
+                  className="[&::marker]:text-mimbboRed [&::marker]:text-lg select-none"
                 >
                   {listItem}
                 </li>

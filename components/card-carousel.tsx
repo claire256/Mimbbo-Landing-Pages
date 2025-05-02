@@ -72,11 +72,11 @@ export default function CardCarousel({
                     className="rounded-full"
                   />
                   <div>
-                    <p className="font-bold">{card.name}</p>
-                    <p className="text-[#717171] md:text-[16px] text-sm">{card.title}</p>
+                    <p className="font-bold select-none">{card.name}</p>
+                    <p className="text-[#717171] md:text-[16px] text-sm select-none">{card.title}</p>
                   </div>
                 </div>
-                <p className="xl:pt-10 pt-6 md:text-[16px] text-sm">{card.text}</p>
+                <p className="xl:pt-10 pt-6 md:text-[16px] text-sm select-none">{card.text}</p>
               </div>
             </div>
           ))}

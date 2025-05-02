@@ -96,11 +96,11 @@ const Pricing = ({utm_source}: PageProps) => {
               height={16}
               className="w-[16px] h-[16px]"
             />
-            <p className="md:text-[18px]">
+            <p className="md:text-[18px] select-none">
               Monthly Subscription $35/mo (Starts Later){" "}
             </p>
           </div>
-          <p className="text-textGray pt-6 md:text-[16px] text-[14px]">
+          <p className="text-textGray pt-6 md:text-[16px] text-[14px] select-none">
             Once you’re approved and fully onboarded, a $35/month <br></br>
             subscription will kick in. But don’t worry — you’ll be notified
             <br></br> before this happens, so there won’t be any surprises.

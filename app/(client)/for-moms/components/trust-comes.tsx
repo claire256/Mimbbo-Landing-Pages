@@ -36,7 +36,7 @@ const TrustComes = () => {
          {items.map((item, index)=>
          <div key={index} className='flex gap-3 xl:pl-64 pt-4'>
          <Image src={item.src} alt="" width={20} height={15} className='' />
-         <p className='md:text-lg text-bas '>{item.title}</p>
+         <p className='md:text-lg text-bas select-none'>{item.title}</p>
          </div>
         )}
         </div>

@@ -89,7 +89,7 @@ const Hero = ({ utm_source }: PageProps) => {
               className="w-[200px] h-[186px] bg-transparent border border-[#FE5F1D] rounded-lg p-4 mt-10"
             >
             <Image src={item.src} width={24} height={27} alt=""/>
-              <p className="pt-6 md:text-[16px] text-base text-white">{item.des}</p>
+              <p className="pt-6 md:text-[16px] text-base text-white select-none">{item.des}</p>
             </div>
           ))}
         </div>

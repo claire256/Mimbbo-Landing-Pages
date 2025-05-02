@@ -51,10 +51,10 @@ const WhySection = ({ title, subtitle, imageSrc, items }: WhySectionProps) => {
               height={50}
               className="md:w-[50px] md:h-[50px] h-8 w-8"
             />
-            <p className="md:text-[16px] text-base font-bold md:pt-10 pt-6">
+            <p className="md:text-[16px] text-base font-bold md:pt-10 pt-6 select-none">
               {item.title}
             </p>
-            <p className="md:text-[16px] text-base pt-2">{item.des}</p>
+            <p className="md:text-[16px] text-base pt-2 select-none">{item.des}</p>
           </div>
         ))}
       </div>

@@ -37,8 +37,8 @@ const WhyJoin = () => (
               className=" text-primary"
             />
           </div>
-          <h3 className="font-semibold text-2xl md:text-3xl pt-10">{item.title}</h3>
-          <p className="pt-6 text-base  md:text-[16px] ">{item.desc}</p>
+          <h3 className="font-semibold text-2xl md:text-3xl pt-10 select-none">{item.title}</h3>
+          <p className="pt-6 text-base  md:text-[16px] select-none">{item.desc}</p>
         </div>
       ))}
     </div>
