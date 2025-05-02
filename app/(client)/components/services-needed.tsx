@@ -23,17 +23,17 @@ const ServicesNeeded = () => {
             need editorial makeup
           </p>
           <div className="flex gap-6 md:gap-10 vector_div">
-            <div className="flex gap-2 display_vector">
+            <div className="flex md:gap-2 display_vector justify-center items-center">
               <Image
                 src="/Vector.png"
                 alt="vector"
                 height={1}
                 width={1}
-                className="h-5 w-5 vector"
+                className="h-4 w-4 vector"
               />
               <p className="text-dark font-semibold select-none">$115-$155</p>
             </div>
-            <div className="bg-primary pt-[2px]  rounded-3xl w-[63px] h-[22px] text-white text-xs flex justify-center makeup">
+            <div className="bg-primary pt-[2px]  rounded-3xl w-[63px] h-[22px] text-white text-xs flex justify-center items-center makeup">
               Makeup
             </div>
           </div>
@@ -52,18 +52,18 @@ const ServicesNeeded = () => {
           <p className="font-medium text-lg text-dark pt-2 select-none">
             need a sleek ponytail
           </p>
-          <div className="flex justify-center md:gap-16 gap-10 display_vector2">
-            <div className="flex gap-2">
+          <div className="flex justify-center items-center md:gap-16 gap-10 display_vector2">
+            <div className="flex md:gap-2 justify-center items-center">
               <Image
                 src="/Vector.png"
                 alt="vector"
                 height={1}
                 width={1}
-                className="h-5 w-5"
+                className="h-4 w-4"
               />
               <p className="text-dark font-semibold select-none" >$95-$105</p>
             </div>
-            <div className="bg-mimbboRed pt-[2px] rounded-3xl w-[42px] h-[22px] text-white text-xs flex justify-center makeup">
+            <div className="bg-mimbboRed pt-[2px] rounded-3xl w-[42px] h-[22px] text-white text-xs flex items-center justify-center makeup">
               Hair
             </div>
           </div>
