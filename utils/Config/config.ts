@@ -71,7 +71,7 @@ const Config = {
       appEnv === 'prod'
         ? '87c515e341cf4ca4885178343dbd7661'
         : 'd4b2fb4e0e584eb6af8da102065ce8af';
-    const pricingUrl = process.env.NEXT_AT_HOME_SUBSCRIPTIION  
+    const pricingUrl = process.env.NEXT_PUBLIC_AT_HOME_SUBSCRIPTION;
     const slug = appEnv === 'prod' ? 'mimbbo-app' : `mimbbo-${appEnv}`;
     Config.auth = auth_object[appEnv];
     Config.endpoints = getAPIEndpoints(appEnv);
