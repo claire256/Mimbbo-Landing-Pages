@@ -72,7 +72,7 @@ const Config = {
         ? '87c515e341cf4ca4885178343dbd7661'
         : 'd4b2fb4e0e584eb6af8da102065ce8af';
     const pricingUrl = process.env.NEXT_PUBLIC_AT_HOME_SUBSCRIPTION;
-    const slug = appEnv === 'prod' ? 'mimbbo-app' : `mimbbo-${appEnv}`;
+    const slug = appEnv === 'prod' ? 'mimbbo-landingpage-app' : `mimbbo-${appEnv}-landingpage`;
     Config.auth = auth_object[appEnv];
     Config.endpoints = getAPIEndpoints(appEnv);
     Config.itunesAppId = appEnv === 'prod' ? '1602788926' : `1638154372`;
