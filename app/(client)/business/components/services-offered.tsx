@@ -19,7 +19,7 @@ const ServicesOffered = () => {
             <div className="p-3 mb-2 rounded-full bg-accent inner_img">
               <Image src={service.icon} alt={service.label} height={20} width={20} className="w-8 h-8 text-primary" />
             </div>
-            <span className="text_service">{service.label}</span>
+            <span className="text_service select-none">{service.label}</span>
           </div>
         ))}
       </div>

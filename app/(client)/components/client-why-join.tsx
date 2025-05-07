@@ -2,10 +2,10 @@ import Image from "next/image";
 
 const WhyJoin = () => (
   <section className="section-padding" data-aos="fade-up">
-    <h2 className="text-2xl font-semibold pt-16 theme-title">
+    <h2 className="text-2xl font-semibold pt-10 md:pt-32 theme-title">
       Why Join Mimbbo?
     </h2>
-    <div className="flex flex-wrap gap-6 items-center justify-center pt-14">
+    <div className="flex flex-wrap gap-6 items-center justify-center md:pt-14">
 
       {[
         {
@@ -37,8 +37,8 @@ const WhyJoin = () => (
               className=" text-primary"
             />
           </div>
-          <h3 className="font-semibold text-2xl md:text-3xl pt-10">{item.title}</h3>
-          <p className="pt-6 text-sm  md:text-base ">{item.desc}</p>
+          <h3 className="font-semibold text-2xl md:text-3xl pt-10 select-none">{item.title}</h3>
+          <p className="pt-6 text-base  md:text-[16px] select-none">{item.desc}</p>
         </div>
       ))}
     </div>

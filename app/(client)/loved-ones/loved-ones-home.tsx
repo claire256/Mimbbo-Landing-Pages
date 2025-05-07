@@ -5,32 +5,31 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../../styles/landing-page.css";
-import CTA from "../business/components/cta";
 import Footer from "../../../components/footer";
 import { useSearchParams } from "next/navigation";
-import { apiConfig, auth_object } from "../../../utils/Config/amplify-auth-config";
+import {
+  apiConfig,
+  auth_object,
+} from "../../../utils/Config/amplify-auth-config";
 import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
-import Header from "./components/header";
-import HowItWorks from "./components/how-it-works";
+import CTA from "../business/components/cta";
+import Hero from "./components/hero";
+import HowItWorksHome from "./components/how-it-works";
 import WhyMoms from "./components/why-moms";
 import RealStories from "./components/real-stories";
 import ServicesHome from "./components/services";
-import TrustComes from "./components/trust-comes";
-import GetStarted from "./components/get-started";
-import TreatYourself from "./components/treat-yourself";
-import Faqs from "./components/faq";
-import BeautyCare from "./components/beauty-care";
 
-Amplify.configure({ Auth: auth_object, API: apiConfig });
+
+Amplify.configure({ Auth: auth_object, API: apiConfig, ssr: true });
 
 export default function Home() {
-  const for_moms = "for_moms_landing_page";
+  const loved_ones = "loved_ones_landing_page";
   const searchParams = useSearchParams();
 
   useEffect(() => {
     // track the page view first
     trackEvent({
-      eventName: `${for_moms}_view`,
+      eventName: `${loved_ones}_view`,
       params: {
         attributes: {
           source: "_direct",
@@ -38,13 +37,13 @@ export default function Home() {
         query: {},
       },
     });
- 
-  //  check for UTM params and track those as well
+
+    //  check for UTM params and track those as well
     for (const key of searchParams.keys()) {
       console.log("key", key);
       if (key.includes("utm")) {
         trackEvent({
-          eventName: `${for_moms}_utm_view`,
+          eventName: `${loved_ones}_utm_view`,
           params: {
             attributes: {},
             query: {
@@ -64,24 +63,20 @@ export default function Home() {
       });
     }
   }, []);
-
   return (
     <div className="flex flex-col min-h-screen">
-      <Header utm_source={for_moms} />
+        <Hero utm_source={loved_ones}/>
 
-      <main className="flex-1">
-        <HowItWorks/>
+      <div className="flex-1">
+        <HowItWorksHome/>
         <WhyMoms/>
         <RealStories/>
         <ServicesHome/>
-        <TrustComes/>
-        <GetStarted utm_source={for_moms}/>
-        <TreatYourself utm_source={for_moms}/>
-        <Faqs/>
-        <BeautyCare utm_source={for_moms}/>
-        <CTA utm_source={for_moms} />
-      </main>
-      <Footer />
+
+      <CTA utm_source={loved_ones}/> 
+      </div>
+
+      <Footer bgColorClass="bg-white" />
     </div>
   );
 }

@@ -1,4 +1,3 @@
-// pages/index.tsx or wherever you want to use it
 
 import HowItWorks from "@/components/how-it-works";
 
@@ -20,7 +19,7 @@ const steps = [
   },
 ];
 
-export default function Home() {
+export default function HowItWorksHome() {
   return (
     <main>
       <HowItWorks

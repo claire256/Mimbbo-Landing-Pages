@@ -17,21 +17,21 @@ const ServicesNeeded = () => {
               width={215}
               className="rounded-xl natural"
             />
-            <p className="font-medium md:text-lg text-sm text-dark pt-1 ">
+            <p className="font-medium md:text-lg text-sm text-dark pt-2 select-none">
               need editorial makeup
             </p>
             <div className="flex md:gap-10 gap-6 vector_div">
-              <div className="flex gap-2">
+              <div className="flex md:gap-2 justify-center items-center">
                 <Image
                   src="/Vector.png"
                   alt="vector"
                   height={1}
                   width={1}
-                  className="h-5 w-5 vector"
+                  className="h-4 w-4 vector"
                 />
-                <p className="text-dark font-semibold ">$115-$155</p>
+                <p className="text-dark font-semibold select-none ">$115-$155</p>
               </div>
-              <div className="bg-primary pt-[2px]  rounded-3xl md:w-[63px] md:h-[22px] text-white md:text-xs text-[9px]  flex justify-center w-12 h-5">
+              <div className="bg-primary pt-[2px]  rounded-3xl md:w-[63px] md:h-[22px] text-white md:text-xs text-[9px]  flex items-center justify-center w-12 h-5">
                 Makeup
               </div>
             </div>
@@ -47,21 +47,21 @@ const ServicesNeeded = () => {
               width={219}
               className="rounded-xl"
             />
-            <p className="font-medium text-dark pt-2 md:text-lg text-base">
+            <p className="font-medium text-dark pt- md:text-lg text-sm select-none">
               need a sleek ponytail
             </p>
-            <div className="flex justify-center md:gap-16 gap-10 ">
-              <div className="flex gap-2">
+            <div className="flex items-center md:gap-16 gap-4">
+              <div className="flex md:gap-2 justify-center items-center">
                 <Image
                   src="/Vector.png"
                   alt="vector"
                   height={1}
                   width={1}
-                  className="h-5 w-5"
+                  className="h-4 w-4"
                 />
-                <p className="text-dark font-semibold">$95-$105</p>
+                <p className="text-dark font-semibold select-none">$95-$105</p>
               </div>
-              <div className="bg-mimbboRed pt-[2px] rounded-3xl md:w-[42px] md:h-[22px] text-white md:text-xs flex justify-center text-[9px] w-12 h-5">
+              <div className="bg-mimbboRed pt-[2px] rounded-3xl md:w-[42px] md:h-[22px] text-white md:text-xs flex justify-center items-center text-[9px] w-12 h-5">
                 Hair
               </div>
             </div>

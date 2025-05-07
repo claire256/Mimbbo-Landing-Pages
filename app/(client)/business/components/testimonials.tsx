@@ -2,11 +2,11 @@ import Image from "next/image";
 
 const Testimonials = () => (
   <section
-    className="p md:px-8 md:pt-24 section-padding mt-24"
+    className=" md:mt-28 mt-10 section-padding"
     data-aos="fade-up"
   >
-    <h2 className="text-2xl font-semibold theme-title pt-20">Testimonials</h2>
-    <div className="grid gap-14 mt-12 sm:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 lg:place-items-center testimonialss">
+    <h2 className="text-2xl font-semibold theme-title ">Testimonials</h2>
+    <div className="grid gap-14 md:mt-14   sm:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 lg:place-items-center testimonialss">
       {[
         {
           name: "Siv K.",
@@ -34,12 +34,12 @@ const Testimonials = () => (
           />
           <div className="testimonial_text">
             <div>
-              <h3 className="text-lg font-medium">{testimonial.name}</h3>
-              <p className="text-xs text-muted-foreground">
+              <h3 className="text-lg font-medium select-none">{testimonial.name}</h3>
+              <p className="text-xs text-muted-foreground select-none">
                 {testimonial.role}
               </p>
             </div>
-            <p className="mt-4 text-sm">{testimonial.text}</p>
+            <p className="mt-4 text-sm select-none">{testimonial.text}</p>
           </div>
         </div>
       ))}

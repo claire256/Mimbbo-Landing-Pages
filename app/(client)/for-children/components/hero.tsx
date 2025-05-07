@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { trackEvent } from "@/utils/pinpoint/pinpointEvent";
-import ImageGrid from "./image-grid";
 
 interface PageProps {
   utm_source: string;
@@ -18,72 +17,71 @@ const Header = ({ utm_source }: PageProps) => {
 
   const items = [
     {
-      src: "/checkcalender.png",
-      des: "Appointments that fit into your routine, not the other way around",
+      src: "/headphones.png",
+      des: "Avoid crowded, noisy salons",
+    },
+    {
+      src: "/smiley.png",
+      des: "Gentle professionals experienced with children",
     },
     {
       src: "/home.png",
-      des: "No need to find childcare or sit in traffic",
-    },
-    {
-      src: "/bear.png",
-      des: "Services done while your child naps, plays, or relaxes nearby",
+      des: "Personalized care in a space your child knows",
     },
   ];
 
   return (
-    <section className="grid xl:grid-cols-2 grid-cols-1  bg-[#f1ede5]" data-aos="fade-up">
-      <div>
+    <div className=" bg-[#f1ede5]" data-aos="fade-up">
         <div className="flex justify-between align-center section-padding">
-          <div className="flex items-center">
-            <Link
-              href={downloadUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center"
-            >
-              <Image
-                src="/logo.png?height=24&width=100"
-                alt="Mimbbo"
-                width={180}
-                height={48}
-                className="w-auto h-6 logo"
-              />
-            </Link>
-          </div>
-          <div className="flex items-center gap-4">
-            {/* <p>Customer</p> */}
-            <Link href={loginUrl} target="_blank" rel="noopener noreferrer">
-              <Button
-                onClick={async () =>
-                  await trackEvent({
-                    eventName: "login_click",
-                    params: {
-                      attributes: {
-                        buttonLocation: "header_section",
-                      },
-                      query: {
-                        utm_source,
-                      },
-                    },
-                  })
-                }
-                className="rounded-md home_button w-[81px] bg-transparent border-slate-950 h-8"
-                variant={"outline"}
-              >
-                Login
-              </Button>
-            </Link>
-          </div>
+        <div className="flex items-center pt-10">
+          <Link
+            href={downloadUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center"
+          >
+            <Image
+              src="/logo.png?height=24&width=100"
+              alt="Mimbbo"
+              width={180}
+              height={48}
+              className="w-auto h-6 logo"
+            />
+          </Link>
         </div>
+        <div className="flex items-center gap-4">
+          {/* <p>Customer</p> */}
+          <Link href={loginUrl} target="_blank" rel="noopener noreferrer">
+            <Button
+              onClick={async () =>
+                await trackEvent({
+                  eventName: "login_click",
+                  params: {
+                    attributes: {
+                      buttonLocation: "header_section",
+                    },
+                    query: {
+                      utm_source,
+                    },
+                  },
+                })
+              }
+              className="rounded-md home_button w-[81px] bg-transparent border-slate-950 h-8"
+              variant={"outline"}
+            >
+              Login
+            </Button>
+          </Link>
+        </div>
+      </div>
+      <div className="grid xl:grid-cols-2 grid-cols-1 ">
+      <div >
+        
         <div className="section-padding text-center md:text-start">
           <h2 className="font-bold text-3xl md:text-5xl md:pt-28 pt-14">
-            Your time is limited. Your <br></br>self-care shouldn’t be.
-          </h2>
+          Haircuts don’t have to be stressful.          </h2>
           <p className="md:text-[16px] text-base pt-8">
-            Book trusted beauty professionals who can come to your home -
-            <br></br>
-            so you can care for yourself without rearranging your entire day.
+          Create a calm, familiar environment for your child by booking a provider who comes to your home.
           </p>
         </div>
         <div className="flex flex-wrap gap-3 section-padding items-center md:items-start md:justify-start justify-center">
@@ -146,9 +144,10 @@ const Header = ({ utm_source }: PageProps) => {
         </div>
       </div>
       <div className="xl:pt-0 pt-16">
-        <ImageGrid />
+        <Image src="./girl.png" alt="gal with hair" width={688} height={788} className="w-full" />
       </div>
-    </section>
+      </div>
+    </div>
   );
 };
 
