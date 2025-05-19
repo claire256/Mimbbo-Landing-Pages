@@ -36,15 +36,15 @@ const WhyJoin = ({ utm_source }: PageProps) => {
   ];
   return (
     <div className="bg-white section-padding">
-      <h2 className="font-bold text-2xl text-center pt-10">Why Join?</h2>
-      <p className="text-base text-center pt-4">
-        Earn monthly rewards and enjoy exclusive perks
+      <h2 className="font-bold text-2xl text-center pt-12 md:pt-32 md:text-4xl">Why Join?</h2>
+      <p className="text-base md:text-[18px] text-center pt-4">
+        Earn monthly rewards and enjoy exclusive perks.
       </p>
-      <div>
-        <div className="pt-6">
+      <div className="md:w-[400px] md:mx-auto pb-8">
+        <div className="pt-6 md:pt-12">
           {items.map((item, index) => (
-            <div key={index} className="flex gap-2 pt-2">
-              <Image src={item.src} alt="" width={16} height={1} className="" />
+            <div key={index} className="flex gap-2 pt-2 items-center">
+              <div><Image src={item.src} alt="" width={18} height={18} className="font-bold" /></div>
               <p className="md:text-lg text-sm select-none font-semibold">
                 {item.title}
               </p>
@@ -72,7 +72,7 @@ const WhyJoin = ({ utm_source }: PageProps) => {
             }
             variant="custom"
             radius="full"
-            className="bg-LimeGreen text-primary mt-8 w-full h-12 text-base"
+            className="bg-LimeGreen text-primary mt-8 w-full h-12 text-base md:w-[183px] mb-10"
           >
             Apply now
           </Button>

@@ -8,7 +8,7 @@ const UnLock = () => {
       className="section-padding mx-auto text-center place-items-center"
       data-aos="fade-up"
     >
-      <div className="pt-16">
+      <div className="pt-10 md:pt-28">
         <h2 className="text-2xl md:text-[40px] font-semibold ">
           Unlock a new way to grow your beauty business
         </h2>

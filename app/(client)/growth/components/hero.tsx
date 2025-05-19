@@ -12,7 +12,7 @@ const Hero = ({ utm_source }: PageProps) => {
   const downloadUrl = `${webUrl}/?utm_source=${utm_source}`;
 
   return (
-    <div className="bg-white ">
+    <div className="bg-white grid lg:grid-cols-2 ">
       <div className="relative">
         <div className="flex items-center absolute">
           <Link
@@ -30,21 +30,23 @@ const Hero = ({ utm_source }: PageProps) => {
             />
           </Link>
         </div>
+        {/* <div> */}
         <Image
           src="./makeupartist.jpeg"
           alt="makeup artist"
           width={820}
           height={820}
-          className=""
+          className="w-full"
         />
+        {/* </div> */}
       </div>
       <div className="text-center section-padding">
-        <h2 className="font-bold text-2xl pt-8">
+        <h2 className="font-bold text-2xl pt-10 lg:pt-44 md:text-4xl">
           Mimbbo Growth <br></br>Partners Program
         </h2>
-        <p className="pt-6">
+        <p className="pt-6  md:text-[18px]">
           Share authentic beauty moments, help others discover their next look,
-          and earn along the way
+          and earn along the way.
         </p>
         <Link
           href="https://form.typeform.com/to/r5YkK2gz"
