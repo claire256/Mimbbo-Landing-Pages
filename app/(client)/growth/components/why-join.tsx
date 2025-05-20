@@ -36,7 +36,7 @@ const WhyJoin = ({ utm_source }: PageProps) => {
   ];
   return (
     <div className="bg-white section-padding">
-      <h2 className="font-bold text-2xl text-center pt-12 md:pt-32 md:text-4xl">Why Join?</h2>
+      <h2 className="font-bold text-2xl text-center pt-12 md:pt-32 md:text-5xl">Why Join?</h2>
       <p className="text-base md:text-[18px] text-center pt-4">
         Earn monthly rewards and enjoy exclusive perks.
       </p>

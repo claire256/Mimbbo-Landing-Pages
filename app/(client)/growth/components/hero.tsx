@@ -12,36 +12,35 @@ const Hero = ({ utm_source }: PageProps) => {
   const downloadUrl = `${webUrl}/?utm_source=${utm_source}`;
 
   return (
-    <div className="bg-white grid lg:grid-cols-2 ">
-      <div className="relative">
-        <div className="flex items-center absolute">
-          <Link
-            href={downloadUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center"
-          >
-            <Image
-              src="/logo.png?height=24&width=100"
-              alt="Mimbbo"
-              width={180}
-              height={48}
-              className="w-auto h-6 logo"
-            />
-          </Link>
-        </div>
-        {/* <div> */}
+    <div className="bg-white grid xl:grid-cols-2 xl:gap-4 relative">
+      <div className="">
         <Image
-          src="./makeupartist.jpeg"
+          src="./growth-image.png"
           alt="makeup artist"
           width={820}
           height={820}
-          className="w-full"
+          className=""
         />
         {/* </div> */}
       </div>
-      <div className="text-center section-padding">
-        <h2 className="font-bold text-2xl pt-10 lg:pt-44 md:text-4xl">
+      <div className="pr-16 pl-10 xl:text-start text-center">
+      <div className="pt-5 flex xl:static absolute top-0">
+        <Link
+          href={downloadUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ml-auto"
+        >
+          <Image
+            src="/logo.png?height=24&width=100"
+            alt="Mimbbo"
+            width={80}
+            height={80}
+            className="w-auto h-6 logo"
+          />
+        </Link>
+      </div>
+        <h2 className="font-semibold text-3xl md:text-5xl xl:pt-48 pt-10 ">
           Mimbbo Growth <br></br>Partners Program
         </h2>
         <p className="pt-6  md:text-[18px]">
