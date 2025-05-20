@@ -9,10 +9,12 @@ interface PageProps {
 }
 
 const HeroSection = ({utm_source}: PageProps) => {
+  const webUrl = process.env.NEXT_PUBLIC_MIMBBO_WEB_URL || "";
+  const downloadUrl = `${webUrl}/?utm_source=${utm_source}`;
 
   return (
     <div data-aos="fade-up">
-      <div className="grid xl:grid-cols-2 lg:grid-cols-1   place-items-center ">
+      <div className="grid xl:grid-cols-2 xl:gap-4 relative">
         <Image
           src="./makeupartist.jpeg"
           alt="makeup artist"
@@ -20,7 +22,23 @@ const HeroSection = ({utm_source}: PageProps) => {
           height={820}
           className="w-full"
         />
-        <div className="place-items-center xl:text-start text-center">
+        <div className="pr-16 pl-10 xl:text-start text-center">
+        <div className="pt-5 flex xl:static absolute top-0">
+        <Link
+          href={downloadUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ml-auto"
+        >
+          <Image
+            src="/logo.png?height=24&width=100"
+            alt="Mimbbo"
+            width={80}
+            height={80}
+            className="w-auto h-6 logo"
+          />
+        </Link>
+      </div>
           <h2 className="font-semibold text-3xl md:text-5xl xl:pt-32 pt-10 ">
             Bring the Glam <br></br> Straight to their door
           </h2>
