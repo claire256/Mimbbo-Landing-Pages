@@ -1,14 +1,14 @@
 Mimbbo Marketing Landing Pages
 
-A collection of landing pages I built during my internship at Mimbbo, designed to support marketing campaigns and product launches. Each page was created with a focus on clean UI, responsiveness, and performance.
+A collection of landing pages I built during my first weeks at Mimbbo, designed to support marketing campaigns and product launches. Each page was created with a focus on clean UI, responsiveness, and performance.
 
-Tech Stack
+Tech Stack:
 	•	Next.js – React framework for building modern web apps
 	•	React
 	•	[CSS Modules / Tailwind
 	•	Vercel – Deployment
 
-Features
+Features:
 	•	5+ fully responsive landing pages
 	•	Optimized for fast load speeds
 	•	SEO-friendly structure
@@ -31,8 +31,8 @@ npm install
 4. Run the project
 npm run dev
 
-Author
+Author|:
 Claire Nabwami
-	•	Portfolio: [
+	•	Portfolio: 
 	•	LinkedIn: https://www.linkedin.com/in/claire-nabwami-20381a230/
 	•	GitHub: https://github.com/claire256
