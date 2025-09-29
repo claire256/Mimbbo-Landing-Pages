@@ -20,7 +20,7 @@ Live Demo
 
 Installation & Setup (for devs)
 1. Clone the repo
-git clone https://github.com/yourusername/mimbbo-landing-pages.git
+git clone https://github.com/claire256/mimbbo-landing-pages.git
 
 2. Navigate to project folder
 cd mimbbo-landing-pages
