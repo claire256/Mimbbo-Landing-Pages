@@ -9,14 +9,14 @@ Tech Stack:
 	•	Vercel – Deployment
 
 Features:
-	•	5+ fully responsive landing pages
+	•	5+ fully responsive landing pages. Paths include /for-moms, /for-children, /growth, /business etc
 	•	Optimized for fast load speeds
 	•	SEO-friendly structure
 	•	Mobile-first design
 	•	Component-based architecture
 
 Live Demo
-
+https://mimbbo-landing-pages.vercel.app/
 
 Installation & Setup (for devs)
 1. Clone the repo
